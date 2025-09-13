@@ -1,18 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Progra3</title>
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
+
 <body>
     <header></header>
     <main>
         <section id="options"></section>
         <section id="ColorPalette"></section>
-        <section id="Buttons"></section>
-        <section id="Inputs/Fields"></section>
+        <section id="Buttons">
+            <fieldset>
+                <legend>Botones</legend>
+                <button class="primary-button">Primario</button>
+                <button class="secondary-button">Secundario</button>
+                <button class="outline-button">Outline</button>
+
+                <button class="disable-button">Disable</button>
+                <pre><code>
+&lt;button class="primary-button"&gt;Primario&lt;/button&gt;
+&lt;button class="secondary-button"&gt;Secundario&lt;/button&gt;
+&lt;button class="outline-button"&gt;Outline&lt;/button&gt;
+&lt;button class="disable-button"&gt;Disable&lt;/button&gt;
+</code></pre>
+            </fieldset>
+        </section>
+        <section id="Inputs/Fields">
+            <fieldset>
+                <legend>inputs</legend>
+                <label for="input-text">Texto</label>
+                <div class="form-interior">
+                    <input type="text" id="input-text" class="form_input" required placeholder="Texto">
+                </div>
+
+                <label for="email">Email</label>
+                <div class="form-interior">
+                    <input type="email" id="email" class="form_input" placeholder="ejemplo.ejemplo@gmail.com" required>
+                </div>
+
+                <label for="password">Password</label>
+                <div class="form-interior">
+                    <input type="password" id="password" class="form_input" placeholder="password"
+                        placeholder="contraseña" required>
+                </div>
+                <div>
+                    <textarea name="" id="" maxlength="100" rows="8"></textarea>
+                </div>
+                <pre><code>
+&lt;div class="form-interior"&gt;
+    &lt;label for="input-text"&gt;texto&lt;/label&gt;
+    &lt;input type="text" id="input-text" class="form_input" required placeholder=""&gt;
+&lt;/div&gt;
+
+&lt;div class="form-interior"&gt;
+    &lt;label for="email"&gt;email&lt;/label&gt;
+    &lt;input type="email" id="email" class="form_input" placeholder="ejemplo.ejemplo@gmail.com" required&gt;
+&lt;/div&gt;
+
+&lt;div class="form-interior"&gt;
+    &lt;label for="password"&gt;password&lt;/label&gt;
+    &lt;input type="password" id="password" class="form_input" placeholder="password" required&gt;
+    &lt;div&gt;
+        &lt;textarea name="" id="" maxlength="100" rows="8"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+            </fieldset>
+
+
+
+
+        </section>
         <section id="Forms"></section>
         <section id="Labels"></section>
         <section id="Links"></section>
@@ -24,4 +86,5 @@
     <footer></footer>
     <script src="JS/Script.js"></script>
 </body>
+
 </html>
