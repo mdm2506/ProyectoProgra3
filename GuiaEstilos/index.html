@@ -5,85 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Progra3</title>
-    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
-    <header></header>
-    <main>
-        <section id="options"></section>
-        <section id="ColorPalette"></section>
-        <section id="Buttons">
-            <fieldset>
-                <legend>Botones</legend>
-                <button class="primary-button">Primario</button>
-                <button class="secondary-button">Secundario</button>
-                <button class="outline-button">Outline</button>
+    <header>
+        <nav class="navbar">
+            <div class="logo" onclick="showPage('inicio')">Progra3 Project</div>
+            <div class="nav-menu">
+                <a onclick="showPage('inicio')">Inicio</a>
+                <a onclick="showPage('sobre-nosotros')">Sobre Nosotros</a>
+                <a onclick="showPage('servicios')">Servicios</a>
+            </div>
+        </nav>
+    </header>
 
-                <button class="disable-button">Disable</button>
-                <pre><code>
-&lt;button class="primary-button"&gt;Primario&lt;/button&gt;
-&lt;button class="secondary-button"&gt;Secundario&lt;/button&gt;
-&lt;button class="outline-button"&gt;Outline&lt;/button&gt;
-&lt;button class="disable-button"&gt;Disable&lt;/button&gt;
-</code></pre>
-            </fieldset>
-        </section>
-        <section id="Inputs/Fields">
-            <fieldset>
-                <legend>inputs</legend>
-                <label for="input-text">Texto</label>
-                <div class="form-interior">
-                    <input type="text" id="input-text" class="form_input" required placeholder="Texto">
-                </div>
+    <!-- PÁGINA DE INICIO (LANDING) -->
+    <div id="inicio" class="page landing-page active">
 
-                <label for="email">Email</label>
-                <div class="form-interior">
-                    <input type="email" id="email" class="form_input" placeholder="ejemplo.ejemplo@gmail.com" required>
-                </div>
+        <div class="index-links">
+            <p>Componentes:</p>
+            <a onclick="showComponent('ColorPalette')">Color Palette</a>
+            <a onclick="showComponent('Buttons')">Buttons</a>
+            <a onclick="showComponent('Inputs/Fields')">Inputs & Fields</a>
+            <a onclick="showComponent('Forms')">Forms</a>
+            <a onclick="showComponent('Labels')">Labels</a>
+            <a onclick="showComponent('Links')">Links</a>
+            <a onclick="showComponent('RadioButtons')">Radio Buttons</a>
+            <a onclick="showComponent('CheckBoxes')">Check Boxes</a>
+            <a onclick="showComponent('Select/Dropdown')">Select & Dropdown</a>
+            <a onclick="showComponent('NavBar')">Navigation Bar</a>
+        </div>
+        <div class="components-page">
 
-                <label for="password">Password</label>
-                <div class="form-interior">
-                    <input type="password" id="password" class="form_input" placeholder="password"
-                        placeholder="contraseña" required>
-                </div>
-                <div>
-                    <textarea name="" id="" maxlength="100" rows="8"></textarea>
-                </div>
-                <pre><code>
-&lt;div class="form-interior"&gt;
-    &lt;label for="input-text"&gt;texto&lt;/label&gt;
-    &lt;input type="text" id="input-text" class="form_input" required placeholder=""&gt;
-&lt;/div&gt;
+            <section id="ColorPalette">
+                <p>Fatima</p>
+            </section>
 
-&lt;div class="form-interior"&gt;
-    &lt;label for="email"&gt;email&lt;/label&gt;
-    &lt;input type="email" id="email" class="form_input" placeholder="ejemplo.ejemplo@gmail.com" required&gt;
-&lt;/div&gt;
+            <section id="Buttons">
+                <p>Elian</p>
+            </section>
 
-&lt;div class="form-interior"&gt;
-    &lt;label for="password"&gt;password&lt;/label&gt;
-    &lt;input type="password" id="password" class="form_input" placeholder="password" required&gt;
-    &lt;div&gt;
-        &lt;textarea name="" id="" maxlength="100" rows="8"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                        </code></pre>
-            </fieldset>
+            <section id="Inputs/Fields">
+                <p>Elian</p>
+            </section>
+
+            <section id="Forms">
+                <p>Mar</p>
+            </section>
+
+            <section id="Labels">
+                <p>Keril</p>
+            </section>
+
+            <section id="Links">
+                <p>Keril</p>
+            </section>
+
+            <section id="RadioButtons">
+                <p>Samir</p>
+            </section>
+
+            <section id="CheckBoxes">
+                <p>Fatima</p>
+            </section>
+
+            <section id="Select/Dropdown">
+                <p>Samir</p>
+            </section>
+
+            <section id="NavBar">
+                <p>Yeisson</p>
+            </section>
+        </div>
+    </div>
+
+
+    <div id="sobre-nosotros" class="page about-page">
+        <h1>Sobre Nosotros</h1>
+    </div>
+
+
+    <div id="servicios" class="page services-page">
+        <h1>Nuestros Servicios</h1>
+
+    </div>
+    </div>
 
 
 
-
-        </section>
-        <section id="Forms"></section>
-        <section id="Labels"></section>
-        <section id="Links"></section>
-        <section id="RadioButtons"></section>
-        <section id="CheckBoxes"></section>
-        <section id="Select/Dropdown"></section>
-        <section id="NavBar"></section>
-    </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Progra3 Project</h3>
+                <p>Biblioteca completa de componentes UI para desarrollo web moderno.</p>
+                <p>© 2024 Progra3 Project. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
     <script src="JS/Script.js"></script>
 </body>
 
