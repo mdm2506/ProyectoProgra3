@@ -4,24 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Progra3</title>
-    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <header></header>
-    <main>
-        <section id="options"></section>
-        <section id="ColorPalette"></section>
-        <section id="Buttons"></section>
-        <section id="Inputs/Fields"></section>
-        <section id="Forms"></section>
-        <section id="Labels"></section>
-        <section id="Links"></section>
-        <section id="RadioButtons"></section>
-        <section id="CheckBoxes"></section>
-        <section id="Select/Dropdown"></section>
-        <section id="NavBar">parte yeisson</section>
-    </main>
-    <footer></footer>
-    <script src="JS/Script.js"></script>
+    <header>
+        <nav class="navbar">
+            <div class="logo" onclick="showPage('inicio')">Progra3 Project</div>
+            <div class="nav-menu">
+                <a onclick="showPage('inicio')">Inicio</a>
+                <a onclick="showPage('sobre-nosotros')">Sobre Nosotros</a>
+                <a onclick="showPage('servicios')">Servicios</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- PÁGINA DE INICIO (LANDING) -->
+    <div id="inicio" class="page landing-page active">
+        
+        <div class="index-links">
+            <p>Componentes:</p>
+            <a onclick="showComponent('ColorPalette')">Color Palette</a>
+            <a onclick="showComponent('Buttons')">Buttons</a>
+            <a onclick="showComponent('Inputs/Fields')">Inputs & Fields</a>
+            <a onclick="showComponent('Forms')">Forms</a>
+            <a onclick="showComponent('Labels')">Labels</a>
+            <a onclick="showComponent('Links')">Links</a>
+            <a onclick="showComponent('RadioButtons')">Radio Buttons</a>
+            <a onclick="showComponent('CheckBoxes')">Check Boxes</a>
+            <a onclick="showComponent('Select/Dropdown')">Select & Dropdown</a>
+            <a onclick="showComponent('NavBar')">Navigation Bar</a>
+        </div>
+        <div class="components-page">
+        
+        <section id="ColorPalette">
+            <p>Fatima</p>
+        </section>
+        
+        <section id="Buttons">
+            <p>Elian</p>
+        </section>
+        
+        <section id="Inputs/Fields">
+            <p>Elian</p>
+        </section>
+        
+        <section id="Forms">
+          <p>Mar</p>
+        </section>
+        
+        <section id="Labels">
+           <p>Keril</p>
+        </section>
+        
+        <section id="Links">
+           <p>Keril</p>
+        </section>
+        
+        <section id="RadioButtons">
+             <p>Samir</p>
+        </section>
+        
+        <section id="CheckBoxes">
+            <p>Fatima</p>
+        </section>
+        
+        <section id="Select/Dropdown">
+         <p>Samir</p>   
+        </section>
+        
+        <section id="NavBar">
+            <p>Yeisson</p>
+        </section>
+    </div>
+    </div>
+    
+    
+    <div id="sobre-nosotros" class="page about-page">
+        <h1>Sobre Nosotros</h1>
+    </div>
+    
+   
+    <div id="servicios" class="page services-page">
+        <h1>Nuestros Servicios</h1>
+        
+        </div>
+    </div>
+    
+   
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Progra3 Project</h3>
+                <p>Biblioteca completa de componentes UI para desarrollo web moderno.</p>
+                <p>© 2024 Progra3 Project. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="JS/script.js"></script>
 </body>
 </html>
