@@ -4,6 +4,121 @@
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Navbar principal - FIJO */
+.navbar {
+    background-color: #F08D7D;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.nav-menu a:hover {
+    color: #FBDFCA;
+}
+
+.nav-menu a.active {
+    color: #f1eeec;
+    font-weight: bold;
+}
+
+/* Páginas/Vistas */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Página de Inicio (Landing) */
+.landing-page {
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.landing-page h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.landing-page p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.index-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.index-links a {
+    text-decoration: none;
+    color: #4a4a4a;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #FBDFCA;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+/* >>>>>>> 6f80ba676a82dd2398fbe832e077f758469b718c */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #fff;
