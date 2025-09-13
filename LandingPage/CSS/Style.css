@@ -76,7 +76,7 @@ header.scrolled .Navbar {
   transition: color 0.6s ease, opacity .6s ease;
 }
 .nav-links li a:hover { 
-  color: #222; 
+  color: #2f2323; 
 }
 .hero {
   min-height: 100vh;
