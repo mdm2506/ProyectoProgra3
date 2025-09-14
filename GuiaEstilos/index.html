@@ -19,9 +19,178 @@
         <section id="RadioButtons"></section>
         <section id="CheckBoxes"></section>
         <section id="Select/Dropdown"></section>
-        <section id="NavBar">parte yeisson</section>
+        <section id="NavBar"></section>
     </main>
     <footer></footer>
     <script src="JS/Script.js"></script>
+    <header>
+        <nav class="navbar">
+            <div class="logo" onclick="showPage('inicio')">Progra3 Project</div>
+            <div class="nav-menu">
+                <a onclick="showPage('inicio')">Inicio</a>
+                <a onclick="showPage('sobre-nosotros')">Sobre Nosotros</a>
+                <a onclick="showPage('servicios')">Servicios</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- PÁGINA DE INICIO (LANDING) -->
+    <div id="inicio" class="page landing-page active">
+        
+        <div class="index-links">
+            <p>Componentes:</p>
+            <a onclick="showComponent('ColorPalette')">Color Palette</a>
+            <a onclick="showComponent('Buttons')">Buttons</a>
+            <a onclick="showComponent('Inputs/Fields')">Inputs & Fields</a>
+            <a onclick="showComponent('Forms')">Forms</a>
+            <a onclick="showComponent('Labels')">Labels</a>
+            <a onclick="showComponent('Links')">Links</a>
+            <a onclick="showComponent('RadioButtons')">Radio Buttons</a>
+            <a onclick="showComponent('CheckBoxes')">Check Boxes</a>
+            <a onclick="showComponent('Select/Dropdown')">Select & Dropdown</a>
+            <a onclick="showComponent('NavBar')">Navigation Bar</a>
+        </div>
+        <div class="components-page">
+        
+        <section id="ColorPalette">
+            <p>Fatima</p>
+        </section>
+        
+        <section id="Buttons">
+            <p>Elian</p>
+        </section>
+        
+        <section id="Inputs/Fields">
+            <p>Elian</p>
+        </section>
+        
+        <section id="Forms">
+          <p>Mar</p>
+        </section>
+        
+        <section id="Labels">
+           <p>Keril</p>
+        </section>
+        
+        <section id="Links">
+           <p>Keril</p>
+        </section>
+        
+     <section id="RadioButtons">
+
+  <h2>Esta es la sección de RadioButtons</h2>
+
+  <p>Selecciona tu color favorito:</p>
+
+  <label>
+    <input type="radio" id="color-verde" name="color" value="verde" checked>
+    <span>Verde</span>
+  </label>
+  <label>
+    <input type="radio" id="color-azul" name="color" value="azul">
+    <span>Azul</span>
+  </label>
+  <label>
+    <input type="radio" id="color-rojo" name="color" value="rojo" disabled>
+    <span>Rojo (deshabilitado)</span>
+  </label>
+
+  <h3>Código HTML:</h3>
+  <pre><code>
+&lt;section id="RadioButtons"&gt;
+
+  &lt;h2&gt;Esta es la sección de RadioButtons&lt;/h2&gt;
+
+  &lt;p&gt;Selecciona tu color favorito:&lt;/p&gt;
+
+  &lt;label&gt;
+    &lt;input type="radio" name="color" value="verde" checked&gt;
+    <p>Verde</p>
+  &lt;/label&gt;
+
+  &lt;label&gt;
+    &lt;input type="radio" name="color" value="azul"&gt;
+    <p></p>Azul</p>
+  &lt;/label&gt;
+
+  &lt;label&gt;
+    &lt;input type="radio" name="color" value="rojo" disabled&gt;
+    <p>Rojo (deshabilitado)</p>
+  &lt;/label&gt;
+
+&lt;/section&gt;
+  </code></pre>
+
+</section>
+        
+        <section id="CheckBoxes">
+            <p>Fatima</p>
+        </section>
+        
+         <section id="Select-Dropdown">
+
+    <h2>Esta es la sección de Select/Dropdown</h2>
+
+    <label for="opciones">Selecciona una opción:</label>
+    <select class="opciones">
+        <option value="1">Opción 1</option>
+        <option value="2">Opción 2</option>
+        <option value="3">Opción 3</option>
+    </select>
+
+    <select class="opciones" disabled>
+        <option>Opción deshabilitada</option>
+    </select>
+
+    <h3>Código HTML:</h3>
+    <pre><code>
+&lt;section id="Select-Dropdown"&gt;
+  &lt;h2&gt;Esta es la sección de Select/Dropdown&lt;/h2&gt;
+
+  &lt;label for="opciones"&gt;Selecciona una opción:&lt;/label&gt;
+  &lt;select class="opciones"&gt;
+    &lt;option value="1"&gt;Opción 1&lt;/option&gt;
+    &lt;option value="2"&gt;Opción 2&lt;/option&gt;
+    &lt;option value="3"&gt;Opción 3&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;select class="opciones" disabled&gt;
+    &lt;option&gt;Opción deshabilitada&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/section&gt;
+    </code></pre>
+
+        </section>
+        
+        <section id="NavBar">
+            <p>Yeisson</p>
+        </section>
+    </div>
+    </div>
+    
+    
+    <div id="sobre-nosotros" class="page about-page">
+        <h1>Sobre Nosotros</h1>
+    </div>
+    
+   
+    <div id="servicios" class="page services-page">
+        <h1>Nuestros Servicios</h1>
+        <h1>poner servicios</h1>
+        </div>
+    </div>
+    
+   
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Progra3 Project</h3>
+                <p>Biblioteca completa de componentes UI para desarrollo web moderno.</p>
+                <p>© 2024 Progra3 Project. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="JS/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 (() => {
   const header = document.getElementById('site-header');
   const logo = document.querySelector('.logo');
