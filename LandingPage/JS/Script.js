@@ -1,36 +1,52 @@
 (() => {
-  const header = document.getElementById('site-header');
-  const logo = document.querySelector('.logo');
-  let isCollapsed = null;
-  const DURATION = getComputedStyle(document.documentElement).getPropertyValue('--logo-move-duration').trim() || '800ms';
-  const EASING = getComputedStyle(document.documentElement).getPropertyValue('--logo-move-ease').trim() || 'ease-in-out';
-  const playFlip = (collapse) => {
-    const first = logo.getBoundingClientRect();
-    header.classList.toggle('scrolled', collapse);
-    const last = logo.getBoundingClientRect();
-    const dx = first.left - last.left;
-    const dy = first.top - last.top;
-    logo.style.transition = 'none';
-    logo.style.transform = `translate(${dx}px, ${dy}px)`;
-    void logo.offsetWidth;
-    logo.style.transition = `transform ${DURATION} ${EASING}`;
-    logo.style.transform = 'translate(0, 0)';
-    const onEnd = (e) => {
-      if (e.propertyName !== 'transform') return;
-      logo.style.transition = '';
-      logo.style.transform = '';
-      logo.removeEventListener('transitionend', onEnd);
-    };
-    logo.addEventListener('transitionend', onEnd);
-  };
+  const logoContainer = document.querySelector('.logo');
+  const logoImg = logoContainer.querySelector('img');
+  const logoText = logoContainer.querySelector('a');
+  const navbar = document.querySelector('.Navbar');
+
+  const MAX_SCROLL = 200; // scroll donde la animación se completa
+
+  // Valores iniciales y finales
+  const START_LOGO_X = 0;     // posición inicial del logo
+  const END_LOGO_X = -30;    // cuánto se mueve a la izquierda
+  const START_LOGO_SIZE = 90;
+  const END_LOGO_SIZE = 60;
+  const START_FONT = 28;
+  const END_FONT = 22;
+  const START_PADDING = 20;
+  const END_PADDING = 10;
+
   const onScroll = () => {
-    const collapsed = window.scrollY > 10;
-    if (collapsed !== isCollapsed) {
-      isCollapsed = collapsed;
-      playFlip(collapsed);
+    const scrollY = Math.min(window.scrollY, MAX_SCROLL);
+    const t = scrollY / MAX_SCROLL; // porcentaje de colapso 0 → 1
+
+    // Movimiento horizontal del logo
+    const translateX = START_LOGO_X + (END_LOGO_X - START_LOGO_X) * t;
+    logoContainer.style.transform = `translateX(${translateX}px)`;
+
+    // Tamaño del logo
+    const logoSize = START_LOGO_SIZE + (END_LOGO_SIZE - START_LOGO_SIZE) * t;
+    logoImg.style.width = `${logoSize}px`;
+    logoImg.style.height = `${logoSize}px`;
+
+    // Tamaño de la fuente
+    const fontSize = START_FONT + (END_FONT - START_FONT) * t;
+    logoText.style.fontSize = `${fontSize}px`;
+
+    // Padding del navbar
+    const padding = START_PADDING + (END_PADDING - START_PADDING) * t;
+    navbar.style.padding = `${padding}px 40px`;
+
+    // Flex-direction: columna hasta el final, fila al 100%
+    if (t === 1) {
+      navbar.style.flexDirection = 'row';
+      navbar.style.justifyContent = 'space-between';
+    } else {
+      navbar.style.flexDirection = 'column';
+      navbar.style.justifyContent = 'center';
     }
   };
-  // init
-  onScroll();
+
   window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // inicializar al cargar
 })();
