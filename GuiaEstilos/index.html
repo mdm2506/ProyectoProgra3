@@ -2,87 +2,136 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Progra3</title>
-    <link rel="stylesheet" href="CSS/Style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Progra3</title>
+  <link rel="stylesheet" href="CSS/Style.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo" onclick="showPage('inicio')">Progra3 Project</div>
-            <div class="nav-menu">
-                <a onclick="showPage('inicio')">Inicio</a>
-                <a onclick="showPage('sobre-nosotros')">Sobre Nosotros</a>
-                <a onclick="showPage('servicios')">Servicios</a>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="logo" onclick="showPage('inicio')">Progra3 Project</div>
+      <div class="nav-menu">
+        <a onclick="showPage('inicio')">Inicio</a>
+        <a onclick="showPage('sobre-nosotros')">Sobre Nosotros</a>
+        <a onclick="showPage('servicios')">Servicios</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- PÁGINA DE INICIO (LANDING) -->
-    <div id="inicio" class="page landing-page active">
+  <!-- PÁGINA DE INICIO (LANDING) -->
+  <div id="inicio" class="page landing-page active">
 
-        <div class="index-links">
-            <p>Componentes:</p>
-            <a href="#ColorPalette">Color Palette</a>
-            <a href="#Buttons">Buttons</a>
-            <a href="#Inputs/Fields">Inputs & Fields</a>
-            <a href="#Forms">Forms</a>
-            <a href="#Labels">Labels</a>
-            <a href="#Links">Links</a>
-            <a href="#RadioButtons">Radio Buttons</a>
-            <a href="#CheckBoxes">Check Boxes</a>
-            <a href="#Select-Dropdown">Select & Dropdown</a>
-            <a href="#NavBar">Navigation Bar</a>
+    <div class="index-links">
+      <p>Componentes:</p>
+      <a href="#ColorPalette">Color Palette</a>
+      <a href="#Buttons">Buttons</a>
+      <a href="#Inputs/Fields">Inputs & Fields</a>
+      <a href="#Forms">Forms</a>
+      <a href="#Labels">Labels</a>
+      <a href="#Links">Links</a>
+      <a href="#RadioButtons">Radio Buttons</a>
+      <a href="#CheckBoxes">Check Boxes</a>
+      <a href="#Select-Dropdown">Select & Dropdown</a>
+      <a href="#NavBar">Navigation Bar</a>
+    </div>
+    <div class="components-page">
+
+      <section id="ColorPalette">
+        <p>Fatima</p>
+      </section>
+
+      <section id="Buttons">
+        <p>Elian</p>
+        <h3>Botones</h3>
+        <button class="primary-button">Primario</button>
+        <button class="secondary-button">Secundario</button>
+        <button class="outline-button">Outline</button>
+
+        <button class="disable-button">Disable</button>
+        <pre><code>
+&lt;button class="primary-button"&gt;Primario&lt;/button&gt;
+&lt;button class="secondary-button"&gt;Secundario&lt;/button&gt;
+&lt;button class="outline-button"&gt;Outline&lt;/button&gt;
+&lt;button class="disable-button"&gt;Disable&lt;/button&gt;
+</code></pre>
+      </section>
+
+      <section id="Inputs/Fields">
+        <p>Elian</p>
+        <h3>inputs</h3>
+        <label for="input-text">Texto</label>
+        <div class="form-interior">
+          <input type="text" id="input-text" class="form_input" required placeholder="Texto">
         </div>
-        <div class="components-page">
-        
-        <section id="ColorPalette">
-            <p>Fatima</p>
-        </section>
-        
-        <section id="Buttons">
-            <p>Elian</p>
-        </section>
-        
-        <section id="Inputs/Fields">
-            <p>Elian</p>
-        </section>
-        
-        <section id="Forms">
-          <p>Mar</p>
-        </section>
-        
-        <section id="Labels">
-           <p>Keril</p>
-        </section>
-        
-        <section id="Links">
-           <p>Keril</p>
-        </section>
-        
-     <section id="RadioButtons">
 
-  <h2>Esta es la sección de RadioButtons</h2>
+        <label for="email">Email</label>
+        <div class="form-interior">
+          <input type="email" id="email" class="form_input" placeholder="ejemplo.Ejemplo@gmail.com" required>
+        </div>
 
-  <p>Selecciona tu color favorito:</p>
+        <label for="password">Password</label>
+        <div class="form-interior">
+          <input type="password" id="password" class="form_input" placeholder="Password" required>
+        </div>
+        <div>
+          <textarea name="" id="" maxlength="200" rows="6"></textarea>
+        </div>
+        <pre><code>
+&lt;div class="form-interior"&gt;
+    &lt;label for="input-text"&gt;texto&lt;/label&gt;
+    &lt;input type="text" id="input-text" class="form_input" required placeholder=""&gt;
+&lt;/div&gt;
 
-  <label>
-    <input type="radio" id="color-verde" name="color" value="verde" checked>
-    <span>Verde</span>
-  </label>
-  <label>
-    <input type="radio" id="color-azul" name="color" value="azul">
-    <span>Azul</span>
-  </label>
-  <label>
-    <input type="radio" id="color-rojo" name="color" value="rojo" disabled>
-    <span>Rojo (deshabilitado)</span>
-  </label>
+&lt;div class="form-interior"&gt;
+    &lt;label for="email"&gt;email&lt;/label&gt;
+    &lt;input type="email" id="email" class="form_input" placeholder="ejemplo.ejemplo@gmail.com" required&gt;
+&lt;/div&gt;
 
-  <h3>Código HTML:</h3>
-  <pre><code>
+&lt;div class="form-interior"&gt;
+    &lt;label for="password"&gt;password&lt;/label&gt;
+    &lt;input type="password" id="password" class="form_input" placeholder="password" required&gt;
+    &lt;div&gt;
+        &lt;textarea name="" id="" maxlength="100" rows="8"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+      </section>
+
+      <section id="Forms">
+        <p>Mar</p>
+      </section>
+
+      <section id="Labels">
+        <p>Keril</p>
+      </section>
+
+      <section id="Links">
+        <p>Keril</p>
+      </section>
+
+      <section id="RadioButtons">
+
+        <h2>Esta es la sección de RadioButtons</h2>
+
+        <p>Selecciona tu color favorito:</p>
+
+        <label>
+          <input type="radio" id="color-verde" name="color" value="verde" checked>
+          <span>Verde</span>
+        </label>
+        <label>
+          <input type="radio" id="color-azul" name="color" value="azul">
+          <span>Azul</span>
+        </label>
+        <label>
+          <input type="radio" id="color-rojo" name="color" value="rojo" disabled>
+          <span>Rojo (deshabilitado)</span>
+        </label>
+
+        <h3>Código HTML:</h3>
+        <pre><code>
 &lt;section id="RadioButtons"&gt;
 
   &lt;h2&gt;Esta es la sección de RadioButtons&lt;/h2&gt;
@@ -107,29 +156,29 @@
 &lt;/section&gt;
   </code></pre>
 
-</section>
-        
-        <section id="CheckBoxes">
-            <p>Fatima</p>
-        </section>
-        
-         <section id="Select-Dropdown">
+      </section>
 
-    <h2>Esta es la sección de Select/Dropdown</h2>
+      <section id="CheckBoxes">
+        <p>Fatima</p>
+      </section>
 
-    <label for="opciones">Selecciona una opción:</label>
-    <select class="opciones">
-        <option value="1">Opción 1</option>
-        <option value="2">Opción 2</option>
-        <option value="3">Opción 3</option>
-    </select>
+      <section id="Select-Dropdown">
 
-    <select class="opciones" disabled>
-        <option>Opción deshabilitada</option>
-    </select>
+        <h2>Esta es la sección de Select/Dropdown</h2>
 
-    <h3>Código HTML:</h3>
-    <pre><code>
+        <label for="opciones">Selecciona una opción:</label>
+        <select class="opciones">
+          <option value="1">Opción 1</option>
+          <option value="2">Opción 2</option>
+          <option value="3">Opción 3</option>
+        </select>
+
+        <select class="opciones" disabled>
+          <option>Opción deshabilitada</option>
+        </select>
+
+        <h3>Código HTML:</h3>
+        <pre><code>
 &lt;section id="Select-Dropdown"&gt;
   &lt;h2&gt;Esta es la sección de Select/Dropdown&lt;/h2&gt;
 
@@ -146,47 +195,47 @@
 &lt;/section&gt;
     </code></pre>
 
-        </section>
-        
-        <section id="NavBar">
-            <nav>   
-      <ul class="nav-links">
-        <a href="#Home">Inicio</a>
-        <a href="#About">Sobre nosotros</a>
-        <a href="#Seasons">Temporada</a>
-        <a href="#Services">Servicios</a>
-        <a href="#Testimonies">Testimonios</a>
-        <a href="#Contact">Contacto</a>
-      </ul>
-    </nav>
-        </section>
+      </section>
+
+      <section id="NavBar">
+        <nav>
+          <ul class="nav-links">
+            <a href="#Home">Inicio</a>
+            <a href="#About">Sobre nosotros</a>
+            <a href="#Seasons">Temporada</a>
+            <a href="#Services">Servicios</a>
+            <a href="#Testimonies">Testimonios</a>
+            <a href="#Contact">Contacto</a>
+          </ul>
+        </nav>
+      </section>
     </div>
 
 
     <div id="sobre-nosotros" class="page about-page">
-        <h1>Sobre Nosotros</h1>
+      <h1>Sobre Nosotros</h1>
     </div>
 
 
     <div id="servicios" class="page services-page">
-        <h1>Nuestros Servicios</h1>
-        <h1>poner servicios</h1>
-        </div>
+      <h1>Nuestros Servicios</h1>
+      <h1>poner servicios</h1>
     </div>
+  </div>
+  </div>
+
+
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Progra3 Project</h3>
+        <p>Biblioteca completa de componentes UI para desarrollo web moderno.</p>
+        <p>© 2024 Progra3 Project. Todos los derechos reservados.</p>
+      </div>
     </div>
-
-
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Progra3 Project</h3>
-                <p>Biblioteca completa de componentes UI para desarrollo web moderno.</p>
-                <p>© 2024 Progra3 Project. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="JS/Script.js"></script>
+  </footer>
+  <script src="JS/Script.js"></script>
 </body>
 
 </html>
