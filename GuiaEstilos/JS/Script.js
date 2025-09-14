@@ -2,14 +2,14 @@
 function showPage(pageId) {
     // Ocultar todas las páginas
     document.querySelectorAll('.page').forEach(page => {
-        page.style.display = 'none';
-        page.classList.remove('active');
+        page.classList.remove('active'); // Elimina la clase activa
+        page.style.display = 'none'; // Oculta la sección
     });
 
     // Mostrar la página seleccionada
     const selectedPage = document.getElementById(pageId);
-    selectedPage.style.display = 'block';
-    selectedPage.classList.add('active');
+    selectedPage.style.display = 'block'; // Mostramos la página
+    selectedPage.classList.add('active'); // Añadimos la clase activa
 
     // Actualizar navbar
     document.querySelectorAll('.nav-menu a').forEach(link => {
@@ -22,12 +22,11 @@ function showPage(pageId) {
         activeLink.classList.add('active');
     }
 
-    // Scroll al top
-    window.scrollTo(0, 0);
+    // Desplazarse a la página activa de manera suave
+    selectedPage.scrollIntoView({ behavior: 'smooth' });
 }
 
-
-        // Inicializar
-        document.addEventListener('DOMContentLoaded', function() {
-            showPage('inicio');
-        });
+// Inicializar
+document.addEventListener('DOMContentLoaded', function() {
+    showPage('inicio');
+});

@@ -113,21 +113,21 @@
 
       <section id="RadioButtons">
 
-        <h2>Esta es la sección de RadioButtons</h2>
+        <h2>Radio Buttons section</h2>
 
         <p>Selecciona tu color favorito:</p>
 
         <label>
           <input type="radio" id="color-verde" name="color" value="verde" checked>
-          <span>Verde</span>
+          <span id="color-verde-label">Verde</span>
         </label>
         <label>
           <input type="radio" id="color-azul" name="color" value="azul">
-          <span>Azul</span>
+          <span id="color-azul-label">Azul</span>
         </label>
         <label>
           <input type="radio" id="color-rojo" name="color" value="rojo" disabled>
-          <span>Rojo (deshabilitado)</span>
+          <span id="color-rojo-label">Rojo (deshabilitado)</span>
         </label>
 
         <h3>Código HTML:</h3>
@@ -140,17 +140,17 @@
 
   &lt;label&gt;
     &lt;input type="radio" name="color" value="verde" checked&gt;
-    <p>Verde</p>
+    &lt;span id="color-verde-label"&gt;Verde&lt;/span&gt;
   &lt;/label&gt;
 
   &lt;label&gt;
     &lt;input type="radio" name="color" value="azul"&gt;
-    <p></p>Azul</p>
+    &lt;span id="color-azul-label"&gt;Azul&lt;/span&gt;
   &lt;/label&gt;
 
   &lt;label&gt;
     &lt;input type="radio" name="color" value="rojo" disabled&gt;
-    <p>Rojo (deshabilitado)</p>
+    &lt;span id="color-rojo-label"&gt;Rojo (deshabilitado)&lt;/span&gt;
   &lt;/label&gt;
 
 &lt;/section&gt;
@@ -164,7 +164,7 @@
 
       <section id="Select-Dropdown">
 
-        <h2>Esta es la sección de Select/Dropdown</h2>
+        <h2>Select/Dropdown section</h2>
 
         <label for="opciones">Selecciona una opción:</label>
         <select class="opciones">
