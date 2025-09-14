@@ -4,10 +4,15 @@
       box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth; /* Habilitar desplazamiento suave */
+}
+
   body {
       font-family: Arial, sans-serif;
       background-color: #fff;
   }
+  
 
   /* Navbar principal - FIJO */
   .navbar {
@@ -345,7 +350,8 @@
 
   /* === RadioButtons === */
   #RadioButtons {
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: 10px;
   }
 
@@ -361,8 +367,23 @@
       margin: 0;
       font-weight: 600;
       color: #444;
+      text-align: left;
   }
 
+  #RadioButtons #color-verde-label {
+      color: green;
+      font-weight: bold;
+  }
+
+  #RadioButtons #color-azul-label {
+      color: blue;
+      font-weight: bold;
+  }
+
+  #RadioButtons #color-rojo-label {
+      color: red;
+      font-weight: bold;
+  }
 
   #RadioButtons label {
       display: flex;
@@ -389,6 +410,13 @@
 
   /* === Select/Dropdown === */
   /* Titulados sobrios */
+
+  #Select-Dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+
   #Select-Dropdown h2 {
       margin: 0 0 8px;
       line-height: 1.25;
@@ -402,6 +430,13 @@
   #Select-Dropdown label {
       font-weight: 600;
       color: #666;
+  }
+
+  #Select-Dropdown label {
+      margin: 0;
+      font-weight: 600;
+      color: #444;
+      text-align: left;
   }
 
   /* Selects */
@@ -443,12 +478,14 @@
       overflow-x: auto;
       font-family: Consolas, "Courier New", monospace;
       font-size: 14px;
+      text-align: left;
       line-height: 1.5;
       border: 1px solid #333;
   }
 
   pre code {
       color: #ff9dad;
+      display: block;
       /* color claro tipo rosado para resaltar */
   }
 
