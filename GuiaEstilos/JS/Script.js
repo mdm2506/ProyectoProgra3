@@ -26,22 +26,8 @@ function showPage(pageId) {
     window.scrollTo(0, 0);
 }
 
-// Función para mostrar componentes
-function showComponent(componentId) {
-    // Asegúrate de que estás en la página de inicio (donde están los componentes)
-    showPage('inicio');
 
-    // Hacer scroll al componente específico después de un breve delay
-    setTimeout(() => {
-        const target = document.getElementById(componentId);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }, 100);
-}
-
-
-// Inicializar
-document.addEventListener('DOMContentLoaded', function () {
-    showPage('inicio');
-});
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('inicio');
+        });
