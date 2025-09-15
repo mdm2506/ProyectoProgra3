@@ -125,51 +125,160 @@ footer {
   --logo-move-duration: 0.6s;
   --logo-move-ease: ease-in-out;
 }
-#AboutUs{
- display:grid;
-  grid-template-columns: 1.1fr 0.9fr; /* texto | imagen */
+
+
+/*?? Parte de Features Elian */
+#Services-flex-cards {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+
+  background-color: rgb(251, 223, 202);
+  text-align: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+#Services {
+  min-height: 50vh;
+}
+
+.test {
+  width: 300px;
+}
+
+.card {
+  position: relative;
+
+  border-radius: 18px;
+  width: 30%;
+  height: 500px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.intro {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgb(27, 27, 27, 0.91);
+  color: white;
+  transition: .5s;
+}
+
+#Services>h2 {
+  font-size: 24px;
+}
+
+
+h2 {
+  margin: 10px;
+  font-size: 20px;
+}
+
+
+
+#Services-flex-cards p {
+
+  font-size: 20px;
+  margin: 20px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+span {
+  font-weight: bold;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card:hover .intro {
+  height: 220px;
+  /* que suba un poco */
+  width: 100%;
+  /* ocupar todo el card */
+  background: black;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* animación suave */
+}
+
+#Services .card:hover p {
+  opacity: 1;
+  visibility: visible;
+  height: 200px;
+  width: 100%;
+
+}
+
+.card:hover img {
+  transform: scale(1.1) rotate(-3deg);
+
+}
+
+
+
+#AboutUs {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  /* texto | imagen */
   grid-template-areas: "texto imagen";
-  gap:100px;
-  align-items:center;
-  background:#FFBC8A;
-  padding:36px 24px;
-  border-radius:18px;
-  box-shadow: inset 0 1px 0 rgba(0,0,0,.04);
+  gap: 100px;
+  align-items: center;
+  background: #FFBC8A;
+  padding: 36px 24px;
+  border-radius: 18px;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, .04);
 }
 
-#AboutUs .texto{ grid-area:texto; }
-#AboutUs .imagen{ grid-area:imagen; }
+#AboutUs .texto {
+  grid-area: texto;
+}
 
-.texto{
-    grid-column: span 3 / span 3;
-    grid-row: 3 span / span 3;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    background-color:#FFD1A8;
-    border-radius: 45px;
-padding: 20px;
-box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+#AboutUs .imagen {
+  grid-area: imagen;
 }
-.texto>h2{
-    text-align: center;
-    background:url(https://i.pinimg.com/736x/30/df/6e/30df6e01a3310efb2dfc11b1c160b507--color-durazno.jpg) center;
-    background-size: cover;
-    background-clip: text;
-    color: transparent;
-    font-size: sans-serif;
+
+.texto {
+  grid-column: span 3 / span 3;
+  grid-row: 3 span / span 3;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  background-color: #FFD1A8;
+  border-radius: 45px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
-.imagen{
-    position:relative;
-  aspect-ratio:4 / 3;                 /* mantiene proporción */
-  border-radius:16px;
-  overflow:hidden;
+
+.texto>h2 {
+  text-align: center;
+  background: url(https://i.pinimg.com/736x/30/df/6e/30df6e01a3310efb2dfc11b1c160b507--color-durazno.jpg) center;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  font-size: sans-serif;
+}
+
+.imagen {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  /* mantiene proporción */
+  border-radius: 16px;
+  overflow: hidden;
   /* el borde negro era pesado; si lo quieres, deja 1px sutil: */
   /* border:1px solid rgba(0,0,0,.35); */
-  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
   background: url(about-us.png)top/cover no-repeat;
 }
-
-
-
-
-

@@ -5,14 +5,15 @@
   }
 
   html {
-    scroll-behavior: smooth; /* Habilitar desplazamiento suave */
-}
+      scroll-behavior: smooth;
+      /* Habilitar desplazamiento suave */
+  }
 
   body {
       font-family: Arial, sans-serif;
       background-color: #fff;
   }
-  
+
 
   /* Navbar principal - FIJO */
   .navbar {
@@ -251,7 +252,7 @@
 
   }
 
-  /* botones */
+  /*TODO XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX botones XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
   button {
 
       font-family: sans-serif;
@@ -319,7 +320,7 @@
 
   }
 
-  /* INPUTS */
+  /* TODO INPUTS */
   .form_input {
       padding-left: 4px;
       height: 1.3rem;
@@ -495,94 +496,107 @@
 
   /* links*/
   a {
-    color:#FFBC8A;  
-    text-decoration: none;
-    transition: color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
+      color: #FFBC8A;
+      text-decoration: none;
+      transition: color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+  }
 
-a:hover{
-    color:#FFD1A8;
-    text-decoration: underline;
-transition: color 0.5s ease;}
+  a:hover {
+      color: #FFD1A8;
+      text-decoration: underline;
+      transition: color 0.5s ease;
+  }
 
-.tipo1::before{
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    height: 6px;
-    width: 100%;
-    background-color: #FFD1A8;
-    border-radius:50px;
-    transform: scaleX(0);
-    transition: transform 0.3s linear;
-}
+  .tipo1::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      height: 6px;
+      width: 100%;
+      background-color: #FFD1A8;
+      border-radius: 50px;
+      transform: scaleX(0);
+      transition: transform 0.3s linear;
+  }
 
-.tipo1:hover::before{
-   transform: scaleX(1);
-}
+  .tipo1:hover::before {
+      transform: scaleX(1);
+  }
 
-.tipo2{
-    display: inline-block;
-}
+  .tipo2 {
+      display: inline-block;
+  }
 
-.tipo2::before{
-    content: "🍑";
-    display: inline-block;
-    width: 1em;
-    opacity: 0;
-    transform: translateX(-0.5em);
-    transition: transform .3s ease, opacity .2s ease;
-    margin-right: 0.25em;
-}
-.tipo2:hover::before{
-    transform: translateX(0);
-    opacity: 1;
-}
+  .tipo2::before {
+      content: "🍑";
+      display: inline-block;
+      width: 1em;
+      opacity: 0;
+      transform: translateX(-0.5em);
+      transition: transform .3s ease, opacity .2s ease;
+      margin-right: 0.25em;
+  }
 
-/* los em  es el tamaño relativo ala fuente de letra*/
+  .tipo2:hover::before {
+      transform: translateX(0);
+      opacity: 1;
+  }
 
-h1.TituloPrincipal {
-    font-size: 3.1em;
-    color: #FFBC8A;
-}
-.TituloSecundario{
-    font-size: 2.7em;   
-    color: #FFBC8A;
-}
-.subtitulo{
-    font-size: 2em;   
-    color: #FFBC8A;
-}
+  /* los em  es el tamaño relativo ala fuente de letra*/
 
-.label{
-display: inline-block;
-    background: #1f2937;   /* gris oscuro */
-    color: #f5ab73;        /* amarillo */
-    font-size: 1rem;
-    padding: 6px 12px;
-    border-radius: 6px;
-    margin: 4px 0;
-}
+  h1.TituloPrincipal {
+      font-size: 3.1em;
+      color: #FFBC8A;
+  }
 
-.Pequeño{
-    font-size: 0.8rem;
-    padding: 4px 8px;
-}
+  .TituloSecundario {
+      font-size: 2.7em;
+      color: #FFBC8A;
+  }
 
-.Grande{
-    font-size: 1.2rem;
-    padding: 8px 16px;
-}
+  .subtitulo {
+      font-size: 2em;
+      color: #FFBC8A;
+  }
 
-/*Esto lo hice para agregar un efecto de hover a todos los labels de un solo*/
-.label:hover , .Pequeño:hover , .Grande:hover{
-    background: #374151;   /* gris más claro */
-    color: #ffd1a8;        /* amarillo más claro */
-    cursor: pointer;
-}
+  .label {
+      display: inline-block;
+      background: #1f2937;
+      /* gris oscuro */
+      color: #f5ab73;
+      /* amarillo */
+      font-size: 1rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      margin: 4px 0;
+  }
 
-/* Esto es para resaltar los em en el html para que se vea de diferente color */
-h1,h2, h3, strong{
-    color:  #ff8aeb;
-}
+  .Pequeño {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+  }
+
+  .Grande {
+      font-size: 1.2rem;
+      padding: 8px 16px;
+  }
+
+  /*Esto lo hice para agregar un efecto de hover a todos los labels de un solo*/
+  .label:hover,
+  .Pequeño:hover,
+  .Grande:hover {
+      background: #374151;
+      /* gris más claro */
+      color: #ffd1a8;
+      /* amarillo más claro */
+      cursor: pointer;
+  }
+
+  /* Esto es para resaltar los em en el html para que se vea de diferente color */
+  #labels h1,
+  #labels h2,
+  #labels h3,
+  #Labels strong {
+      color: #ff8aeb;
+  }
