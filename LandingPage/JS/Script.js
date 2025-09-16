@@ -50,3 +50,31 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll(); // inicializar al cargar
 })();
+
+
+   ///////////////// JAVASCRIPT PARA EL CARRUSEL ///////////////////
+
+    // Selecciona el elemento con la clase "carrusel" (el contenedor que se desplazará)
+const carrusel = document.querySelector(".carrusel");
+
+// Selecciona el botón con las clases "flecha izquierda"
+const btnIzquierda = document.querySelector(".flecha.izquierda");
+
+// Selecciona el botón con las clases "flecha derecha"
+const btnDerecha = document.querySelector(".flecha.derecha");
+
+// Agrega un evento al botón izquierdo.
+// Cuando el usuario hace clic, el carrusel se desplaza 300px hacia la izquierda.
+// El parámetro "behavior: smooth" hace que el movimiento sea animado y no brusco.
+btnIzquierda.addEventListener("click", () => {
+  carrusel.scrollBy({ left: -300, behavior: "smooth" });
+});
+
+// Agrega un evento al botón derecho.
+// Cuando el usuario hace clic, el carrusel se desplaza 300px hacia la derecha.
+// También con animación suave.
+btnDerecha.addEventListener("click", () => {
+  carrusel.scrollBy({ left: 300, behavior: "smooth" });
+});
+
+////////////////// FIN DEL JAVASCRIPT PARA EL CARRUSEL /////////////////
