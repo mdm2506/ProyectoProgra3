@@ -10,6 +10,7 @@
         }
         
         /* Navbar principal aaaaaa */
+        /*
         .navbar {
             background-color: #F08D7D;
             padding: 15px 30px;
@@ -51,8 +52,36 @@
         .nav-menu a.active {
             color: #f1eeec;
             font-weight: bold;
-        }
+        }*/
         
+        /*NAVBAR Yeissonnn*/
+.NavBar {
+  width: 100%;
+  display: flex;           
+  justify-content: center;
+  align-items: center;         
+  transition: padding .6s ease, height .6s ease, background .6s ease;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;            
+  flex-wrap: wrap;
+  transition: gap 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+   background-color: rgb(240, 141, 125);
+line-height: 4;
+}
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.6s ease, opacity 0.6s ease;
+}
+.nav-links a:hover { 
+  color: white; 
+  text-decoration: underline;
+  transition: color 0.5s ease;
+}
+/*fin del navbar*/
         /* Páginas/Vistas */
         .page {
             display: none;
@@ -349,4 +378,3 @@ pre {
 pre code {
   color: #ff9dad; /* color claro tipo rosado para resaltar */
 }
-/* FIN SECCION DROPDOWN */
