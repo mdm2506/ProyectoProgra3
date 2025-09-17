@@ -140,241 +140,598 @@ line-height: 4;
             cursor: pointer;
         }
 
-        
-        .index-links a:hover {
-            background-color: #F08D7D;
-            color: white;
-            border-color: #F08D7D;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-        }
-        
-        /* Página Sobre Nosotros */
-        .about-page {
-            min-height: 100vh;
-            background-color: #f5f5f5;
-            padding: 120px 20px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .about-page h1 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-        
-        /* Página Servicios */
-        .services-page {
-            min-height: 100vh;
-            background-color: white;
-            padding: 120px 20px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .services-page h1 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-        
-        .components-page {
-            padding: 120px 20px 40px;
-        }
-        
-        .components-page section {
-            min-height: 400px;
-            margin-bottom: 30px;
-            padding: 40px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            border-left: 4px solid #F08D7D;
-        }
-    
-        
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 20px 20px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .footer-section {
-            margin-bottom: 30px;
-        }
-        
-        .footer-section h3 {
-            color: #FBDFCA;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .footer-section p {
-            color: #ccc;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-        
-    
-        
-        .footer-bottom {
-            border-top: 1px solid #555;
-            padding-top: 20px;
-            color: #999;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px;
-            }
-            
-            .nav-menu {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .landing-page h1,
-            .about-content h1,
-            .services-page h1 {
-                font-size: 2rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .index-links {
-        display: flex;
-        flex-direction: column; /* De arriba hacia abajo */
-        gap: 10px; /* Espacio entre los botones */
-        max-width: 300px; /* Ancho máximo del índice */
-        margin: 0 auto; /* Centrado horizontal */
-        margin-top: 30px;
-        }
+  html {
+      scroll-behavior: smooth;
+      /* Habilitar desplazamiento suave */
+  }
 
-            
-          
-        }
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+  }
 
 
+  /* Navbar principal - FIJO */
+  .navbar {
+      background-color: #F08D7D;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
 
-        /* === RadioButtons === */
-#RadioButtons {
-  display: grid;
-  gap: 10px;
-}
+  .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+  }
 
-#RadioButtons h2 {
-  margin: 0 0 8px;
-  line-height: 1.25;
-  font-weight: 700;
-  text-align: center;
-  font-size: 1.25rem;
-}
+  .nav-menu {
+      display: flex;
+      gap: 25px;
+  }
 
-#RadioButtons p {
-  margin: 0;
-  font-weight: 600;
-  color: #444;
-}
+  .nav-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+      cursor: pointer;
+  }
+
+  .nav-menu a:hover {
+      color: #FBDFCA;
+  }
+
+  .nav-menu a.active {
+      color: #f1eeec;
+      font-weight: bold;
+  }
+
+  /* Páginas/Vistas */
+  .page {
+      display: none;
+  }
+
+  .page.active {
+      display: block;
+  }
+
+  /* Página de Inicio (Landing) */
+  .landing-page {
+      min-height: 100vh;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px 40px;
+  }
+
+  .landing-page h1 {
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  .landing-page p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 40px;
+      max-width: 600px;
+  }
+
+  .index-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-top: 30px;
+  }
+
+  .index-links a {
+      text-decoration: none;
+      color: #4a4a4a;
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #FBDFCA;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: left;
+      transition: all 0.3s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+  }
 
 
-#RadioButtons label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-  cursor: pointer;
-  color: #222;
-}
+  .index-links a:hover {
+      background-color: #F08D7D;
+      color: white;
+      border-color: #F08D7D;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
 
-#RadioButtons input[type="radio"] {
-  accent-color: #2a7ae2;
-  cursor: pointer;
-}
+  /* Página Sobre Nosotros */
+  .about-page {
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      padding: 120px 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
 
-#RadioButtons input[type="radio"]:disabled + span,
-#RadioButtons input[type="radio"]:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-/* FIN SECCION RADIOBUTTONS */
+  .about-page h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 50px;
+      text-align: center;
+  }
+
+  /* Página Servicios */
+  .services-page {
+      min-height: 100vh;
+      background-color: white;
+      padding: 120px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .services-page h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 50px;
+      text-align: center;
+  }
+
+  .components-page {
+      padding: 120px 20px 40px;
+  }
+
+  .components-page section {
+      min-height: 400px;
+      margin-bottom: 30px;
+      padding: 40px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      border-left: 4px solid #F08D7D;
+  }
 
 
-        /* === Select/Dropdown === */
-/* Titulados sobrios */
-#Select-Dropdown h2 {
-  margin: 0 0 8px;
-  line-height: 1.25;
-  font-weight: 700;
-  text-align: center;
-  font-size: 1.25rem;
-}
+  /* Footer */
+  footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 20px 20px;
+      text-align: center;
+  }
 
-/* === Select/Dropdown === */
+  .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
 
-#Select-Dropdown label {
-  font-weight: 600;
-  color: #666;
-}
+  .footer-section {
+      margin-bottom: 30px;
+  }
 
-/* Selects */
-.opciones {
-  width: 100%;
-  max-width: 420px;
-  padding: 10px 12px;
-  font-size: 16px;
-  color: #222;
-  background: #fff;
-}
+  .footer-section h3 {
+      color: #FBDFCA;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+  }
+  .footer-section p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 10px;
+  }
+  .footer-bottom {
+      border-top: 1px solid #555;
+      padding-top: 20px;
+      color: #999;
+  }
 
-/* Hover sutil */
-.opciones:hover {
-  border-color: #2a7ae2;
-}
+  /* Responsive */
+  @media (max-width: 768px) {
+      .navbar {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px;
+      }
 
-/* Focus accesible */
-.opciones:focus {
-  outline: none;
-  border-color: #2a7ae2;
-  box-shadow: 0 0 0 3px rgba(42,122,226,.25);
-}
+      .nav-menu {
+          flex-wrap: wrap;
+          justify-content: center;
+      }
 
-/* Disabled */
-.opciones:disabled {
-  background-color: red;
-  color: #777;
-  border-color: #ddd;
-  cursor: not-allowed;
-}
+      .landing-page h1,
+      .about-content h1,
+      .services-page h1 {
+          font-size: 2rem;
+      }
 
-/* Bloques de código estilo simple.css dark */
-pre {
-  background: #1e1e1e;
-  color: #f5f5f5;
-  padding: 16px;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  border: 1px solid #333;
-}
+      .services-grid {
+          grid-template-columns: 1fr;
+      }
+
+      .index-links {
+          display: flex;
+          flex-direction: column;
+          /* De arriba hacia abajo */
+          gap: 10px;
+          /* Espacio entre los botones */
+          max-width: 300px;
+          /* Ancho máximo del índice */
+          margin: 0 auto;
+          /* Centrado horizontal */
+          margin-top: 30px;
+      }
+
+
+
+  }
+
+  /*TODO XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX botones XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+  button {
+
+      font-family: sans-serif;
+      background-color: coral;
+      padding: 4px;
+      border-radius: 3px;
+      height: 30px;
+      width: 80px;
+      cursor: pointer;
+      transition: all 0.1s ease;
+  }
+
+  button:hover:not(.disable-button) {
+      transform: scale(1.1);
+  }
+
+  /* active tiene prioridad */
+  button:active:not(.disable-button) {
+      transform: scale(0.95);
+      /* o el valor que quieras */
+      background-color: rgb(220, 95, 60);
+  }
+
+  .primary-button {
+      transition: transform 0.1s ease-in-out;
+      color: white;
+  }
+
+  .secondary-button {
+      background-color: white;
+      border: solid 2px coral;
+      color: black;
+  }
+
+  .outline-button {
+      background: transparent;
+      border: none;
+      color: black;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: underline;
+  }
+
+  .outline-button:hover {
+      background-color: li;
+      color: black;
+  }
+
+
+
+  .outline-button:focus {
+      outline: 2px solid #6366f1;
+      outline-offset: 2px;
+      border-radius: 2px;
+  }
+
+
+  .disable-button {
+      background-color: rgb(200, 170, 160);
+      cursor: not-allowed;
+
+  }
+
+  /* TODO INPUTS */
+  .form_input {
+      padding-left: 4px;
+      height: 1.3rem;
+      width: 150px;
+      background-color: rgb(240, 180, 152);
+      color: white;
+      border-radius: 4px;
+      border: none;
+      border-bottom: 2px solid rgb(236, 142, 142);
+  }
+
+
 
 pre code {
   color: #ff9dad; /* color claro tipo rosado para resaltar */
 }
+  .form_input:focus {
+      background-color: lightcoral
+  }
+
+
+
+  textarea {
+      max-height: 200px;
+      min-height: 100px;
+      max-width: 300px;
+      min-width: 100px;
+      margin: 10px;
+  }
+
+
+  /* === RadioButtons === */
+  #RadioButtons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  #RadioButtons h2 {
+      margin: 0 0 8px;
+      line-height: 1.25;
+      font-weight: 700;
+      text-align: center;
+      font-size: 1.25rem;
+  }
+
+  #RadioButtons p {
+      margin: 0;
+      font-weight: 600;
+      color: #444;
+      text-align: left;
+  }
+
+  #RadioButtons #color-verde-label {
+      color: green;
+      font-weight: bold;
+  }
+
+  #RadioButtons #color-azul-label {
+      color: blue;
+      font-weight: bold;
+  }
+
+  #RadioButtons #color-rojo-label {
+      color: red;
+      font-weight: bold;
+  }
+
+  #RadioButtons label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      color: #222;
+  }
+
+  #RadioButtons input[type="radio"] {
+      accent-color: #2a7ae2;
+      cursor: pointer;
+  }
+
+  #RadioButtons input[type="radio"]:disabled+span,
+  #RadioButtons input[type="radio"]:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+  }
+
+  /* FIN SECCION RADIOBUTTONS */
+
+
+  /* === Select/Dropdown === */
+  /* Titulados sobrios */
+
+  #Select-Dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  #Select-Dropdown h2 {
+      margin: 0 0 8px;
+      line-height: 1.25;
+      font-weight: 700;
+      text-align: center;
+      font-size: 1.25rem;
+  }
+
+  /* === Select/Dropdown === */
+
+  #Select-Dropdown label {
+      font-weight: 600;
+      color: #666;
+  }
+
+  #Select-Dropdown label {
+      margin: 0;
+      font-weight: 600;
+      color: #444;
+      text-align: left;
+  }
+
+  /* Selects */
+  .opciones {
+      width: 100%;
+      max-width: 420px;
+      padding: 10px 12px;
+      font-size: 16px;
+      color: #222;
+      background: #fff;
+  }
+
+  /* Hover sutil */
+  .opciones:hover {
+      border-color: #2a7ae2;
+  }
+
+  /* Focus accesible */
+  .opciones:focus {
+      outline: none;
+      border-color: #2a7ae2;
+      box-shadow: 0 0 0 3px rgba(42, 122, 226, .25);
+  }
+
+  /* Disabled */
+  .opciones:disabled {
+      background-color: red;
+      color: #777;
+      border-color: #ddd;
+      cursor: not-allowed;
+  }
+
+  /* Bloques de código estilo simple.css dark */
+  pre {
+      background: #1e1e1e;
+      color: #f5f5f5;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 14px;
+      text-align: left;
+      line-height: 1.5;
+      border: 1px solid #333;
+  }
+
+  pre code {
+      color: #ff9dad;
+      display: block;
+      /* color claro tipo rosado para resaltar */
+  }
+
+  /* FIN SECCION DROPDOWN */
+
+
+
+  /* links*/
+  a {
+      color: #FFBC8A;
+      text-decoration: none;
+      transition: color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+  }
+
+  a:hover {
+      color: #FFD1A8;
+      text-decoration: underline;
+      transition: color 0.5s ease;
+  }
+
+  .tipo1::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      height: 6px;
+      width: 100%;
+      background-color: #FFD1A8;
+      border-radius: 50px;
+      transform: scaleX(0);
+      transition: transform 0.3s linear;
+  }
+
+  .tipo1:hover::before {
+      transform: scaleX(1);
+  }
+
+  .tipo2 {
+      display: inline-block;
+  }
+
+  .tipo2::before {
+      content: "🍑";
+      display: inline-block;
+      width: 1em;
+      opacity: 0;
+      transform: translateX(-0.5em);
+      transition: transform .3s ease, opacity .2s ease;
+      margin-right: 0.25em;
+  }
+
+  .tipo2:hover::before {
+      transform: translateX(0);
+      opacity: 1;
+  }
+
+  /* los em  es el tamaño relativo ala fuente de letra*/
+
+  h1.TituloPrincipal {
+      font-size: 3.1em;
+      color: #FFBC8A;
+  }
+
+  .TituloSecundario {
+      font-size: 2.7em;
+      color: #FFBC8A;
+  }
+
+  .subtitulo {
+      font-size: 2em;
+      color: #FFBC8A;
+  }
+
+  .label {
+      display: inline-block;
+      background: #1f2937;
+      /* gris oscuro */
+      color: #f5ab73;
+      /* amarillo */
+      font-size: 1rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      margin: 4px 0;
+  }
+
+  .Pequeño {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+  }
+
+  .Grande {
+      font-size: 1.2rem;
+      padding: 8px 16px;
+  }
+
+  /*Esto lo hice para agregar un efecto de hover a todos los labels de un solo*/
+  .label:hover,
+  .Pequeño:hover,
+  .Grande:hover {
+      background: #374151;
+      /* gris más claro */
+      color: #ffd1a8;
+      /* amarillo más claro */
+      cursor: pointer;
+  }
+
+  /* Esto es para resaltar los em en el html para que se vea de diferente color */
+  #labels h1,
+  #labels h2,
+  #labels h3,
+  #Labels strong {
+      color: #ff8aeb;
+  }
