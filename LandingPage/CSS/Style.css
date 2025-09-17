@@ -1,17 +1,20 @@
 * {
-  box-sizing: border-box;
+ box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   line-height: 1.6;
   color: #333;
   font-family: Arial, sans-serif;
   margin: 0;
+  background-color: rgb(251, 223, 202);
 }
+main { 
+  padding-top: 150px; 
+  background-color: rbg (251, 223, 202);
+} 
 
 main {
   padding-top: calc(var(--header-height, 130px));
@@ -24,7 +27,7 @@ header {
   left: 0;
   width: 100%;
   background: rgb(240, 141, 125);
-  z-index: 1000;
+  z-index: 100;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background 0.6s ease, box-shadow 0.6s ease, height 0.6s ease;
 }
@@ -47,6 +50,10 @@ header {
   align-items: center;
   will-change: transform;
 }
+:root{
+  --logo-move-duration: 800ms;        
+  --logo-move-ease: ease-in-out;     
+}
 
 .logo a {
   display: flex;
@@ -68,6 +75,7 @@ header {
 .nav-links {
   display: flex;
   gap: 20px;
+  justify-content: center;            
   list-style: none;
   justify-content: center;
   flex-wrap: wrap;
@@ -110,6 +118,7 @@ header.scrolled .logo img {
 .content {
   min-height: 100vh;
   padding: 60px;
+   border-bottom: 2px solid #000;
   border-bottom: 2px solid #000;
   background-color: rgb(251, 223, 202);
 }
