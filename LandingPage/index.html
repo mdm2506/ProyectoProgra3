@@ -13,27 +13,38 @@
     <nav class="Navbar" aria-label="Principal">
       <div class="logo">
         <a href="#Hero" aria-label="Ir a inicio">
-          <img src="337 sin título_20250913141150.png" alt="logo">Durazno</a>
+          <img src="IMG/Logo.png" alt="logo">Durazno</a>
       </div>
       <ul class="nav-links">
-        <a href="#Home">Inicio</a>
         <a href="#AboutUs">Sobre nosotros</a>
         <a href="#Seasons">Temporada</a>
         <a href="#Services">Servicios</a>
         <a href="#Testimonies">Testimonios</a>
-        <a href="#Contact">Contacto</a>
+        <a href="#formulario-seccion">Contacto</a>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="Hero" class="content alt full">
-      <h2>Hero</h2>
+     <div class="hero-grid">
+      <div class="tile"><img src="IMG/Hero1.png" ></div>
+      <div class="tile"><img src="IMG/Hero2.png" ></div>
+      <div class="tile"><img src="IMG/Hero3.png" ></div>
+      <div class="tile"><img src="IMG/Hero4.png" ></div>
+      <div class="tile"><img src="IMG/Hero5.png" ></div>
+      <div class="tile"><img src="IMG/Hero6.png" ></div>
+      <div class="tile"><img src="IMG/Hero7.png" ></div>
+      <div class="tile"><img src="IMG/Hero8.png" ></div>
+      <div class="tile"><img src="IMG/Hero9.png" ></div>
+    </div>
+
+    <div class="herooo">
+      <h1 class="hero-slogan">Vestimos tus sueños</h1>
+    </div>
+
     </section>
 
-    <section id="Home" class="content full">
-      <h2>Inicio</h2>
-    </section>
 
     <section id="AboutUs" class="content alt full">
       <div class="texto">
@@ -62,7 +73,7 @@
       <h2>Tipos de Servicios</h2>
       <div id="Services-flex-cards">
         <div class="card">
-          <img src="/LandingPage/CSS/ChatGPT Image 13 sept 2025, 10_23_26 a.m..png" alt="" class="service-img">
+          <img src="IMG/Service1.png" alt="" class="service-img">
           <div class="intro">
             <h2>Mamá+Hija</h2>
             <p>accesorios<span>madre e hija</span> que tengan match</p>
@@ -70,14 +81,14 @@
         </div>
         <div class="card">
 
-          <img src="/LandingPage/CSS/image0_large (1).jpg" alt="" class="service-img">
+          <img src="IMG/Service2.jpg" alt="" class="service-img">
           <div class="intro">
             <h2>Elije tu diseño</h2>
             <p>Crea tu <span>Propio diseño personalizado diseño</span></p>
           </div>
         </div>
         <div class="card">
-          <img src="/LandingPage/CSS/image1_large.jpg" alt="" class="service-img">
+          <img src="IMG/Service3.jpg" alt="" class="service-img">
           <div class="intro">
             <h2>Envios a Domicilio</h2>
             <p>Puedes hacer<span>envios a domicilio</span></p>
@@ -171,9 +182,59 @@
   </div>
     </section>
 
-    <section id="Contact" class="content alt full">
-      <h2>Contacto</h2>
+    <section id="formulario-seccion" class="content alt full">
+        <div class="contenedor-formulario">
+            <h2 class="titulo-principal">¡Contáctanos!</h2>
+            <p class="subtitulo">Ingresa tus datos para contactarnos</p>
+            
+            <form action="procesar.php" method="POST" novalidate>
+                <div class="campo">
+                    <input type="text" id="nombre" name="name" class="input-campo" required>
+                    <label for="nombre" class="etiqueta">Tu Nombre Completo *</label>
+                    <div class="icono-validacion">✓</div>
+                    <div class="mensaje-error"></div>
+                </div>
+
+                <div class="campo">
+                    <input type="email" id="correo" name="email" class="input-campo" required>
+                    <label for="correo" class="etiqueta">Tu Correo Electrónico *</label>
+                    <div class="icono-validacion">✓</div>
+                    <div class="mensaje-error"></div>
+                </div>
+
+                <div class="campo">
+                    <input type="tel" id="telefono" name="phone" class="input-campo">
+                    <label for="telefono" class="etiqueta">Tu Teléfono (opcional)</label>
+                    <div class="icono-validacion">✓</div>
+                    <div class="mensaje-error"></div>
+                </div>
+
+                <div class="campo">
+                    <select id="asunto" name="subject" class="select-campo" required>
+                        <option value="">¿De qué quieres hablar? *</option>
+                        <option value="support">Necesito Ayuda</option>
+                        <option value="feedback">Quiero Opinar</option>
+                        <option value="order">Hacer Pedido</option>
+                        <option value="other">Otra Cosa</option>
+                    </select>
+                    <label for="asunto" class="etiqueta">¿De qué quieres hablar? *</label>
+                    <div class="icono-validacion">✓</div>
+                    <div class="mensaje-error"></div>
+                </div>
+
+                <div class="campo">
+                    <textarea id="mensaje" name="message" class="textarea-campo" required maxlength="500"></textarea>
+                    <label for="mensaje" class="etiqueta">Escribe tu mensaje aquí *</label>
+                    <div class="icono-validacion">✓</div>
+                    <div class="mensaje-error"></div>
+                    <div class="contador-caracteres">0 / 500</div>
+                </div>
+
+                <button type="submit" class="boton-enviar" disabled>Enviar Mi Mensaje</button>
+            </form>
+        </div>
     </section>
+
   </main>
 
   <footer>

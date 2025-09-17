@@ -379,10 +379,73 @@ line-height: 4;
           /* Centrado horizontal */
           margin-top: 30px;
       }
+    }
+    /*paleta*/
+    #ColorPalette {
+          
+            display: inline-block;
+        }
 
+        .palette-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            grid-template-columns: 1fr;
+        }
 
+        .color-card {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-  }
+        .primary-color {
+            border: 3px solid #fff;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .color-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .color-card::after {
+            content: attr(data-color);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-family: monospace;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .color-card:hover::after {
+            opacity: 1;
+        }
+
+        .usage-note {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 15px;
+        }
 
   /*TODO XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX botones XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
   button {
@@ -483,7 +546,148 @@ pre code {
       margin: 10px;
   }
 
+/* ESTILOS DEL FORMULARIO ORIGINAL */
+        .formulario-contenedor {
+            max-width: 500px;
+            padding: 40px;
+            background: linear-gradient(135deg, #f0b498, #f08d7d);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
 
+        .formulario-titulo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #8b4513;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+        } 
+
+        .formulario-subtitulo {
+            color: #a0522d;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+            font-weight: 500;
+        }
+
+        .campo-form {
+            margin-bottom: 25px;
+        }
+
+        .etiqueta-form {
+            display: block;
+            margin-bottom: 8px;
+            color: #8b4513;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .input-form, .select-form, .textarea-form {
+            width: 100%;
+            padding: 15px;
+            border: 3px solid rgba(255, 255, 255, 0.6);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #8b4513;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .input-form:focus, .select-form:focus, .textarea-form:focus {
+            outline: none;
+            border-color: #cd853f;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(205, 133, 63, 0.3);
+        }
+
+        .campo-form-correcto .input-form,
+        .campo-form-correcto .select-form,
+        .campo-form-correcto .textarea-form {
+            border-color: #90ee90;
+            background: rgba(144, 238, 144, 0.15);
+        }
+
+        .campo-form-error .input-form,
+        .campo-form-error .select-form,
+        .campo-form-error .textarea-form {
+            border-color: #ffa07a;
+            background: rgba(255, 160, 122, 0.15);
+        }
+
+        .mensaje-error-form {
+            color: #d2691e;
+            font-size: 14px;
+            margin-top: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            border-left: 4px solid #ff6347;
+        }
+
+        .textarea-form {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .select-form {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%238b4513' viewBox='0 0 16 16'%3e%3cpath d='m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+            padding-right: 50px;
+        }
+
+        .boton-form {
+            display: flex;                 /* centra el texto vertical/horizontal */
+  align-items: center;
+  justify-content: center;
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 15px;
+            background: linear-gradient(45deg, #cd853f, #deb887);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+        }
+
+        .boton-form:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(205, 133, 63, 0.4);
+        }
+
+        .boton-form:active {
+            transform: translateY(0);
+        }
+
+        .contador-caracteres-form {
+            text-align: right;
+            font-size: 14px;
+            color: #8b4513;
+            margin-top: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px 12px;
+            border-radius: 10px;
+            display: inline-block;
+            font-weight: 600;
+            border: 2px solid #cd853f;
+        }
   /* === RadioButtons === */
   #RadioButtons {
       display: flex;
@@ -542,8 +746,10 @@ pre code {
   }
 
   /* FIN SECCION RADIOBUTTONS */
-
-
+  /* Checkbox */
+input[type="checkbox"] {
+  accent-color: rgba(240, 141, 125) ; /* Cambia el color del check */
+}
   /* === Select/Dropdown === */
   /* Titulados sobrios */
 
