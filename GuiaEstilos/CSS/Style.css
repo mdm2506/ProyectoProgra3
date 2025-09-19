@@ -748,8 +748,17 @@ pre code {
   /* FIN SECCION RADIOBUTTONS */
   /* Checkbox */
 input[type="checkbox"] {
-  accent-color: rgba(240, 141, 125) ; /* Cambia el color del check */
+  accent-color: rgba(240, 141, 125);
+  transform: scale(2);
 }
+label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  margin-right: 30px; 
+}
+
   /* === Select/Dropdown === */
   /* Titulados sobrios */
 
