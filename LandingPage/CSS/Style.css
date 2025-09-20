@@ -800,3 +800,60 @@ span {
       "contact";
   }
 }
+
+
+/*FOOTER YEISSON CON LINK DE REDES SOCIALES*/
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--secondary-peach);
+}
+
+.social-links {
+  margin-bottom: 10px;
+}
+
+.social-link {
+  display: inline-block;
+  font-size: 1.2em;
+  color: #333;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: white; 
+    text-decoration: underline;
+}
+
+.social-link{
+  display: inline-block;
+}
+
+.social-link::before {
+  display: inline-block;
+  width: 1em;
+  opacity: 0;
+  transform: translateX(-0.5em);
+  transition: transform .3s ease, opacity .2s ease;
+  margin-right: 0.25em;
+}
+
+.facebook::before {
+  content: "ⓕ"; 
+}
+
+.instagram::before {
+  content: "🅾"; 
+}
+
+.whatsapp::before {
+  content: "✆"; 
+}
+
+.tipo2:hover::before {
+  transform: translateX(0);
+  opacity: 1;
+}
