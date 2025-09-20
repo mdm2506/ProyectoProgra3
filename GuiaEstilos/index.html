@@ -9,16 +9,16 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo" onclick="showPage('inicio')">Progra3 Project</div>
-            <div class="nav-menu">
-                <a onclick="showPage('inicio')">Inicio</a>
-                <a onclick="showPage('sobre-nosotros')">Sobre Nosotros</a>
-                <a onclick="showPage('servicios')">Servicios</a>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="logo" onclick="showPage('inicio')">Progra3 Project</div>
+      <div class="nav-menu">
+        <a onclick="showPage('inicio')">Inicio</a>
+        <a onclick="showPage('sobre-nosotros')">Sobre Nosotros</a>
+        <a onclick="showPage('servicios')">Servicios</a>
+      </div>
+    </nav>
+  </header>
 
   <!-- PÁGINA DE INICIO (LANDING) -->
   <div id="inicio" class="page landing-page active">
@@ -39,75 +39,77 @@
     <div class="components-page">
 
       <section id="ColorPalette">
-        
+
         <div class="palette-grid">
-            <!-- Color Principal -->
-            <div class="color-card primary-color" 
-                 style="background-color: #F0B498;" 
-                 data-color="#F0B498">
-            </div>
-            
-            <!-- Colores secundarios -->
-            <div class="color-card" 
-                 style="background-color: #FBDFCA;" 
-                 data-color="#FBDFCA">
-            </div>
+          <!-- Color Principal -->
+          <div class="color-card primary-color" style="background-color: #F0B498;" data-color="#F0B498">
+          </div>
 
-            <div class="color-card" 
-                 style="background-color: #F08D7D;" 
-                 data-color="#F08D7D">
-            </div>
+          <!-- Colores secundarios -->
+          <div class="color-card" style="background-color: #FBDFCA;" data-color="#FBDFCA">
+          </div>
 
-            <!-- Neutros -->
-            <div class="color-card" 
-                 style="background-color: #FFFFFF; border: 2px solid #f0f0f0;" 
-                 data-color="#FFFFFF">
-            </div>
+          <div class="color-card" style="background-color: #F08D7D;" data-color="#F08D7D">
+          </div>
 
-            <div class="color-card" 
-                 style="background-color: #000000;" 
-                 data-color="#000000">
-            </div>
+          <!-- Neutros -->
+          <div class="color-card" style="background-color: #FFFFFF; border: 2px solid #f0f0f0;" data-color="#FFFFFF">
+          </div>
+
+          <div class="color-card" style="background-color: #000000;" data-color="#000000">
+          </div>
         </div>
 
         <div class="usage-note">
-            Pasa el cursor sobre cualquier color para ver su código hexadecimal
+          Pasa el cursor sobre cualquier color para ver su código hexadecimal
         </div>
-    </section>
+      </section>
       <section id="Buttons">
         <h3>Botones</h3>
-        <button class="primary-button">Primario</button>
-        <button class="secondary-button">Secundario</button>
-        <button class="outline-button">Outline</button>
+        <div class="component-description">
+          <p><strong>¿Para qué sirven?</strong> Permiten al usuario seleccionar la opcion dependiendo del caso,ya sea
+            para ingresar a otro apartado o realizar una accion en especifico.</p>
+        </div>
 
-        <button class="disable-button">Disable</button>
+        <div class="type-of-buttons">
+          <button class="primary-button">Primario</button>
+          <button class="secondary-button">Secundario</button>
+          <button class="outline-button">Outline</button>
+          <button class="disable-button">Disable</button>
+        </div>
         <h3>Código HTML:</h3>
         <pre><code>
-&lt;button class="primary-button"&gt;Primario&lt;/button&gt;
-&lt;button class="secondary-button"&gt;Secundario&lt;/button&gt;
-&lt;button class="outline-button"&gt;Outline&lt;/button&gt;
-&lt;button class="disable-button"&gt;Disable&lt;/button&gt;
+&lt;div class="type-of-buttons"&gt;
+  &lt;button class="primary-button"&gt;Primario&lt;/button&gt;
+  &lt;button class="secondary-button"&gt;Secundario&lt;/button&gt;
+  &lt;button class="outline-button"&gt;Outline&lt;/button&gt;
+  &lt;button class="disable-button"&gt;Disable&lt;/button&gt;
+&lt;/div&gt;
 </code></pre>
       </section>
 
-      <section id="Inputs/Fields">
+      <section id="Inputs-Fields">
         <h3>Inputs</h3>
+        <div class="component-description">
+          <p><strong>¿Para qué sirven?</strong> En esta parte el cliente podra ingresar datos como un texto
+            breve,correo,contraseña,y si lo necesitara, un area de texto para emitir un comunicado más largo.</p>
+        </div>
         <label for="input-text">Texto</label>
-        <div class="form-interior">
+        <div class="inner-form">
           <input type="text" id="input-text" class="form_input" required placeholder="Texto">
         </div>
 
         <label for="email">Email</label>
-        <div class="form-interior">
+        <div class="inner-form">
           <input type="email" id="email" class="form_input" placeholder="ejemplo.Ejemplo@gmail.com" required>
         </div>
 
         <label for="password">Password</label>
-        <div class="form-interior">
+        <div class="inner-form">
           <input type="password" id="password" class="form_input" placeholder="Password" required>
         </div>
-        <div>
-          <textarea name="" id="" maxlength="200" rows="6"></textarea>
+        <div class="textarea-div">
+          <textarea name="" id="" maxlength="200" placeholder="Escriba su texto" rows="6"></textarea>
         </div>
         <h3>Código HTML:</h3>
         <pre><code>
@@ -131,57 +133,61 @@
                         </code></pre>
       </section>
 
-         <section id="Forms">
-       <h2>Formularios section</h2>
-       <div class="formulario-contenedor">
-            <h4 class="formulario-titulo">¡Formulario!</h4>
-            <p class="formulario-subtitulo">mensaje</p>
-            
-            <form class="formulario-contacto">
-                <!-- CAMPO OBLIGATORIO CORRECTO -->
-                <div class="campo-form campo-form-correcto">
-                    <label for="form-nombre" class="etiqueta-form">Tu Nombre Completo *</label>
-                    <input type="text" id="form-nombre" name="name" class="input-form" placeholder="Escribe tu nombre aquí" value="Juan Carlos Pérez">
-                </div>
+      <section id="Forms">
+        <h2>Formularios section</h2>
+        <div class="formulario-contenedor">
+          <h4 class="formulario-titulo">¡Formulario!</h4>
+          <p class="formulario-subtitulo">mensaje</p>
 
-                <!-- CAMPO OBLIGATORIO INCORRECTO -->
-                <div class="campo-form campo-form-error">
-                    <label for="form-correo" class="etiqueta-form">Tu Correo Electrónico *</label>
-                    <input type="email" id="form-correo" name="email" class="input-form" placeholder="ejemplo@correo.com" value="email-invalido">
-                    <div class="mensaje-error-form">Por favor ingresa un email válido</div>
-                </div>
+          <form class="formulario-contacto">
+            <!-- CAMPO OBLIGATORIO CORRECTO -->
+            <div class="campo-form campo-form-correcto">
+              <label for="form-nombre" class="etiqueta-form">Tu Nombre Completo *</label>
+              <input type="text" id="form-nombre" name="name" class="input-form" placeholder="Escribe tu nombre aquí"
+                value="Juan Carlos Pérez">
+            </div>
 
-                <!-- CAMPO OPCIONAL NORMAL -->
-                <div class="campo-form">
-                    <label for="form-telefono" class="etiqueta-form">Tu Teléfono (opcional)</label>
-                    <input type="tel" id="form-telefono" name="phone" class="input-form" placeholder="Tu número de teléfono" value="">
-                </div>
+            <!-- CAMPO OBLIGATORIO INCORRECTO -->
+            <div class="campo-form campo-form-error">
+              <label for="form-correo" class="etiqueta-form">Tu Correo Electrónico *</label>
+              <input type="email" id="form-correo" name="email" class="input-form" placeholder="ejemplo@correo.com"
+                value="email-invalido">
+              <div class="mensaje-error-form">Por favor ingresa un email válido</div>
+            </div>
 
-                <!-- CAMPO OBLIGATORIO INCORRECTO -->
-                <div class="campo-form campo-form-error">
-                    <label for="form-asunto" class="etiqueta-form">¿De qué quieres hablar? *</label>
-                    <select id="form-asunto" name="subject" class="select-form">
-                        <option value="">Selecciona una opción</option>
-                        <option value="support">Necesito Ayuda</option>
-                        <option value="feedback">Quiero Opinar</option>
-                        <option value="order">Hacer Pedido</option>
-                        <option value="other">Otra Cosa</option>
-                    </select>
-                    <div class="mensaje-error-form">Debes seleccionar una opción</div>
-                </div>
+            <!-- CAMPO OPCIONAL NORMAL -->
+            <div class="campo-form">
+              <label for="form-telefono" class="etiqueta-form">Tu Teléfono (opcional)</label>
+              <input type="tel" id="form-telefono" name="phone" class="input-form" placeholder="Tu número de teléfono"
+                value="">
+            </div>
 
-                <!-- CAMPO OBLIGATORIO INCORRECTO -->
-                <div class="campo-form campo-form-error">
-                    <label for="form-mensaje" class="etiqueta-form">Escribe tu mensaje aquí *</label>
-                    <textarea id="form-mensaje" name="message" class="textarea-form" placeholder="Escribe tu mensaje aquí...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.</textarea>
-                    <div class="contador-caracteres-form">547 / 500</div>
-                    <div class="mensaje-error-form">El mensaje excede el límite de 500 caracteres</div>
-                </div>
+            <!-- CAMPO OBLIGATORIO INCORRECTO -->
+            <div class="campo-form campo-form-error">
+              <label for="form-asunto" class="etiqueta-form">¿De qué quieres hablar? *</label>
+              <select id="form-asunto" name="subject" class="select-form">
+                <option value="">Selecciona una opción</option>
+                <option value="support">Necesito Ayuda</option>
+                <option value="feedback">Quiero Opinar</option>
+                <option value="order">Hacer Pedido</option>
+                <option value="other">Otra Cosa</option>
+              </select>
+              <div class="mensaje-error-form">Debes seleccionar una opción</div>
+            </div>
 
-                <button type="button" class="boton-form">Enviar Mi Mensaje</button>
-              </div>
-            </form>
-            <pre><code>
+            <!-- CAMPO OBLIGATORIO INCORRECTO -->
+            <div class="campo-form campo-form-error">
+              <label for="form-mensaje" class="etiqueta-form">Escribe tu mensaje aquí *</label>
+              <textarea id="form-mensaje" name="message" class="textarea-form"
+                placeholder="Escribe tu mensaje aquí...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.</textarea>
+              <div class="contador-caracteres-form">547 / 500</div>
+              <div class="mensaje-error-form">El mensaje excede el límite de 500 caracteres</div>
+            </div>
+
+            <button type="button" class="boton-form">Enviar Mi Mensaje</button>
+        </div>
+        </form>
+        <pre><code>
 &lt;form class="formulario-contacto"&gt;
     &lt;div class="campo-form campo-form-correcto"&gt;
         &lt;label for="form-nombre" class="etiqueta-form"&gt;Tu Nombre Completo *&lt;/label&gt;
@@ -256,9 +262,11 @@
       <section id="RadioButtons">
 
         <h2>Radio Buttons section</h2>
-        
+
         <div class="component-description">
-          <p><strong>¿Para qué sirve?</strong> Los radio buttons permiten al usuario seleccionar una única opción de un grupo de alternativas mutuamente excluyentes. Solo se puede elegir una opción a la vez. Son ideales para configuraciones donde necesitas una selección obligatoria entre varias opciones.</p>
+          <p><strong>¿Para qué sirve?</strong> Los radio buttons permiten al usuario seleccionar una única opción de un
+            grupo de alternativas mutuamente excluyentes. Solo se puede elegir una opción a la vez. Son ideales para
+            configuraciones donde necesitas una selección obligatoria entre varias opciones.</p>
         </div>
 
         <p>Selecciona tu color favorito:</p>
@@ -306,10 +314,10 @@
 
       <section id="CheckBoxes">
         <h2>Check Boxes section</h2>
-          <label for="check">Esto es un checkbox</label>
-          <input type="checkbox" id="check">
-        
-          <pre><code>
+        <label for="check">Esto es un checkbox</label>
+        <input type="checkbox" id="check">
+
+        <pre><code>
           &lt;label for="check"&gt;Esto es un checkbox&lt;/label&gt;
           &lt;input type="checkbox" id="check"&gt;
           </code></pre>
@@ -318,9 +326,11 @@
       <section id="Select-Dropdown">
 
         <h2>Select/Dropdown section</h2>
-        
+
         <div class="component-description">
-          <p><strong>¿Para qué sirve?</strong> Los elementos select/dropdown permiten a los usuarios elegir una opción de una lista predefinida de valores. Son ideales cuando hay múltiples opciones pero el espacio es limitado, ya que muestran solo la opción seleccionada hasta que el usuario hace clic.</p>
+          <p><strong>¿Para qué sirve?</strong> Los elementos select/dropdown permiten a los usuarios elegir una opción
+            de una lista predefinida de valores. Son ideales cuando hay múltiples opciones pero el espacio es limitado,
+            ya que muestran solo la opción seleccionada hasta que el usuario hace clic.</p>
         </div>
 
         <label for="opciones">Selecciona una opción:</label>
@@ -386,23 +396,23 @@
 }
     </code></pre>
 
-        </section>
-        
-        <header>
-        <section id="NavBar">
-            <nav>   
-      <ul class="nav-links">
-        <a href="#Home">Inicio</a>
-        <a href="#About">Sobre nosotros</a>
-        <a href="#Seasons">Temporada</a>
-        <a href="#Services">Servicios</a>
-        <a href="#Testimonies">Testimonios</a>
-        <a href="#Contact">Contacto</a>
-      </ul>
-    </nav>
+      </section>
 
-    <h3>Código HTML:</h3>
-<pre><code>
+      <header>
+        <section id="NavBar">
+          <nav>
+            <ul class="nav-links">
+              <a href="#Home">Inicio</a>
+              <a href="#About">Sobre nosotros</a>
+              <a href="#Seasons">Temporada</a>
+              <a href="#Services">Servicios</a>
+              <a href="#Testimonies">Testimonios</a>
+              <a href="#Contact">Contacto</a>
+            </ul>
+          </nav>
+
+          <h3>Código HTML:</h3>
+          <pre><code>
 &lt;section id="NavBar"&gt;
   &lt;nav&gt;   
     &lt;ul class="nav-links"&gt;
@@ -418,7 +428,7 @@
 </code></pre>
 
         </section>
-      </section>
+        </section>
 
 
     </div>

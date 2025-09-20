@@ -29,10 +29,10 @@ body {
   background-color: var(--primary-peach);
   min-height: 100vh;
   overflow-x: hidden;
-  
+
   /* CSS Grid Layout Principal */
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "header"
     "main"
     "footer";
@@ -52,13 +52,13 @@ header {
   transition: background 0.6s ease, box-shadow 0.6s ease, height 0.6s ease;
 }
 
-main { 
+main {
   grid-area: main;
   padding-top: var(--header-height);
   background-color: var(--primary-peach);
   overflow-x: hidden;
   width: 100%;
-  
+
   /* Grid para las secciones del main */
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -70,7 +70,7 @@ main {
     "testimonies"
     "contact";
   gap: 0;
-} 
+}
 
 footer {
   grid-area: footer;
@@ -188,7 +188,7 @@ header.scrolled .logo img {
 .tile {
   background: gray;
   position: relative;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
@@ -256,7 +256,7 @@ header.scrolled .logo img {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.texto > h2 {
+.texto>h2 {
   text-align: center;
   background: url(https://i.pinimg.com/736x/30/df/6e/30df6e01a3310efb2dfc11b1c160b507--color-durazno.jpg) center;
   background-size: cover;
@@ -291,10 +291,10 @@ header.scrolled .logo img {
   overflow: hidden;
 }
 
-#Services > h2 {
+#Services>h2 {
   font-size: 24px;
   margin: 10px;
-  
+
 }
 
 #Services-flex-cards {
@@ -365,50 +365,58 @@ header.scrolled .logo img {
   width: 100%;
 }
 
-.card:hover img {
-  transform: scale(1.1) rotate(-3deg);
-}
+
 
 /* =============== CARRUSEL DE TESTIMONIOS =============== */
 #Testimonies {
   grid-area: testimonies;
   width: 100%;
   max-width: 100%;
-  min-height: auto; /* Ajuste automático de altura */
-  overflow-x: hidden; /* Evitar scroll horizontal */
-  padding: 16px 0; /* más compacto vertical */
+  min-height: auto;
+  /* Ajuste automático de altura */
+  overflow-x: hidden;
+  /* Evitar scroll horizontal */
+  padding: 16px 0;
+  /* más compacto vertical */
 }
 
 #Testimonies .testimonies-title {
-  font-size: 2.5rem; /* Tamaño de fuente grande */
-  font-weight: bold; 
+  font-size: 2.5rem;
+  /* Tamaño de fuente grande */
+  font-weight: bold;
   text-align: center;
-  color: var(--brown-text); /* Texto marrón */
-  background-color: var(--secondary-peach); /* Fondo sólido con el color de la paleta */
+  color: var(--brown-text);
+  /* Texto marrón */
+  background-color: var(--secondary-peach);
+  /* Fondo sólido con el color de la paleta */
   padding: 30px;
   border-radius: 15px;
   margin-bottom: 30px;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-  
+
 }
 
 .carousel-container {
-  position: relative; /* Para posicionar las flechas */
+  position: relative;
+  /* Para posicionar las flechas */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto; 
+  margin: auto;
   width: 100%;
   margin-left: 50%;
-   transform: translateX(-50%); /* Centrar horizontalmente */
+  transform: translateX(-50%);
+  /* Centrar horizontalmente */
   max-width: 100%;
-  overflow-x: hidden; /* Evitar scroll horizontal */
+  overflow-x: hidden;
+  /* Evitar scroll horizontal */
 }
 
 .carousel {
   display: flex;
-  overflow-x: auto; 
-  scroll-snap-type: x mandatory; /* Snap horizontal obligatorio */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* Snap horizontal obligatorio */
   padding: 20px;
   gap: 15px;
   scrollbar-width: none;
@@ -422,9 +430,10 @@ header.scrolled .logo img {
   border: 2px solid #ffd8c2;
   border-radius: 15px;
   padding: 20px;
-  scroll-snap-align: start; /* Alineación de snap al inicio */
+  scroll-snap-align: start;
+  /* Alineación de snap al inicio */
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
   min-width: 50;
   max-width: 100;
@@ -435,7 +444,8 @@ header.scrolled .logo img {
   height: 80px;
   border-radius: 50%;
   margin-bottom: 10px;
-  object-fit: cover; /* Asegura que la imagen cubra el área */
+  object-fit: cover;
+  /* Asegura que la imagen cubra el área */
   border: 3px solid #e67c73;
 }
 
@@ -466,9 +476,11 @@ header.scrolled .logo img {
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); 
-  z-index: 10; /* Asegura que las flechas estén sobre el carrusel */
-  transition: background 0.3s; /* Transición suave */
+  transform: translateY(-50%);
+  z-index: 10;
+  /* Asegura que las flechas estén sobre el carrusel */
+  transition: background 0.3s;
+  /* Transición suave */
 }
 
 .flecha:hover {
@@ -476,12 +488,13 @@ header.scrolled .logo img {
 }
 
 .left.arrow {
-  left: -10px; 
+  left: -10px;
 }
 
 .right.arrow {
   right: -10px;
 }
+
 /* =============== FIN SECCION DE CARRUSEL =============== */
 
 /* =============== FORMULARIO DE CONTACTO =============== */
@@ -511,6 +524,7 @@ header.scrolled .logo img {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -566,8 +580,8 @@ header.scrolled .logo img {
   font-weight: 600;
 }
 
-.input-campo + .etiqueta,
-.textarea-campo + .etiqueta {
+.input-campo+.etiqueta,
+.textarea-campo+.etiqueta {
   opacity: 1;
 }
 
@@ -616,9 +630,19 @@ header.scrolled .logo img {
 }
 
 @keyframes sacudir {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-10px); }
-  75% { transform: translateX(10px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
 }
 
 .icono-validacion {
@@ -694,7 +718,7 @@ header.scrolled .logo img {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.5s ease;
 }
 
@@ -740,12 +764,12 @@ header.scrolled .logo img {
   padding-right: 50px;
 }
 
-.select-campo + .etiqueta {
+.select-campo+.etiqueta {
   z-index: 1;
 }
 
-.campo.activo .select-campo + .etiqueta,
-.campo.lleno .select-campo + .etiqueta {
+.campo.activo .select-campo+.etiqueta,
+.campo.lleno .select-campo+.etiqueta {
   z-index: 2;
 }
 
@@ -772,36 +796,36 @@ span {
     padding: 20px;
     margin: 10px;
   }
-  
+
   .titulo-principal {
     font-size: 2rem;
   }
-  
+
   .hero-slogan {
     font-size: 2rem;
     padding: 15px 25px;
   }
-  
+
   #AboutUs {
     grid-template-columns: 1fr;
     grid-template-areas: "texto" "imagen";
     gap: 30px;
   }
-  
+
   #Services-flex-cards {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .card {
     width: 90%;
   }
-  
+
   /* Ajustar el grid del main en móvil si es necesario */
   main {
     grid-template-areas:
       "hero"
-      "about-us" 
+      "about-us"
       "seasons"
       "services"
       "testimonies"
@@ -832,11 +856,11 @@ footer {
 }
 
 .social-link:hover {
-  color: white; 
-    text-decoration: underline;
+  color: white;
+  text-decoration: underline;
 }
 
-.social-link{
+.social-link {
   display: inline-block;
 }
 
@@ -850,15 +874,15 @@ footer {
 }
 
 .facebook::before {
-  content: "ⓕ"; 
+  content: "ⓕ";
 }
 
 .instagram::before {
-  content: "🅾"; 
+  content: "🅾";
 }
 
 .whatsapp::before {
-  content: "✆"; 
+  content: "✆";
 }
 
 .tipo2:hover::before {
