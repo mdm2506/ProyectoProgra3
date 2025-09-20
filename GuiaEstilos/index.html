@@ -256,16 +256,20 @@
       <section id="RadioButtons">
 
         <h2>Radio Buttons section</h2>
+        
+        <div class="component-description">
+          <p><strong>¿Para qué sirve?</strong> Los radio buttons permiten al usuario seleccionar una única opción de un grupo de alternativas mutuamente excluyentes. Solo se puede elegir una opción a la vez. Son ideales para configuraciones donde necesitas una selección obligatoria entre varias opciones.</p>
+        </div>
 
         <p>Selecciona tu color favorito:</p>
 
         <label>
-          <input type="radio" id="color-verde" name="color" value="verde" checked>
-          <span id="color-verde-label">Verde</span>
+          <input type="radio" id="color-f08d7d" name="color" value="f08d7d" checked>
+          <span id="color-f08d7d-label">Coral</span>
         </label>
         <label>
-          <input type="radio" id="color-azul" name="color" value="azul">
-          <span id="color-azul-label">Azul</span>
+          <input type="radio" id="color-f0b498" name="color" value="f0b498">
+          <span id="color-f0b498-label">Melocotón</span>
         </label>
         <label>
           <input type="radio" id="color-rojo" name="color" value="rojo" disabled>
@@ -281,13 +285,13 @@
   &lt;p&gt;Selecciona tu color favorito:&lt;/p&gt;
 
   &lt;label&gt;
-    &lt;input type="radio" name="color" value="verde" checked&gt;
-    &lt;span id="color-verde-label"&gt;Verde&lt;/span&gt;
+    &lt;input type="radio" id="color-f08d7d" name="color" value="f08d7d" checked&gt;
+    &lt;span id="color-f08d7d-label"&gt;Coral&lt;/span&gt;
   &lt;/label&gt;
 
   &lt;label&gt;
-    &lt;input type="radio" name="color" value="azul"&gt;
-    &lt;span id="color-azul-label"&gt;Azul&lt;/span&gt;
+    &lt;input type="radio" id="color-f0b498" name="color" value="f0b498"&gt;
+    &lt;span id="color-f0b498-label"&gt;Melocotón&lt;/span&gt;
   &lt;/label&gt;
 
   &lt;label&gt;
@@ -314,6 +318,10 @@
       <section id="Select-Dropdown">
 
         <h2>Select/Dropdown section</h2>
+        
+        <div class="component-description">
+          <p><strong>¿Para qué sirve?</strong> Los elementos select/dropdown permiten a los usuarios elegir una opción de una lista predefinida de valores. Son ideales cuando hay múltiples opciones pero el espacio es limitado, ya que muestran solo la opción seleccionada hasta que el usuario hace clic.</p>
+        </div>
 
         <label for="opciones">Selecciona una opción:</label>
         <select class="opciones">
@@ -344,7 +352,42 @@
 &lt;/section&gt;
     </code></pre>
 
+        <h3>Código CSS:</h3>
+        <pre><code>
+.opciones {
+    width: 100%;
+    max-width: 420px;
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #222;
+    background: #fff;
+}
+
+.opciones option {
+    color: #f08d7d;
+    background: #fff;
+}
+
+.opciones:hover {
+    border-color: #2a7ae2;
+}
+
+.opciones:focus {
+    outline: none;
+    border-color: #2a7ae2;
+    box-shadow: 0 0 0 3px rgba(42, 122, 226, .25);
+}
+
+.opciones:disabled {
+    background-color: red;
+    color: #777;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+    </code></pre>
+
         </section>
+        
         <header>
         <section id="NavBar">
             <nav>   

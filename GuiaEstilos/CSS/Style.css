@@ -1,756 +1,788 @@
-  * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-        }
-        
-        /* Navbar principal aaaaaa */
-        /*
-        .navbar {
-            background-color: #F08D7D;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #fff;
-            cursor: pointer;
-        }
-        
-        .nav-menu {
-            display: flex;
-            gap: 25px;
-        }
-        
-        .nav-menu a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-            transition: color 0.3s;
-            cursor: pointer;
-        }
-        
-        .nav-menu a:hover {
-            color: #FBDFCA;
-        }
-        
-        .nav-menu a.active {
-            color: #f1eeec;
-            font-weight: bold;
-        }*/
-        
-        /*NAVBAR Yeissonnn*/
+/* ============================================
+   ESTILOS GLOBALES Y CONFIGURACIÓN INICIAL
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+/* Navbar principal comentado */
+/*
+.navbar {
+    background-color: #F08D7D;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.nav-menu a:hover {
+    color: #FBDFCA;
+}
+
+.nav-menu a.active {
+    color: #f1eeec;
+    font-weight: bold;
+}*/
+
+/*NAVBAR Yeissonnn*/
 .NavBar {
-  width: 100%;
-  display: flex;           
-  justify-content: center;
-  align-items: center;         
-  transition: padding .6s ease, height .6s ease, background .6s ease;
+    width: 100%;
+    display: flex;           
+    justify-content: center;
+    align-items: center;         
+    transition: padding .6s ease, height .6s ease, background .6s ease;
 }
+
 .nav-links {
-  display: flex;
-  gap: 20px;
-  justify-content: center;            
-  flex-wrap: wrap;
-  transition: gap 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-   background-color: rgb(240, 141, 125);
-line-height: 4;
+    display: flex;
+    gap: 20px;
+    justify-content: center;            
+    flex-wrap: wrap;
+    transition: gap 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    background-color: rgb(240, 141, 125);
+    line-height: 4;
 }
+
 .nav-links a {
-  text-decoration: none;
-  color: black;
-  transition: color 0.6s ease, opacity 0.6s ease;
+    text-decoration: none;
+    color: black;
+    transition: color 0.6s ease, opacity 0.6s ease;
 }
+
 .nav-links a:hover { 
-  color: white; 
-  text-decoration: underline;
-  transition: color 0.5s ease;
+    color: white; 
+    text-decoration: underline;
+    transition: color 0.5s ease;
 }
-/*fin del navbar*/
-        /* Páginas/Vistas */
-        .page {
-            display: none;
-        }
-        
-        .page.active {
-            display: block;
-        }
-        
-        /* Página de Inicio (Landing) */
-        .landing-page {
-            min-height: 100vh;
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 80px 20px 40px;
-        }
-        
-        .landing-page h1 {
-            font-size: 3rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        
-        .landing-page p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 40px;
-            max-width: 600px;
-        }
-        
-       .index-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 300px;
-            margin: 0 auto;
-            margin-top: 30px;
-        }
-        
-        .index-links a {
-            text-decoration: none;
-            color: #4a4a4a;
-            background-color: white;
-            padding: 10px 15px;
-            border-radius: 8px;
-            border: 1px solid #FBDFCA;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-align: left;
-            transition: all 0.3s;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            cursor: pointer;
-        }
 
-  html {
-      scroll-behavior: smooth;
-      /* Habilitar desplazamiento suave */
-  }
+/* Navbar principal - FIJO */
+.navbar {
+    background-color: #F08D7D;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-  body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-  }
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
 
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
 
-  /* Navbar principal - FIJO */
-  .navbar {
-      background-color: #F08D7D;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+    cursor: pointer;
+}
 
-  .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #fff;
-      cursor: pointer;
-  }
+.nav-menu a:hover {
+    color: #FBDFCA;
+}
 
-  .nav-menu {
-      display: flex;
-      gap: 25px;
-  }
+.nav-menu a.active {
+    color: #f1eeec;
+    font-weight: bold;
+}
 
-  .nav-menu a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: color 0.3s;
-      cursor: pointer;
-  }
+/* ============================================
+   PÁGINAS/VISTAS GENERALES
+   ============================================ */
 
-  .nav-menu a:hover {
-      color: #FBDFCA;
-  }
+.page {
+    display: none;
+}
 
-  .nav-menu a.active {
-      color: #f1eeec;
-      font-weight: bold;
-  }
+.page.active {
+    display: block;
+}
 
-  /* Páginas/Vistas */
-  .page {
-      display: none;
-  }
+/* Página de Inicio (Landing) */
+.landing-page {
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 40px;
+}
 
-  .page.active {
-      display: block;
-  }
+.landing-page h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
 
-  /* Página de Inicio (Landing) */
-  .landing-page {
-      min-height: 100vh;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 80px 20px 40px;
-  }
+.landing-page p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
 
-  .landing-page h1 {
-      font-size: 3rem;
-      color: #333;
-      margin-bottom: 20px;
-  }
+.index-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
 
-  .landing-page p {
-      font-size: 1.2rem;
-      color: #666;
-      margin-bottom: 40px;
-      max-width: 600px;
-  }
+.index-links a {
+    text-decoration: none;
+    color: #4a4a4a;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #FBDFCA;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
 
-  .index-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 300px;
-      margin: 0 auto;
-      margin-top: 30px;
-  }
+.index-links a:hover {
+    background-color: #F08D7D;
+    color: white;
+    border-color: #F08D7D;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
 
-  .index-links a {
-      text-decoration: none;
-      color: #4a4a4a;
-      background-color: white;
-      padding: 10px 15px;
-      border-radius: 8px;
-      border: 1px solid #FBDFCA;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-align: left;
-      transition: all 0.3s;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      cursor: pointer;
-  }
+/* Página Sobre Nosotros */
+.about-page {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 120px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.about-page h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+}
 
-  .index-links a:hover {
-      background-color: #F08D7D;
-      color: white;
-      border-color: #F08D7D;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  }
+/* Página Servicios */
+.services-page {
+    min-height: 100vh;
+    background-color: white;
+    padding: 120px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-  /* Página Sobre Nosotros */
-  .about-page {
-      min-height: 100vh;
-      background-color: #f5f5f5;
-      padding: 120px 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
+.services-page h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+}
 
-  .about-page h1 {
-      font-size: 2.5rem;
-      color: #333;
-      margin-bottom: 50px;
-      text-align: center;
-  }
+.components-page {
+    padding: 120px 20px 40px;
+}
 
-  /* Página Servicios */
-  .services-page {
-      min-height: 100vh;
-      background-color: white;
-      padding: 120px 20px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
+.components-page section {
+    min-height: 400px;
+    margin-bottom: 30px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border-left: 4px solid #F08D7D;
+}
 
-  .services-page h1 {
-      font-size: 2.5rem;
-      color: #333;
-      margin-bottom: 50px;
-      text-align: center;
-  }
+/* Estilos para las descripciones de componentes */
+.component-description {
+    background-color: #fff;
+    padding: 20px; 
+    margin: 15px auto 25px auto; /* Centrado horizontal */
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: fit-content; /* Ajusta el ancho al contenido */
+    display: block; /* Cambiado a block para centrar correctamente */
+}
 
-  .components-page {
-      padding: 120px 20px 40px;
-  }
+.component-description p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
 
-  .components-page section {
-      min-height: 400px;
-      margin-bottom: 30px;
-      padding: 40px;
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      border-left: 4px solid #F08D7D;
-  }
+.component-description strong {
+    color: #F08D7D;
+    font-weight: 600;
+}
 
+/* ============================================
+   1. COLOR PALETTE
+   ============================================ */
 
-  /* Footer */
-  footer {
-      background-color: #333;
-      color: white;
-      padding: 40px 20px 20px;
-      text-align: center;
-  }
+#ColorPalette {
+    display: inline-block;
+}
 
-  .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-  }
+.palette-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    grid-template-columns: 1fr;
+}
 
-  .footer-section {
-      margin-bottom: 30px;
-  }
+.color-card {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-  .footer-section h3 {
-      color: #FBDFCA;
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-  }
-  .footer-section p {
-      color: #ccc;
-      line-height: 1.6;
-      margin-bottom: 10px;
-  }
-  .footer-bottom {
-      border-top: 1px solid #555;
-      padding-top: 20px;
-      color: #999;
-  }
+.primary-color {
+    border: 3px solid #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
 
-  /* Responsive */
-  @media (max-width: 768px) {
-      .navbar {
-          flex-direction: column;
-          gap: 15px;
-          padding: 15px;
-      }
+.color-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
 
-      .nav-menu {
-          flex-wrap: wrap;
-          justify-content: center;
-      }
+.color-card::after {
+    content: attr(data-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
 
-      .landing-page h1,
-      .about-content h1,
-      .services-page h1 {
-          font-size: 2rem;
-      }
+.color-card:hover::after {
+    opacity: 1;
+}
 
-      .services-grid {
-          grid-template-columns: 1fr;
-      }
+.usage-note {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 15px;
+}
 
-      .index-links {
-          display: flex;
-          flex-direction: column;
-          /* De arriba hacia abajo */
-          gap: 10px;
-          /* Espacio entre los botones */
-          max-width: 300px;
-          /* Ancho máximo del índice */
-          margin: 0 auto;
-          /* Centrado horizontal */
-          margin-top: 30px;
-      }
-    }
-    /*paleta*/
-    #ColorPalette {
-          
-            display: inline-block;
-        }
+/* ============================================
+   2. BUTTONS
+   ============================================ */
 
-        .palette-grid {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-            grid-template-columns: 1fr;
-        }
+button {
+    font-family: sans-serif;
+    background-color: coral;
+    padding: 4px;
+    border-radius: 3px;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
 
-        .color-card {
-            width: 80px;
-            height: 80px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .primary-color {
-            border: 3px solid #fff;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-
-        .color-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-
-        .color-card::after {
-            content: attr(data-color);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-family: monospace;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .color-card:hover::after {
-            opacity: 1;
-        }
-
-        .usage-note {
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-            margin-top: 15px;
-        }
-
-  /*TODO XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX botones XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
-  button {
-
-      font-family: sans-serif;
-      background-color: coral;
-      padding: 4px;
-      border-radius: 3px;
-      height: 30px;
-      width: 80px;
-      cursor: pointer;
-      transition: all 0.1s ease;
-  }
-
-  button:hover:not(.disable-button) {
-      transform: scale(1.1);
-  }
-
-  /* active tiene prioridad */
-  button:active:not(.disable-button) {
-      transform: scale(0.95);
+button:hover:not(.disable-button) {
+    transform: scale(1.1);
+}
+ /* active tiene prioridad */
+button:active:not(.disable-button) {
+    transform: scale(0.95);
       /* o el valor que quieras */
-      background-color: rgb(220, 95, 60);
-  }
 
-  .primary-button {
-      transition: transform 0.1s ease-in-out;
-      color: white;
-  }
-
-  .secondary-button {
-      background-color: white;
-      border: solid 2px coral;
-      color: black;
-  }
-
-  .outline-button {
-      background: transparent;
-      border: none;
-      color: black;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-decoration: underline;
-  }
-
-  .outline-button:hover {
-      background-color: li;
-      color: black;
-  }
-
-
-
-  .outline-button:focus {
-      outline: 2px solid #6366f1;
-      outline-offset: 2px;
-      border-radius: 2px;
-  }
-
-
-  .disable-button {
-      background-color: rgb(200, 170, 160);
-      cursor: not-allowed;
-
-  }
-
-  /* TODO INPUTS */
-  .form_input {
-      padding-left: 4px;
-      height: 1.3rem;
-      width: 150px;
-      background-color: rgb(240, 180, 152);
-      color: white;
-      border-radius: 4px;
-      border: none;
-      border-bottom: 2px solid rgb(236, 142, 142);
-  }
-
-
-
-pre code {
-  color: #ff9dad; /* color claro tipo rosado para resaltar */
+    background-color: rgb(220, 95, 60);
 }
-  .form_input:focus {
-      background-color: lightcoral
-  }
 
+.primary-button {
+    transition: transform 0.1s ease-in-out;
+    color: white;
+}
 
+.secondary-button {
+    background-color: white;
+    border: solid 2px coral;
+    color: black;
+}
 
-  textarea {
-      max-height: 200px;
-      min-height: 100px;
-      max-width: 300px;
-      min-width: 100px;
-      margin: 10px;
-  }
+.outline-button {
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: underline;
+}
 
-/* ESTILOS DEL FORMULARIO ORIGINAL */
-        .formulario-contenedor {
-            max-width: 500px;
-            padding: 40px;
-            background: linear-gradient(135deg, #f0b498, #f08d7d);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-        }
+.outline-button:hover {
+    background-color: li;
+    color: black;
+}
 
-        .formulario-titulo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #8b4513;
-            text-align: center;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-        } 
+.outline-button:focus {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
 
-        .formulario-subtitulo {
-            color: #a0522d;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
-            font-weight: 500;
-        }
+.disable-button {
+    background-color: rgb(200, 170, 160);
+    cursor: not-allowed;
+}
 
-        .campo-form {
-            margin-bottom: 25px;
-        }
+/* ============================================
+   3. INPUTS & FIELDS
+   ============================================ */
 
-        .etiqueta-form {
-            display: block;
-            margin-bottom: 8px;
-            color: #8b4513;
-            font-size: 16px;
-            font-weight: 600;
-        }
+.form_input {
+    padding-left: 4px;
+    height: 1.3rem;
+    width: 150px;
+    background-color: rgb(240, 180, 152);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 2px solid rgb(236, 142, 142);
+}
 
-        .input-form, .select-form, .textarea-form {
-            width: 100%;
-            padding: 15px;
-            border: 3px solid rgba(255, 255, 255, 0.6);
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.2);
-            color: #8b4513;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-        }
+.form_input:focus {
+    background-color: lightcoral
+}
 
-        .input-form:focus, .select-form:focus, .textarea-form:focus {
-            outline: none;
-            border-color: #cd853f;
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.02);
-            box-shadow: 0 5px 15px rgba(205, 133, 63, 0.3);
-        }
+textarea {
+    max-height: 200px;
+    min-height: 100px;
+    max-width: 300px;
+    min-width: 100px;
+    margin: 10px;
+}
 
-        .campo-form-correcto .input-form,
-        .campo-form-correcto .select-form,
-        .campo-form-correcto .textarea-form {
-            border-color: #90ee90;
-            background: rgba(144, 238, 144, 0.15);
-        }
+/* ============================================
+   4. FORMS
+   ============================================ */
 
-        .campo-form-error .input-form,
-        .campo-form-error .select-form,
-        .campo-form-error .textarea-form {
-            border-color: #ffa07a;
-            background: rgba(255, 160, 122, 0.15);
-        }
+.formulario-contenedor {
+    max-width: 500px;
+    padding: 40px;
+    background: linear-gradient(135deg, #f0b498, #f08d7d);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
 
-        .mensaje-error-form {
-            color: #d2691e;
-            font-size: 14px;
-            margin-top: 8px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 8px 12px;
-            border-radius: 10px;
-            font-weight: 600;
-            border-left: 4px solid #ff6347;
-        }
+.formulario-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8b4513;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+} 
 
-        .textarea-form {
-            resize: vertical;
-            min-height: 120px;
-        }
+.formulario-subtitulo {
+    color: #a0522d;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+}
 
-        .select-form {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%238b4513' viewBox='0 0 16 16'%3e%3cpath d='m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z'/%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 20px center;
-            background-size: 16px;
-            padding-right: 50px;
-        }
+.campo-form {
+    margin-bottom: 25px;
+}
 
-        .boton-form {
-            display: flex;                 /* centra el texto vertical/horizontal */
-  align-items: center;
-  justify-content: center;
-            width: 100%;
-            padding: 18px;
-            border: none;
-            border-radius: 15px;
-            background: linear-gradient(45deg, #cd853f, #deb887);
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            box-sizing: border-box;
-        }
+.etiqueta-form {
+    display: block;
+    margin-bottom: 8px;
+    color: #8b4513;
+    font-size: 16px;
+    font-weight: 600;
+}
 
-        .boton-form:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(205, 133, 63, 0.4);
-        }
+.input-form, .select-form, .textarea-form {
+    width: 100%;
+    padding: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #8b4513;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
 
-        .boton-form:active {
-            transform: translateY(0);
-        }
+.input-form:focus, .select-form:focus, .textarea-form:focus {
+    outline: none;
+    border-color: #cd853f;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(205, 133, 63, 0.3);
+}
 
-        .contador-caracteres-form {
-            text-align: right;
-            font-size: 14px;
-            color: #8b4513;
-            margin-top: 5px;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 5px 12px;
-            border-radius: 10px;
-            display: inline-block;
-            font-weight: 600;
-            border: 2px solid #cd853f;
-        }
-  /* === RadioButtons === */
-  #RadioButtons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-  }
+.campo-form-correcto .input-form,
+.campo-form-correcto .select-form,
+.campo-form-correcto .textarea-form {
+    border-color: #90ee90;
+    background: rgba(144, 238, 144, 0.15);
+}
 
-  #RadioButtons h2 {
-      margin: 0 0 8px;
-      line-height: 1.25;
-      font-weight: 700;
-      text-align: center;
-      font-size: 1.25rem;
-  }
+.campo-form-error .input-form,
+.campo-form-error .select-form,
+.campo-form-error .textarea-form {
+    border-color: #ffa07a;
+    background: rgba(255, 160, 122, 0.15);
+}
 
-  #RadioButtons p {
-      margin: 0;
-      font-weight: 600;
-      color: #444;
-      text-align: left;
-  }
+.mensaje-error-form {
+    color: #d2691e;
+    font-size: 14px;
+    margin-top: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    border-left: 4px solid #ff6347;
+}
 
-  #RadioButtons #color-verde-label {
-      color: green;
-      font-weight: bold;
-  }
+.textarea-form {
+    resize: vertical;
+    min-height: 120px;
+}
 
-  #RadioButtons #color-azul-label {
-      color: blue;
-      font-weight: bold;
-  }
+.select-form {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%238b4513' viewBox='0 0 16 16'%3e%3cpath d='m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 16px;
+    padding-right: 50px;
+}
 
-  #RadioButtons #color-rojo-label {
-      color: red;
-      font-weight: bold;
-  }
+.boton-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #cd853f, #deb887);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
 
-  #RadioButtons label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 15px;
-      cursor: pointer;
-      color: #222;
-  }
+.boton-form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(205, 133, 63, 0.4);
+}
 
-  #RadioButtons input[type="radio"] {
-      accent-color: #2a7ae2;
-      cursor: pointer;
-  }
+.boton-form:active {
+    transform: translateY(0);
+}
 
-  #RadioButtons input[type="radio"]:disabled+span,
-  #RadioButtons input[type="radio"]:disabled {
-      cursor: not-allowed;
-      opacity: 0.6;
-  }
+.contador-caracteres-form {
+    text-align: right;
+    font-size: 14px;
+    color: #8b4513;
+    margin-top: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 12px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 600;
+    border: 2px solid #cd853f;
+}
 
-  /* FIN SECCION RADIOBUTTONS */
-  /* Checkbox */
+/* ============================================
+   5. LABELS
+   ============================================ */
+
+h1.TituloPrincipal {
+    font-size: 3.1em;
+    color: #FFBC8A;
+}
+
+.TituloSecundario {
+    font-size: 2.7em;
+    color: #FFBC8A;
+}
+
+.subtitulo {
+    font-size: 2em;
+    color: #FFBC8A;
+}
+
+.label {
+    display: inline-block;
+    background: #1f2937;
+    color: #f5ab73;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin: 4px 0;
+}
+
+.Pequeño {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+}
+
+.Grande {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+}
+
+.label:hover,
+.Pequeño:hover,
+.Grande:hover {
+    background: #374151;
+    color: #ffd1a8;
+    cursor: pointer;
+}
+
+#labels h1,
+#labels h2,
+#labels h3,
+#Labels strong {
+    color: #ff8aeb;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    margin-right: 30px; 
+}
+
+/* ============================================
+   6. LINKS
+   ============================================ */
+
+a {
+    color: #FFBC8A;
+    text-decoration: none;
+    transition: color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+a:hover {
+    color: #FFD1A8;
+    text-decoration: underline;
+    transition: color 0.5s ease;
+}
+
+.tipo1::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 6px;
+    width: 100%;
+    background-color: #FFD1A8;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition: transform 0.3s linear;
+}
+
+.tipo1:hover::before {
+    transform: scaleX(1);
+}
+
+.tipo2 {
+    display: inline-block;
+}
+
+.tipo2::before {
+    content: "🍑";
+    display: inline-block;
+    width: 1em;
+    opacity: 0;
+    transform: translateX(-0.5em);
+    transition: transform .3s ease, opacity .2s ease;
+    margin-right: 0.25em;
+}
+
+.tipo2:hover::before {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* ============================================
+   7. RADIO BUTTONS
+   ============================================ */
+
+#RadioButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#RadioButtons h2 {
+    margin: 0 0 8px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+#RadioButtons p {
+    margin: 0;
+    font-weight: 600;
+    color: #444;
+    text-align: left;
+}
+
+#RadioButtons #color-f08d7d-label {
+    color: #f08d7d;
+    font-weight: bold;
+}
+
+#RadioButtons #color-f0b498-label {
+    color: #f0b498;
+    font-weight: bold;
+}
+
+#RadioButtons #color-f08d7d {
+    accent-color: #f08d7d;
+    cursor: pointer;
+}
+
+#RadioButtons #color-f0b498 {
+    accent-color: #f0b498;
+    cursor: pointer;
+}
+
+#RadioButtons #color-rojo-label {
+    color: red;
+    font-weight: bold;
+}
+
+#RadioButtons label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #222;
+}
+
+#RadioButtons input[type="radio"] {
+    accent-color: #2a7ae2;
+    cursor: pointer;
+}
+
+#RadioButtons input[type="radio"]:disabled+span,
+#RadioButtons input[type="radio"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ============================================
+   8. CHECKBOXES
+   ============================================ */
+
 input[type="checkbox"] {
-  accent-color: rgba(240, 141, 125);
-  transform: scale(2);
+    accent-color: rgba(240, 141, 125);
+    transform: scale(2);
 }
+
 label {
   font-size: 20px;
   font-weight: 600;
@@ -759,194 +791,160 @@ label {
   margin-right: 30px; 
 }
 
-  /* === Select/Dropdown === */
-  /* Titulados sobrios */
+/* ============================================
+   9. SELECT & DROPDOWN
+   ============================================ */
 
-  #Select-Dropdown {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-  }
+#Select-Dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-  #Select-Dropdown h2 {
-      margin: 0 0 8px;
-      line-height: 1.25;
-      font-weight: 700;
-      text-align: center;
-      font-size: 1.25rem;
-  }
+#Select-Dropdown h2 {
+    margin: 0 0 8px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.25rem;
+}
 
-  /* === Select/Dropdown === */
+#Select-Dropdown label {
+    font-weight: 600;
+    color: #666;
+    margin: 0;
+    text-align: left;
+}
 
-  #Select-Dropdown label {
-      font-weight: 600;
-      color: #666;
-  }
+.opciones {
+    width: 100%;
+    max-width: 420px;
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #222;
+    background: #fff;
+}
 
-  #Select-Dropdown label {
-      margin: 0;
-      font-weight: 600;
-      color: #444;
-      text-align: left;
-  }
+.opciones option {
+    color: #f08d7d;
+    background: #fff;
+}
 
-  /* Selects */
-  .opciones {
-      width: 100%;
-      max-width: 420px;
-      padding: 10px 12px;
-      font-size: 16px;
-      color: #222;
-      background: #fff;
-  }
+.opciones:hover {
+    border-color: #2a7ae2;
+}
 
-  /* Hover sutil */
-  .opciones:hover {
-      border-color: #2a7ae2;
-  }
+.opciones:focus {
+    outline: none;
+    border-color: #2a7ae2;
+    box-shadow: 0 0 0 3px rgba(42, 122, 226, .25);
+}
 
-  /* Focus accesible */
-  .opciones:focus {
-      outline: none;
-      border-color: #2a7ae2;
-      box-shadow: 0 0 0 3px rgba(42, 122, 226, .25);
-  }
+.opciones:disabled {
+    background-color: red;
+    color: #777;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
 
-  /* Disabled */
-  .opciones:disabled {
-      background-color: red;
-      color: #777;
-      border-color: #ddd;
-      cursor: not-allowed;
-  }
+/* ============================================
+   10. NAVIGATION BAR (sección específica)
+   ============================================ */
 
-  /* Bloques de código estilo simple.css dark */
-  pre {
-      background: #1e1e1e;
-      color: #f5f5f5;
-      padding: 16px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-family: Consolas, "Courier New", monospace;
-      font-size: 14px;
-      text-align: left;
-      line-height: 1.5;
-      border: 1px solid #333;
-  }
+/* (Los estilos del navbar ya están arriba en la sección general) */
 
-  pre code {
-      color: #ff9dad;
-      display: block;
-      /* color claro tipo rosado para resaltar */
-  }
+/* ============================================
+   BLOQUES DE CÓDIGO
+   ============================================ */
 
-  /* FIN SECCION DROPDOWN */
+pre {
+    background: #1e1e1e;
+    color: #f5f5f5;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.5;
+    border: 1px solid #333;
+}
 
+pre code {
+    color: #ff9dad;
+    display: block;
+}
 
+/* ============================================
+   FOOTER
+   ============================================ */
 
-  /* links*/
-  a {
-      color: #FFBC8A;
-      text-decoration: none;
-      transition: color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-  }
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px 20px;
+    text-align: center;
+}
 
-  a:hover {
-      color: #FFD1A8;
-      text-decoration: underline;
-      transition: color 0.5s ease;
-  }
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-  .tipo1::before {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      height: 6px;
-      width: 100%;
-      background-color: #FFD1A8;
-      border-radius: 50px;
-      transform: scaleX(0);
-      transition: transform 0.3s linear;
-  }
+.footer-section {
+    margin-bottom: 30px;
+}
 
-  .tipo1:hover::before {
-      transform: scaleX(1);
-  }
+.footer-section h3 {
+    color: #FBDFCA;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
 
-  .tipo2 {
-      display: inline-block;
-  }
+.footer-section p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
 
-  .tipo2::before {
-      content: "🍑";
-      display: inline-block;
-      width: 1em;
-      opacity: 0;
-      transform: translateX(-0.5em);
-      transition: transform .3s ease, opacity .2s ease;
-      margin-right: 0.25em;
-  }
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    color: #999;
+}
 
-  .tipo2:hover::before {
-      transform: translateX(0);
-      opacity: 1;
-  }
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 
-  /* los em  es el tamaño relativo ala fuente de letra*/
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
 
-  h1.TituloPrincipal {
-      font-size: 3.1em;
-      color: #FFBC8A;
-  }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-  .TituloSecundario {
-      font-size: 2.7em;
-      color: #FFBC8A;
-  }
+    .landing-page h1,
+    .about-content h1,
+    .services-page h1 {
+        font-size: 2rem;
+    }
 
-  .subtitulo {
-      font-size: 2em;
-      color: #FFBC8A;
-  }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .label {
-      display: inline-block;
-      background: #1f2937;
-      /* gris oscuro */
-      color: #f5ab73;
-      /* amarillo */
-      font-size: 1rem;
-      padding: 6px 12px;
-      border-radius: 6px;
-      margin: 4px 0;
-  }
-
-  .Pequeño {
-      font-size: 0.8rem;
-      padding: 4px 8px;
-  }
-
-  .Grande {
-      font-size: 1.2rem;
-      padding: 8px 16px;
-  }
-
-  /*Esto lo hice para agregar un efecto de hover a todos los labels de un solo*/
-  .label:hover,
-  .Pequeño:hover,
-  .Grande:hover {
-      background: #374151;
-      /* gris más claro */
-      color: #ffd1a8;
-      /* amarillo más claro */
-      cursor: pointer;
-  }
-
-  /* Esto es para resaltar los em en el html para que se vea de diferente color */
-  #labels h1,
-  #labels h2,
-  #labels h3,
-  #Labels strong {
-      color: #ff8aeb;
-  }
+    .index-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 300px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}

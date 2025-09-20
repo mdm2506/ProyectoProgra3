@@ -52,33 +52,33 @@
 })();
 
 
-   ///////////////// JAVASCRIPT PARA EL CARRUSEL ///////////////////
+      ///////////////// JAVASCRIPT PARA EL CARRUSEL ///////////////////
 
-    // Selecciona el elemento con la clase "carrusel" (el contenedor que se desplazará)
-const carrusel = document.querySelector(".carrusel");
+    // Selecciona el elemento con la clase "carousel" (el contenedor que se desplazará)
+const carousel = document.querySelector(".carousel");
 
 // Selecciona el botón con las clases "flecha izquierda"
-const btnIzquierda = document.querySelector(".flecha.izquierda");
+const btnIzquierda = document.querySelector(".left.arrow");
 
 // Selecciona el botón con las clases "flecha derecha"
-const btnDerecha = document.querySelector(".flecha.derecha");
+const btnDerecha = document.querySelector(".right.arrow");
 
 // Agrega un evento al botón izquierdo.
 // Cuando el usuario hace clic, el carrusel se desplaza 300px hacia la izquierda.
 // El parámetro "behavior: smooth" hace que el movimiento sea animado y no brusco.
 btnIzquierda.addEventListener("click", () => {
-  carrusel.scrollBy({ left: -300, behavior: "smooth" });
+  carousel.scrollBy({ left: -300, behavior: "smooth" });
 });
 
 // Agrega un evento al botón derecho.
 // Cuando el usuario hace clic, el carrusel se desplaza 300px hacia la derecha.
 // También con animación suave.
 btnDerecha.addEventListener("click", () => {
-  carrusel.scrollBy({ left: 300, behavior: "smooth" });
+  carousel.scrollBy({ left: 300, behavior: "smooth" });
 });
 
 ////////////////// FIN DEL JAVASCRIPT PARA EL CARRUSEL /////////////////
-////////////////// FIN DEL JAVASCRIPT PARA EL CARRUSEL /////////////////
+
 // JAVASCRIPT PARA EL FORMULARIO DE CONTACTO
 
         // Reglas de validación para cada campo
