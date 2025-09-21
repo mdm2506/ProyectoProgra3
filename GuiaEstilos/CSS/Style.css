@@ -362,8 +362,8 @@ button {
     margin: 10px;
     font-family: sans-serif;
     border-radius: 8px;
-    height: 30px;
-    width: 80px;
+    height: 50px;
+    width: 120px;
     cursor: pointer;
     transition: all 0.1s ease;
     border: none;
@@ -380,24 +380,30 @@ button:hover:not(.disable-button) {
 /* active tiene prioridad */
 button:active:not(.disable-button) {
     transform: scale(0.95);
-    /* o el valor que quieras */
 
-    background-color: #f08d7d;
 
 }
 
 
 .primary-button {
     transition: transform 0.1s ease-in-out;
-    background-color: #F08D7D;
+    background-color: #F0b498;
     color: white;
 }
 
+.primary-button:active {
+    background-color: #f08d7d;
+}
 
 .secondary-button {
     background-color: white;
-    border: solid 2px #f08d7d;
+    border: solid 2px #F0b498;
     color: black;
+}
+
+.secondary-button:active {
+
+    background-color: #F0b498;
 }
 
 .outline-button {
@@ -414,20 +420,16 @@ button:active:not(.disable-button) {
 }
 
 .outline-button:hover {
-    background-color: li;
+    background-color: #FBDFCA;
     color: black;
 }
 
-.outline-button:focus {
-    outline: 2px solid #6366f1;
-    outline-offset: 2px;
-    border-radius: 2px;
-}
 
 .disable-button {
-    background-color: rgb(200, 170, 160);
+    background-color: #c8aaa0;
     cursor: not-allowed;
 }
+
 
 /* ============================================
    3. INPUTS & FIELDS
@@ -451,7 +453,7 @@ button:active:not(.disable-button) {
 
 }
 
-textarea {
+.textarea-div textarea {
     width: 400px;
     max-width: 400px;
     max-height: 200px;

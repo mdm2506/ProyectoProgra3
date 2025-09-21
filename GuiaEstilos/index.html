@@ -99,37 +99,40 @@
           <input type="text" id="input-text" class="form_input" required placeholder="Texto">
         </div>
 
-        <label for="email">Email</label>
+        <label for="email">Correo</label>
         <div class="inner-form">
-          <input type="email" id="email" class="form_input" placeholder="ejemplo.Ejemplo@gmail.com" required>
+          <input type="email" id="email" class="form_input" placeholder="Ejemplo.Ejemplo@gmail.com" required>
         </div>
 
-        <label for="password">Password</label>
+        <label for="password">contraseña</label>
         <div class="inner-form">
-          <input type="password" id="password" class="form_input" placeholder="Password" required>
+          <input type="password" id="password" class="form_input" placeholder="Contraseña" required>
         </div>
         <div class="textarea-div">
           <textarea name="" id="" maxlength="200" placeholder="Escriba su texto" rows="6"></textarea>
         </div>
         <h3>Código HTML:</h3>
         <pre><code>
-&lt;div class="form-interior"&gt;
-    &lt;label for="input-text"&gt;texto&lt;/label&gt;
-    &lt;input type="text" id="input-text" class="form_input" required placeholder=""&gt;
-&lt;/div&gt;
+&lt;section id="Inputs-Fields"&gt;
+  &lt;label for="input-text"&gt;Texto&lt;/label&gt;
+  &lt;div class="inner-form"&gt;
+    &lt;input type="text" id="input-text" class="form_input" required placeholder="Texto"&gt;
+  &lt;/div&gt;
 
-&lt;div class="form-interior"&gt;
-    &lt;label for="email"&gt;email&lt;/label&gt;
-    &lt;input type="email" id="email" class="form_input" placeholder="ejemplo.ejemplo@gmail.com" required&gt;
-&lt;/div&gt;
+  &lt;label for="email"&gt;Correo&lt;/label&gt;
+  &lt;div class="inner-form"&gt;
+    &lt;input type="email" id="email" class="form_input" placeholder="Ejemplo.Ejemplo@gmail.com" required&gt;
+  &lt;/div&gt;
 
-&lt;div class="form-interior"&gt;
-    &lt;label for="password"&gt;password&lt;/label&gt;
-    &lt;input type="password" id="password" class="form_input" placeholder="password" required&gt;
-    &lt;div&gt;
-        &lt;textarea name="" id="" maxlength="100" rows="8"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+  &lt;label for="password"&gt;contraseña&lt;/label&gt;
+  &lt;div class="inner-form"&gt;
+    &lt;input type="password" id="password" class="form_input" placeholder="Contraseña" required&gt;
+  &lt;/div&gt;
+
+  &lt;div class="textarea-div"&gt;
+    &lt;textarea name="" id="" maxlength="200" placeholder="Escriba su texto" rows="6"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
                         </code></pre>
       </section>
 
@@ -360,40 +363,6 @@
     &lt;option&gt;Opción deshabilitada&lt;/option&gt;
   &lt;/select&gt;
 &lt;/section&gt;
-    </code></pre>
-
-        <h3>Código CSS:</h3>
-        <pre><code>
-.opciones {
-    width: 100%;
-    max-width: 420px;
-    padding: 10px 12px;
-    font-size: 16px;
-    color: #222;
-    background: #fff;
-}
-
-.opciones option {
-    color: #f08d7d;
-    background: #fff;
-}
-
-.opciones:hover {
-    border-color: #2a7ae2;
-}
-
-.opciones:focus {
-    outline: none;
-    border-color: #2a7ae2;
-    box-shadow: 0 0 0 3px rgba(42, 122, 226, .25);
-}
-
-.opciones:disabled {
-    background-color: red;
-    color: #777;
-    border-color: #ddd;
-    cursor: not-allowed;
-}
     </code></pre>
 
       </section>
