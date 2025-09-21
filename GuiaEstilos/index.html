@@ -90,10 +90,10 @@
         <button class="disable-button">Disabled</button>
         <h3>Código HTML:</h3>
         <pre><code>
-&lt;button class="primary-button"&gt;Primario&lt;/button&gt;
-&lt;button class="secondary-button"&gt;Secundario&lt;/button&gt;
-&lt;button class="outline-button"&gt;Outline&lt;/button&gt;
-&lt;button class="disable-button"&gt;Disabled&lt;/button&gt;
+&lt;button <span class="ids-class">class</span>=<span class="EntreComillas">"primario"</span>&gt;Primario&lt;/button&gt;
+&lt;button <span class="ids-class">class</span>=<span class="EntreComillas">"secundario"</span>&gt;Secundario&lt;/button&gt;
+&lt;button <span class="ids-class">class</span>=<span class="EntreComillas">"outline"</span>&gt;Outline&lt;/button&gt;
+&lt;button <span class="ids-class">class</span>=<span class="EntreComillas">"disabled"</span>&gt;Disabled&lt;/button&gt;
 </code></pre>
       </section>
 
@@ -245,24 +245,56 @@
       </section>
 
       <section id="Labels">
-        <h1 class="TituloPrincipal">Titulo Principal <strong>3,1em</strong></h1>
-        <h2 class="TituloSecundario">hola soy un h2 <strong>2.7em</strong></h2>
-        <h3 class="subtitulo">hola soy un subtitulo <strong>2em</strong></h3>
+          <h2>Labels section</h2>
+        <div class="component-description">
+          <p><strong>¿Para qué sirve?</strong> Las etiquetas (labels) son elementos de texto que proporcionan información descriptiva sobre otros elementos de la interfaz de usuario, como campos de formulario, botones o secciones específicas. Ayudan a los usuarios a comprender el propósito y la función de los elementos con los que interactúan, mejorando la usabilidad y accesibilidad del sitio web.</p>
+        </div>
         <label for="" class="label Grande">Label Grande</label>
         <label for="username" class="label">Label Normal</label>
         <label for="" class="label Pequeño">Label Pequeño</label>
+        <h3>Código HTML:</h3>
+<pre><code>
+&lt;label for=""  <span class="ids-class">class</span>=<span class="EntreComillas">"label Grande"</span>&gt;Label Grande&lt;/label&gt;
+&lt;label for="username" <span class="ids-class">class</span>=<span class="EntreComillas">"label"</span>&gt;Label Normal&lt;/label&gt;
+&lt;label for="" <span class="ids-class">class</span>=<span class="EntreComillas">"label Pequeño"</span>&gt;Label Pequeño&lt;/label&gt;
+
+</code></pre>
+
+
+
+        <h1 class="TituloPrincipal">Titulo Principal <strong>3,1em</strong></h1>
+<pre><code>
+&lt;h1 <span class="ids-class">class</span>=<span class="EntreComillas">"TituloPrincipal"</span>&gt;Titulo Principal&lt;/h1&gt;
+</code></pre>
+        <h2 class="TituloSecundario">Hola soy un h2 <strong>2.7em</strong></h2>
+        <pre><code>
+&lt;h2 <span class="ids-class">class</span>=<span class="EntreComillas">"TituloSecundario"</span>&gt;Hola soy un h2 &lt;/h2&gt;
+</code></pre>
+
+        <h3 class="subtitulo">Hola soy un subtitulo <strong>2em</strong></h3>
+        <pre><code>
+&lt;h3 <span class="ids-class">class</span>=<span class="EntreComillas">"subtitulo"</span>&gt;Hola soy un subtitulo&lt;/h3&gt;
+</code></pre>
 
       </section>
 
       <section id="Links">
+         <h2>Links section</h2>  
+<div class="component-description">
+          <p><strong>¿Para qué sirve?</strong> Los enlaces (links) son elementos interactivos que permiten a los usuarios navegar entre diferentes páginas web o secciones dentro de una misma página. Son fundamentales para la estructura de la web, facilitando el acceso a información adicional, recursos relacionados y funcionalidades específicas.</p>
+</div>
         <p>Este es un tipo número uno del <a href="#" class="tipo1">link tipo 1</a></p>
+        <p>Este es un tipo número dos del <a href="#" class="tipo2">link tipo 2</a></p>
+
+        <h3>Código HTML:</h3>
+
         <pre><code>
-&lt;a href="#" class="tipo1"&gt;link tipo 1&lt;/a&gt;
+&lt;a href="#" <span class="ids-class">class=</span><span class="EntreComillas">"tipo1"</span>&gt;link tipo 1&lt;/a&gt;
     </code></pre>
 
-        <p>Este es un tipo número dos del <a href="#" class="tipo2">link tipo 2</a></p>
+        
         <pre><code>
-&lt;a href="#" class="tipo2"&gt;link tipo 2&lt;/a&gt;
+&lt;a href="#" <span class="ids-class">class=</span><span class="EntreComillas">"tipo2"</span>&gt;link tipo 2&lt;/a&gt;
     </code></pre>
       </section>
 
