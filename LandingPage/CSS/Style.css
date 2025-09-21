@@ -32,6 +32,18 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
+/* ============= ESTILO GENERAL PARA LOS TITULOS DE LAS SECCIONES DE LA PAGINA ===============*/
+.Section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(240, 141, 125);
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
 /* =============== 
     GRID PRINCIPAL
    =============== */
@@ -320,12 +332,6 @@ p>em{
   overflow: hidden;
 }
 
-#Services>h2 {
-  font-size: 24px;
-  margin: 10px;
-
-}
-
 #Services-flex-cards {
   display: flex;
   justify-content: space-between;
@@ -361,14 +367,22 @@ p>em{
   background: rgb(27, 27, 27, 0.91);
   color: white;
   transition: .5s;
+  text-align: center;
+}
+
+.intro h2 {
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 #Services-flex-cards p {
   font-size: 20px;
-  margin: 20px;
+  margin: 10px auto;
   visibility: hidden;
   opacity: 0;
+  text-align: center;
 }
+
 
 .card:hover {
   cursor: pointer;
@@ -402,7 +416,7 @@ p>em{
   overflow-x: hidden;
   padding: 16px 0;
 }
-
+/*============ Quitar cuando Maria haga el commit de su parte ================*/
 #Testimonies .testimonies-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -412,8 +426,8 @@ p>em{
   border-radius: 15px;
   margin-bottom: 30px;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-
 }
+/*=============================================================================*/
 
 .carousel-container {
   position: relative;
