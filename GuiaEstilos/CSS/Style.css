@@ -892,8 +892,15 @@ pre {
 }
 
 pre code {
-    color: #ff9dad;
+    color:  #ffffff;
     display: block;
+}
+.ids-class{
+    color:rgb(240, 141, 125);
+    font-weight: bold;
+}
+.EntreComillas{
+    color:rgb(240,180,152);
 }
 
 /* Estilos para las descripciones de componentes */
