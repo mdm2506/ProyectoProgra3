@@ -52,262 +52,185 @@
 })();
 
 
+
       ///////////////// JAVASCRIPT PARA EL CARRUSEL ///////////////////
-
-    // Selecciona el elemento con la clase "carousel" (el contenedor que se desplazará)
-const carousel = document.querySelector(".carousel");
-
-// Selecciona el botón con las clases "flecha izquierda"
 const btnIzquierda = document.querySelector(".left.arrow");
-
-// Selecciona el botón con las clases "flecha derecha"
 const btnDerecha = document.querySelector(".right.arrow");
+const groups = document.querySelectorAll(".carousel-group");
 
-// Agrega un evento al botón izquierdo.
-// Cuando el usuario hace clic, el carrusel se desplaza 300px hacia la izquierda.
-// El parámetro "behavior: smooth" hace que el movimiento sea animado y no brusco.
-btnIzquierda.addEventListener("click", () => {
-  carousel.scrollBy({ left: -300, behavior: "smooth" });
-});
+let currentIndex = 0; // Índice del primer grupo visible
+const totalGroups = groups.length; // Número total de grupos
 
-// Agrega un evento al botón derecho.
-// Cuando el usuario hace clic, el carrusel se desplaza 300px hacia la derecha.
-// También con animación suave.
-btnDerecha.addEventListener("click", () => {
-  carousel.scrollBy({ left: 300, behavior: "smooth" });
+// Función para mostrar el grupo actual
+
+// Ir al siguiente grupo de 3 testimonios
+function goToNext() {
+  currentIndex = (currentIndex + 1) % totalGroups; // Avanzar de 1 en 1
+  showGroup();
+}
+
+// Ir al grupo anterior de 3 testimonios
+function goToPrevious() {
+  currentIndex = (currentIndex - 1 + totalGroups) % totalGroups; // Retroceder de 1 en 1
+  showGroup();
+}
+function limitWordsInTestimonies() {
+  const items = document.querySelectorAll('.carousel-item');
+  items.forEach(item => {
+    const ps = item.querySelectorAll('p');
+    if (ps.length > 1) {
+      const testimonio = ps[1];
+      const original = testimonio.getAttribute('data-original') || testimonio.textContent;
+      const words = original.trim().split(/\s+/);
+      if (words.length > 20) {
+        testimonio.textContent = words.slice(0, 20).join(' ') + '...';
+      } else {
+        testimonio.textContent = original;
+      }
+      testimonio.setAttribute('data-original', original);
+    }
+  });
+}
+// Función para mostrar el grupo actual
+function showGroup() {
+  // Ocultar todos los grupos
+  groups.forEach(group => {
+    group.style.display = "none";
+  });
+
+  // Mostrar el grupo actual
+  groups[currentIndex].style.display = "flex";
+  limitWordsInTestimonies(); // <-- Llama aquí
+}
+// Conectar las flechas de navegación
+btnIzquierda.addEventListener("click", goToPrevious);
+btnDerecha.addEventListener("click", goToNext);
+
+// Inicializar al cargar
+document.addEventListener('DOMContentLoaded', () => {
+  showGroup(); // Mostrar el primer grupo de 3 testimonios
+  limitWordsInTestimonies();
 });
 
 ////////////////// FIN DEL JAVASCRIPT PARA EL CARRUSEL /////////////////
 
-// JAVASCRIPT PARA EL FORMULARIO DE CONTACTO
+        ///////////////// JAVASCRIPT PARA EL FORMULARIO ///////////////////// ====== Selectores base ======
+const formulario = document.querySelector('form');
+const campos = document.querySelectorAll('.input-campo, .select-campo, .textarea-campo');
+const botonEnviar = document.querySelector('.boton-enviar');
 
-        // Reglas de validación para cada campo
-const reglas = {
-            name: {
-                obligatorio: true,
-                minimo: 2,
-                patron: /^[a-zA-ZáéíóúñÑ\s]{2,}$/,
-                mensajes: {
-                    obligatorio: 'Por favor escribe tu nombre',
-                    minimo: 'Tu nombre debe tener al menos 2 letras',
-                    patron: 'Solo usa letras en tu nombre'
-                }
-            },
-            email: {
-                obligatorio: true,
-                patron: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                mensajes: {
-                    obligatorio: 'Necesitamos tu correo electrónico',
-                    patron: 'Escribe un correo válido (ejemplo@correo.com)'
-                }
-            },
-            phone: {
-                obligatorio: false,
-                patron: /^[\+]?[0-9\s\-\(\)]{8,}$/,
-                mensajes: {
-                    patron: 'Escribe un teléfono válido'
-                }
-            },
-            subject: {
-                obligatorio: true,
-                mensajes: {
-                    obligatorio: 'Selecciona un tema'
-                }
-            },
-            message: {
-                obligatorio: true,
-                minimo: 10,
-                maximo: 500,
-                mensajes: {
-                    obligatorio: 'Escribe tu mensaje',
-                    minimo: 'Tu mensaje debe tener al menos 10 caracteres',
-                    maximo: 'Tu mensaje es muy largo (máximo 500 caracteres)'
-                }
-            }
-        };
+// ====== Helpers de estado del botón ======
+function setButtonDisabled() {
+  botonEnviar.classList.remove('primary-button');
+  botonEnviar.classList.add('disable-button');
+  botonEnviar.disabled = true;
+  botonEnviar.textContent = 'Enviar Mi Mensaje';
+}
 
-        // Conseguir elementos del formulario
-        const formulario = document.querySelector('form');
-        const campos = document.querySelectorAll('.input-campo, .select-campo, .textarea-campo');
-        const botonEnviar = document.querySelector('.boton-enviar');
-        const contadorCaracteres = document.querySelector('.contador-caracteres');
+function setButtonEnabled() {
+  botonEnviar.classList.remove('disable-button');
+  botonEnviar.classList.add('primary-button');
+  botonEnviar.disabled = false;
+  botonEnviar.textContent = 'Enviar Mi Mensaje';
+}
 
-        // Configurar cada campo
-        campos.forEach(campo => {
-            const contenedorCampo = campo.closest('.campo');
-            
-            // Cuando el usuario hace clic en el campo
-            campo.addEventListener('focus', () => {
-                contenedorCampo.classList.add('activo');
-            });
+function setButtonSent() {
+  botonEnviar.classList.remove('primary-button');
+  botonEnviar.classList.add( 'disable-button');
+  botonEnviar.disabled = true;
+  botonEnviar.textContent = 'Enviado';
+}
 
-            // Cuando el usuario sale del campo
-            campo.addEventListener('blur', () => {
-                contenedorCampo.classList.remove('activo');
-                if (campo.value.trim() !== '') {
-                    contenedorCampo.classList.add('lleno');
-                } else {
-                    contenedorCampo.classList.remove('lleno');
-                }
-                revisarCampo(campo);
-            });
+// ====== Estado inicial del botón ======
+setButtonDisabled();
 
-            // Mientras el usuario escribe
-            campo.addEventListener('input', () => {
-                if (campo.value.trim() !== '') {
-                    contenedorCampo.classList.add('lleno');
-                } else {
-                    contenedorCampo.classList.remove('lleno');
-                }
-                
-                // Revisar el campo después de un momento
-                clearTimeout(campo.tiempoRevision);
-                campo.tiempoRevision = setTimeout(() => {
-                    revisarCampo(campo);
-                }, 500);
+// ====== Habilitar/deshabilitar cuando todos los campos estén completos ======
+function actualizarEstadoBoton() {
+  const todosCompletos = [...campos].every(input => input.value.trim() !== '');
+  if (todosCompletos) {
+    setButtonEnabled();
+  } else {
+    setButtonDisabled();
+  }
+}
 
-                // Actualizar contador si es el mensaje
-                if (campo.id === 'mensaje') {
-                    actualizarContador(campo);
-                }
+campos.forEach(input => {
+  input.addEventListener('input', actualizarEstadoBoton);
+});
 
-                // Revisar si se puede enviar el formulario
-                revisarFormularioCompleto();
-            });
-        });
+// ====== Revisión de campos ======
+campos.forEach(campo => {
+  const contenedorCampo = campo.closest('.campo');
+  const mensajeError = contenedorCampo.querySelector('.mensaje-error');
 
-        // Función para revisar un campo
-        function revisarCampo(campo) {
-            const contenedorCampo = campo.closest('.campo');
-            const mensajeError = contenedorCampo.querySelector('.mensaje-error');
-            const reglasDelCampo = reglas[campo.name];
-            
-            if (!reglasDelCampo) return;
+  campo.addEventListener('focus', () => {
+    contenedorCampo.classList.add('activo');
+  });
 
-            let estaCorrect = true;
-            let mensajeDeError = '';
+  campo.addEventListener('blur', () => {
+    if (campo.value.trim() === '') {
+      contenedorCampo.classList.add('error');
+      contenedorCampo.classList.remove('activo', 'correcto');
+      mensajeError?.classList.add('mostrar');
+    } else {
+      contenedorCampo.classList.remove('error');
+      contenedorCampo.classList.add('correcto');
+      mensajeError?.classList.remove('mostrar');
+    }
+  });
 
-            const valor = campo.value.trim();
+  campo.addEventListener('input', () => {
+    if (campo.value.trim() === '') {
+      contenedorCampo.classList.add('error');
+      contenedorCampo.classList.remove('correcto');
+      mensajeError?.classList.add('mostrar');
+    } else {
+      contenedorCampo.classList.add('correcto');
+      contenedorCampo.classList.remove('error');
+      mensajeError?.classList.remove('mostrar');
+    }
+  });
+});
 
-            // Revisar si es obligatorio
-            if (reglasDelCampo.obligatorio && !valor) {
-                estaCorrect = false;
-                mensajeDeError = reglasDelCampo.mensajes.obligatorio;
-            }
-            // Revisar longitud mínima
-            else if (reglasDelCampo.minimo && valor.length > 0 && valor.length < reglasDelCampo.minimo) {
-                estaCorrect = false;
-                mensajeDeError = reglasDelCampo.mensajes.minimo;
-            }
-            // Revisar longitud máxima
-            else if (reglasDelCampo.maximo && valor.length > reglasDelCampo.maximo) {
-                estaCorrect = false;
-                mensajeDeError = reglasDelCampo.mensajes.maximo;
-            }
-            // Revisar patrón
-            else if (reglasDelCampo.patron && valor && !reglasDelCampo.patron.test(valor)) {
-                estaCorrect = false;
-                mensajeDeError = reglasDelCampo.mensajes.patron;
-            }
+// ====== Reset: limpia estados y re-desactiva botón ======
+formulario.addEventListener('reset', function() {
+  campos.forEach(campo => {
+    const contenedorCampo = campo.closest('.campo');
+    const mensajeError = contenedorCampo.querySelector('.mensaje-error');
+    contenedorCampo.classList.remove('activo', 'error', 'correcto', 'lleno');
+    mensajeError?.classList.remove('mostrar');
+  });
+  setButtonDisabled();
+});
 
-            // Actualizar la apariencia
-            contenedorCampo.classList.remove('correcto', 'error');
-            mensajeError.classList.remove('mostrar');
+// ====== Submit: valida y marca "enviado" por clases ======
+formulario.addEventListener('submit', function(e) {
+  e.preventDefault();
 
-            if (valor) { // Solo mostrar estado si hay algo escrito
-                if (estaCorrect) {
-                    contenedorCampo.classList.add('correcto');
-                } else {
-                    contenedorCampo.classList.add('error');
-                    mensajeError.textContent = mensajeDeError;
-                    mensajeError.classList.add('mostrar');
-                }
-            }
+  let todoCorrecto = true;
 
-            return estaCorrect;
-        }
+  campos.forEach(campo => {
+    const contenedorCampo = campo.closest('.campo');
+    const mensajeError = contenedorCampo.querySelector('.mensaje-error');
 
-        // Actualizar contador de caracteres
-        function actualizarContador(textarea) {
-            const caracteresActuales = textarea.value.length;
-            const caracteresMaximos = textarea.getAttribute('maxlength') || 500;
-            contadorCaracteres.textContent = `${caracteresActuales} / ${caracteresMaximos}`;
-            
-            if (caracteresActuales > caracteresMaximos * 0.9) {
-                contadorCaracteres.style.borderColor = '#ff6347';
-                contadorCaracteres.style.color = '#d2691e';
-            } else {
-                contadorCaracteres.style.borderColor = '#cd853f';
-                contadorCaracteres.style.color = '#8b4513';
-            }
-        }
+    if (!campo.value.trim()) {
+      contenedorCampo.classList.add('error');
+      contenedorCampo.classList.remove('correcto');
+      mensajeError?.classList.add('mostrar');
+      todoCorrecto = false;
+    } else {
+      contenedorCampo.classList.remove('error');
+      contenedorCampo.classList.add('correcto');
+      mensajeError?.classList.remove('mostrar');
+    }
+  });
 
-        // Revisar si el formulario está completo
-        function revisarFormularioCompleto() {
-            let formularioCompleto = true;
+if (todoCorrecto) {
+  setButtonSent(); // cambia el texto a Enviado
+  setTimeout(() => {
+    formulario.reset(); // limpia campos después de mostrar "Enviado"
+  }, 1000); // 1 segundo, o el tiempo que quieras mostrar el texto
+}
 
-            campos.forEach(campo => {
-                const reglasDelCampo = reglas[campo.name];
-                if (!reglasDelCampo) return;
-
-                const valor = campo.value.trim();
-
-                if (reglasDelCampo.obligatorio && !valor) {
-                    formularioCompleto = false;
-                } else if (valor && reglasDelCampo.patron && !reglasDelCampo.patron.test(valor)) {
-                    formularioCompleto = false;
-                } else if (reglasDelCampo.minimo && valor.length > 0 && valor.length < reglasDelCampo.minimo) {
-                    formularioCompleto = false;
-                } else if (reglasDelCampo.maximo && valor.length > reglasDelCampo.maximo) {
-                    formularioCompleto = false;
-                }
-            });
-
-            botonEnviar.disabled = !formularioCompleto;
-        }
-
-        // Cuando se envía el formulario
-        formulario.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            let todoCorrect = true;
-
-            // Revisar todos los campos
-            campos.forEach(campo => {
-                if (!revisarCampo(campo)) {
-                    todoCorrect = false;
-                }
-            });
-
-            if (todoCorrect) {
-                // Enviar el formulario
-                botonEnviar.textContent = 'Enviando...';
-                botonEnviar.disabled = true;
-                
-                // Simular envío
-                setTimeout(() => {
-                    alert('¡Tu mensaje se envió correctamente! 🧡');
-                    formulario.reset();
-                    // Limpiar todo
-                    campos.forEach(campo => {
-                        const contenedorCampo = campo.closest('.campo');
-                        contenedorCampo.classList.remove('correcto', 'error', 'lleno', 'activo');
-                        contenedorCampo.querySelector('.mensaje-error').classList.remove('mostrar');
-                    });
-                    contadorCaracteres.textContent = '0 / 500';
-                    botonEnviar.textContent = 'Enviar Mi Mensaje';
-                    botonEnviar.disabled = true;
-                }, 2000);
-            } else {
-                // Ir al primer campo con error
-                const primerError = document.querySelector('.campo.error');
-                if (primerError) {
-                    primerError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    primerError.querySelector('.input-campo, .select-campo, .textarea-campo').focus();
-                }
-            }
-        });
-
-        // Inicializar contador
-        actualizarContador(document.getElementById('mensaje'));
-////////////////// FIN DEL JAVASCRIPT PARA EL FORMULARIO DE CONTACTO /////////////////
+});
+//////////////////// FIN DEL JAVASCRIPT PARA EL FORMULARIO ///////////////////
