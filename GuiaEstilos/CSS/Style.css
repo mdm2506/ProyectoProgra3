@@ -258,33 +258,6 @@ html {
     border-left: 4px solid #F08D7D;
 }
 
-/* Estilos para las descripciones de componentes */
-.component-description {
-    background-color: #fff;
-    padding: 20px;
-    margin: 15px auto 25px auto;
-    /* Centrado horizontal */
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: fit-content;
-    /* Ajusta el ancho al contenido */
-    display: block;
-    /* Cambiado a block para centrar correctamente */
-}
-
-.component-description p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-
-.component-description strong {
-    color: #F08D7D;
-    font-weight: 600;
-}
-
 /* ============================================
    1. COLOR PALETTE
    ============================================ */
@@ -426,7 +399,7 @@ button:active:not(.disable-button) {
 
 
 .disable-button {
-    background-color: #c8aaa0;
+    background-color: #808080;
     cursor: not-allowed;
 }
 
@@ -434,6 +407,21 @@ button:active:not(.disable-button) {
 /* ============================================
    3. INPUTS & FIELDS
    ============================================ */
+
+   #Inputs-Fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#Inputs-Fields h3{
+    margin: 0 0 8px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+}
 
 .form_input {
     padding-left: 4px;
@@ -445,8 +433,6 @@ button:active:not(.disable-button) {
     border: none;
     border-bottom: 2px solid rgb(236, 142, 142);
 }
-
-
 
 .inner-form {
     margin-bottom: 15px;
@@ -675,13 +661,13 @@ h3 {
 #labels h2,
 #labels h3,
 #Labels strong {
-    color: #ff8aeb;
+    color: #ff6347;
 }
 
 label {
     font-size: 20px;
     font-weight: 600;
-    color: #333;
+    color: #000000;
     cursor: pointer;
     margin-right: 30px;
 }
@@ -753,14 +739,13 @@ a:hover {
     line-height: 1.25;
     font-weight: 700;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 2rem;
 }
 
-#RadioButtons p {
+#RadioButtons p{
+    text-align: left;
     margin: 0;
     font-weight: 600;
-    color: #444;
-    text-align: left;
 }
 
 #RadioButtons #color-f08d7d-label {
@@ -783,8 +768,8 @@ a:hover {
     cursor: pointer;
 }
 
-#RadioButtons #color-rojo-label {
-    color: red;
+#RadioButtons #color-gris-label {
+    color: #808080;
     font-weight: bold;
 }
 
@@ -794,12 +779,7 @@ a:hover {
     gap: 8px;
     font-size: 15px;
     cursor: pointer;
-    color: #222;
-}
-
-#RadioButtons input[type="radio"] {
-    accent-color: #2a7ae2;
-    cursor: pointer;
+    color: #000000;
 }
 
 #RadioButtons input[type="radio"]:disabled+span,
@@ -812,6 +792,12 @@ a:hover {
    8. CHECKBOXES
    ============================================ */
 
+#CheckBoxes label {
+    padding-bottom: 10px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
 input[type="checkbox"] {
     accent-color: rgba(240, 141, 125);
     transform: scale(2);
@@ -820,7 +806,7 @@ input[type="checkbox"] {
 label {
     font-size: 20px;
     font-weight: 600;
-    color: #333;
+    color: #000000;
     cursor: pointer;
     margin-right: 30px;
 }
@@ -840,12 +826,12 @@ label {
     line-height: 1.25;
     font-weight: 700;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 2rem;
 }
 
 #Select-Dropdown label {
     font-weight: 600;
-    color: #666;
+    color: #808080;
     margin: 0;
     text-align: left;
 }
@@ -855,7 +841,7 @@ label {
     max-width: 420px;
     padding: 10px 12px;
     font-size: 16px;
-    color: #222;
+    color: #f08d7d;
     background: #fff;
 }
 
@@ -865,19 +851,19 @@ label {
 }
 
 .opciones:hover {
-    border-color: #2a7ae2;
+    border-color: #f08d7d;
 }
 
 .opciones:focus {
     outline: none;
-    border-color: #2a7ae2;
+    border-color: #f08d7d;
     box-shadow: 0 0 0 3px rgba(42, 122, 226, .25);
 }
 
 .opciones:disabled {
-    background-color: red;
-    color: #777;
-    border-color: #ddd;
+    background-color: #808080;
+    color: #000000;
+    border-color: #ffffff;
     cursor: not-allowed;
 }
 
@@ -888,12 +874,12 @@ label {
 /* (Los estilos del navbar ya están arriba en la sección general) */
 
 /* ============================================
-   BLOQUES DE CÓDIGO
+   BLOQUES DE CÓDIGO GENERALES
    ============================================ */
 
 pre {
-    background: #1e1e1e;
-    color: #f5f5f5;
+    background: #000000;
+    color: #ffffff;
     padding: 16px;
     margin: 10px;
     border-radius: 8px;
@@ -908,6 +894,34 @@ pre {
 pre code {
     color: #ff9dad;
     display: block;
+}
+
+/* Estilos para las descripciones de componentes */
+.component-description {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px auto 25px auto;
+    /* Centrado horizontal */
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: fit-content;
+    /* Ajusta el ancho al contenido */
+    display: block;
+    /* Cambiado a block para centrar correctamente */
+}
+
+.component-description p {
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.component-description strong {
+    color: #F08D7D;
+    font-weight: 600;
 }
 
 /* ============================================
