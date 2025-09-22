@@ -5,17 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Durazno</title>
+  <!-- Enlaza el archivo CSS -->
   <link rel="stylesheet" href="CSS/Style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+  <!-- ======= ENCABEZADO CON NAVEGACIÓN ======= -->
   <header id="site-header">
     <nav class="Navbar" aria-label="Principal">
+      <!-- Logo con link al inicio -->
       <div class="logo">
         <a href="#Hero" aria-label="Ir a inicio">
           <img src="IMG/Logo.png" alt="logo">Durazno</a>
       </div>
-        <ul class="nav-links">
+      <!-- Menú de navegación -->
+      <ul class="nav-links">
        <li><a href="#AboutUs">Sobre nosotros</a></li>
        <li><a href="#Seasons">Temporada</a></li>
        <li><a href="#Services">Servicios</a></li>
@@ -26,8 +31,10 @@
   </header>
 
   <main>
+    <!-- ======= SECCIÓN HERO (PORTADA) ======= -->
     <section id="Hero" class="content alt full">
       <div class="hero-grid">
+        <!-- Galería de imágenes del inicio -->
         <div class="tile"><img src="IMG/Hero1.png"></div>
         <div class="tile"><img src="IMG/Hero2.png"></div>
         <div class="tile"><img src="IMG/Hero3.png"></div>
@@ -39,16 +46,14 @@
         <div class="tile"><img src="IMG/Hero9.png"></div>
       </div>
 
+      <!-- Texto y botón principal -->
        <div class="herooo">
        <h1 class="hero-slogan">Vestimos tus sueños</h1>
      <a href="#Seasons" class="cta-button" aria-label="Explorar colección de temporada">Explora Nuestra Colección</a>
       </div>
-     
-
-
     </section>
 
-
+    <!-- ======= SOBRE NOSOTROS ======= -->
    <section id="AboutUs" class="content alt full"> 
   <div class="texto">
     <h2>Sobre nosotros</h2>
@@ -75,12 +80,15 @@
       Guanacaste, Costa Rica. Su propósito es ofrecer productos de calidad que combinen comodidad, diseño y accesibilidad.</p>
   </div>
 
+  <!-- Imagen representativa del equipo -->
   <div class="imagen" role="img" aria-label="Equipo Durazno trabajando"></div>
 </section>
 
+    <!-- ======= PRODUCTOS DE TEMPORADA ======= -->
     <section id="Seasons" class="content full">
       <h2 class = "Section-title">Pijamas más vendidas de la temporada</h2>
       <section class="pijamas-cards-section">
+            <!-- Cada tarjeta muestra un producto con su precio -->
             <div class="pijama-card">
                 <img src="./IMG/pijama blanca floral.png" alt="Pijama blanca floral">
                 <h2>Pijama blanca floral</h2>
@@ -119,10 +127,12 @@
             </section>
     </section>
 
+    <!-- ======= SERVICIOS ======= -->
     <section id="Services" class="content alt full">
       <h2 class = "Section-title">Servicios que ofrecemos</h2>
       <div id="Services-flex-cards">
 
+        <!-- Servicio 1 -->
         <div class="card">
           <img src="IMG/servicio1.1.jpg" alt="" class="service-img">
           <div class="intro">
@@ -130,8 +140,9 @@
             <p>Tenemos pijamas a juego para compartir con tus seres queridos para ambos lucir espectacular</p>
           </div>
         </div>
-        <div class="card">
 
+        <!-- Servicio 2 -->
+        <div class="card">
           <img src="IMG/servicio2.1.jpg" alt="" class="service-img">
           <div class="intro">
             <h2>Elije propio diseño</h2>
@@ -139,27 +150,27 @@
           </div>
         </div>
 
+        <!-- Servicio 3 -->
         <div class="card">
           <img src="IMG/servicio3.1.jpg" alt="" class="service-img">
           <div class="intro">
             <h2>Envios a Domicilio</h2>
             <p>¿No puedes venir a retirar tus productos? <br> No tienes que preocuparte, nosotros te los haremos llegar hasta tu lugar de residencia</p>
           </div>
-
         </div>
       </div>
     </section>
 
+    <!-- ======= TESTIMONIOS ======= -->
     <section id="Testimonies" class="content full">
-
       <!-- titulo para apartado de reseñas -->
-       <h2 class="section-title">Qué opinan nuestros clientes</h2>
+       <h2 class="Section-title">Qué opinan nuestros clientes</h2>
 
   <div class="carousel-container">
     <!-- Botón izquierda -->
     <button class="left arrow">&#10094;</button>
 
-    <!-- Carrusel -->
+    <!-- Carrusel de testimonios -->
     <div class="carousel">
       <!-- Grupo 1 -->
       <div class="carousel-group">
@@ -255,6 +266,7 @@
   </div>
 </section>
 
+<!-- ======= FORMULARIO DE CONTACTO ======= -->
 <section id="formulario-seccion" class="content alt full">
   <div class="contenedor-formulario">
     <h2 class="titulo-principal">¡Contáctanos!</h2>
@@ -262,26 +274,29 @@
 
     <form novalidate>
       <div class="campo">
-        <input type="text" id="nombre" name="name" class="input-campo" required>
+        <input type="text" id="nombre" name="name" class="input-campo" required
+               placeholder="Pon tu nombre completo (ej. nombre apellido)" autocomplete="name">
         <label for="nombre" class="etiqueta">Tu Nombre Completo *</label>
         <div class="mensaje-error">Este campo es obligatorio</div>
       </div>
 
       <div class="campo">
-        <input type="email" id="correo" name="email" class="input-campo" required>
+        <input type="email" id="correo" name="email" class="input-campo" required
+               placeholder="Tu correo electrónico (ej. correo@example.com)" autocomplete="email">
         <label for="correo" class="etiqueta">Tu Correo Electrónico *</label>
         <div class="mensaje-error">Este campo es obligatorio</div>
       </div>
 
       <div class="campo">
-        <input type="tel" id="telefono" name="phone" class="input-campo" required>
+        <input type="tel" id="telefono" name="phone" class="input-campo" required
+               placeholder="Tu número de teléfono (ej. +1234567890)" autocomplete="tel">
         <label for="telefono" class="etiqueta">Tu Teléfono *</label>
         <div class="mensaje-error">Este campo es obligatorio</div>
       </div>
 
       <div class="campo">
         <select id="asunto" name="subject" class="select-campo" required>
-          <option value="">¿De qué quieres hablar? *</option>
+          <option value="" selected disabled hidden>¿De qué quieres hablar? *</option>
           <option value="support">Necesito Ayuda</option>
           <option value="feedback">Quiero Opinar</option>
           <option value="order">Hacer Pedido</option>
@@ -292,22 +307,25 @@
       </div>
 
       <div class="campo">
-        <textarea id="mensaje" name="message" class="textarea-campo" required maxlength="500"></textarea>
-          <div class="contador-caracteres">0 / 500</div>
+        <textarea id="mensaje" name="message" class="textarea-campo" required maxlength="500"
+                  placeholder="Escribe tu mensaje aquí..."></textarea>
+        <div class="contador-caracteres">0 / 500</div>
         <label for="mensaje" class="etiqueta">Escribe tu mensaje aquí *</label>
         <div class="mensaje-error">Este campo es obligatorio</div>
       </div>
-
-    <button type="submit" class="boton-enviar disable-button" disabled>
-  Enviar Mi Mensaje
-</button>
+      <!--Boton de enviar-->
+      <button type="submit" class="boton-enviar disable-button" disabled>
+        Enviar Mi Mensaje
+      </button>
     </form>
   </div>
 </section>
 
   </main>
+  <!-- ======= PIE DE PÁGINA ======= -->
   <footer>
     <div class="social-links">
+      <!-- Links a redes sociales -->
       <a href="https://www.facebook.com" class="social-link tipo2 facebook" aria-label="Facebook">
         Facebook
       </a>
@@ -319,6 +337,8 @@
       </a>
       <p>&copy; 2025 Durazno. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Script JS -->
   <script src="JS/Script.js"></script>
 </body>
 

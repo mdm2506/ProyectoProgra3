@@ -111,122 +111,112 @@ document.addEventListener('DOMContentLoaded', () => {
 ////////////////// FIN DEL JAVASCRIPT PARA EL CARRUSEL /////////////////
 
         ///////////////// JAVASCRIPT PARA EL FORMULARIO ///////////////////// ====== Selectores base ======
-const formulario = document.querySelector('form');
-const campos = document.querySelectorAll('.input-campo, .select-campo, .textarea-campo');
-const botonEnviar = document.querySelector('.boton-enviar');
+    ///////////////// JAVASCRIPT PARA EL FORMULARIO ///////////////////// ====== Selectores base ======
 
-// ====== Helpers de estado del botón ======
-function setButtonDisabled() {
-  botonEnviar.classList.remove('primary-button');
-  botonEnviar.classList.add('disable-button');
-  botonEnviar.disabled = true;
-  botonEnviar.textContent = 'Enviar Mi Mensaje';
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const formulario = document.querySelector('#formulario-seccion form');
+  const campos = document.querySelectorAll('#formulario-seccion .input-campo, #formulario-seccion .select-campo, #formulario-seccion .textarea-campo');
+  const botonEnviar = document.querySelector('#formulario-seccion .boton-enviar');
 
-function setButtonEnabled() {
-  botonEnviar.classList.remove('disable-button');
-  botonEnviar.classList.add('primary-button');
-  botonEnviar.disabled = false;
-  botonEnviar.textContent = 'Enviar Mi Mensaje';
-}
-
-function setButtonSent() {
-  botonEnviar.classList.remove('primary-button');
-  botonEnviar.classList.add( 'disable-button');
-  botonEnviar.disabled = true;
-  botonEnviar.textContent = 'Enviado';
-}
-
-// ====== Estado inicial del botón ======
-setButtonDisabled();
-
-// ====== Habilitar/deshabilitar cuando todos los campos estén completos ======
-function actualizarEstadoBoton() {
-  const todosCompletos = [...campos].every(input => input.value.trim() !== '');
-  if (todosCompletos) {
-    setButtonEnabled();
-  } else {
-    setButtonDisabled();
+  function setButtonDisabled() {
+    botonEnviar.classList.remove('primary-button');
+    botonEnviar.classList.add('disable-button');
+    botonEnviar.disabled = true;
+    botonEnviar.textContent = 'Enviar Mi Mensaje';
   }
-}
+  function setButtonEnabled() {
+    botonEnviar.classList.remove('disable-button');
+    botonEnviar.classList.add('primary-button');
+    botonEnviar.disabled = false;
+    botonEnviar.textContent = 'Enviar Mi Mensaje';
+  }
+  function setButtonSent() {
+    botonEnviar.classList.remove('primary-button');
+    botonEnviar.classList.add('disable-button');
+    botonEnviar.disabled = true;
+    botonEnviar.textContent = 'Enviado';
+  }
 
-campos.forEach(input => {
-  input.addEventListener('input', actualizarEstadoBoton);
-});
-
-// ====== Revisión de campos ======
-campos.forEach(campo => {
-  const contenedorCampo = campo.closest('.campo');
-  const mensajeError = contenedorCampo.querySelector('.mensaje-error');
-
-  campo.addEventListener('focus', () => {
-    contenedorCampo.classList.add('activo');
-  });
-
-  campo.addEventListener('blur', () => {
-    if (campo.value.trim() === '') {
-      contenedorCampo.classList.add('error');
-      contenedorCampo.classList.remove('activo', 'correcto');
-      mensajeError?.classList.add('mostrar');
-    } else {
-      contenedorCampo.classList.remove('error');
-      contenedorCampo.classList.add('correcto');
-      mensajeError?.classList.remove('mostrar');
-    }
-  });
-
-  campo.addEventListener('input', () => {
-    if (campo.value.trim() === '') {
-      contenedorCampo.classList.add('error');
-      contenedorCampo.classList.remove('correcto');
-      mensajeError?.classList.add('mostrar');
-    } else {
-      contenedorCampo.classList.add('correcto');
-      contenedorCampo.classList.remove('error');
-      mensajeError?.classList.remove('mostrar');
-    }
-  });
-});
-
-// ====== Reset: limpia estados y re-desactiva botón ======
-formulario.addEventListener('reset', function() {
-  campos.forEach(campo => {
-    const contenedorCampo = campo.closest('.campo');
-    const mensajeError = contenedorCampo.querySelector('.mensaje-error');
-    contenedorCampo.classList.remove('activo', 'error', 'correcto', 'lleno');
-    mensajeError?.classList.remove('mostrar');
-  });
   setButtonDisabled();
-});
 
-// ====== Submit: valida y marca "enviado" por clases ======
-formulario.addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  let todoCorrecto = true;
+  function actualizarEstadoBoton() {
+    const todosCompletos = [...campos].every(input => input.value.trim() !== '');
+    todosCompletos ? setButtonEnabled() : setButtonDisabled();
+  }
+  campos.forEach(i => i.addEventListener('input', actualizarEstadoBoton));
 
   campos.forEach(campo => {
-    const contenedorCampo = campo.closest('.campo');
-    const mensajeError = contenedorCampo.querySelector('.mensaje-error');
+    const cont = campo.closest('.campo');
+    const msg = cont?.querySelector('.mensaje-error');
 
-    if (!campo.value.trim()) {
-      contenedorCampo.classList.add('error');
-      contenedorCampo.classList.remove('correcto');
-      mensajeError?.classList.add('mostrar');
-      todoCorrecto = false;
-    } else {
-      contenedorCampo.classList.remove('error');
-      contenedorCampo.classList.add('correcto');
-      mensajeError?.classList.remove('mostrar');
-    }
+    const toggleLleno = () => cont?.classList.toggle('lleno', campo.value.trim() !== '');
+
+    campo.addEventListener('focus', () => cont?.classList.add('activo'));
+    campo.addEventListener('blur', () => {
+      const vacio = campo.value.trim() === '';
+      cont?.classList.toggle('error', vacio);
+      cont?.classList.toggle('correcto', !vacio);
+      cont?.classList.remove('activo');
+      msg?.classList.toggle('mostrar', vacio);
+      toggleLleno();
+    });
+    campo.addEventListener('input', () => {
+      const vacio = campo.value.trim() === '';
+      cont?.classList.toggle('error', vacio);
+      cont?.classList.toggle('correcto', !vacio);
+      msg?.classList.toggle('mostrar', vacio);
+      toggleLleno();
+    });
+
+    toggleLleno(); // inicial
   });
 
-if (todoCorrecto) {
-  setButtonSent(); // cambia el texto a Enviado
-  setTimeout(() => {
-    formulario.reset(); // limpia campos después de mostrar "Enviado"
-  }, 1000); // 1 segundo, o el tiempo que quieras mostrar el texto
-}
+  // Contador de caracteres
+  const textareasMax = document.querySelectorAll('#formulario-seccion .textarea-campo[maxlength]');
+  function initContadores() {
+    textareasMax.forEach(textarea => {
+      const counter = textarea.closest('.campo')?.querySelector('.contador-caracteres');
+      if (!counter) return;
+      const update = () => {
+        counter.textContent = `${textarea.value.length} / ${textarea.maxLength}`;
+      };
+      textarea.removeEventListener('input', update);
+      textarea.addEventListener('input', update);
+      update();
+    });
+  }
+  initContadores();
 
+  formulario.addEventListener('reset', () => {
+    campos.forEach(campo => {
+      const cont = campo.closest('.campo');
+      const msg = cont?.querySelector('.mensaje-error');
+      cont?.classList.remove('activo','error','correcto','lleno');
+      msg?.classList.remove('mostrar');
+    });
+    setButtonDisabled();
+    textareasMax.forEach(t => {
+      const c = t.closest('.campo')?.querySelector('.contador-caracteres');
+      if (c) c.textContent = `0 / ${t.maxLength}`;
+    });
+  });
+
+  formulario.addEventListener('submit', e => {
+    e.preventDefault();
+    let ok = true;
+    campos.forEach(campo => {
+      const cont = campo.closest('.campo');
+      const msg = cont?.querySelector('.mensaje-error');
+      const vacio = !campo.value.trim();
+      cont?.classList.toggle('error', vacio);
+      cont?.classList.toggle('correcto', !vacio);
+      msg?.classList.toggle('mostrar', vacio);
+      if (vacio) ok = false;
+    });
+    if (ok) {
+      setButtonSent();
+      setTimeout(() => formulario.reset(), 1000);
+    }
+  });
 });
 //////////////////// FIN DEL JAVASCRIPT PARA EL FORMULARIO ///////////////////
