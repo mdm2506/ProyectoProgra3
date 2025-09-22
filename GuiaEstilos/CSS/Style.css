@@ -20,36 +20,73 @@ html {
 /* =========================================================
     RUTEO DE "PÁGINAS" 
    ========================================================= */
-.page { display: block; }                    
-.page:not(.active) { display: none !important; } 
+.page {
+    display: block;
+}
+
+.page:not(.active) {
+    display: none !important;
+}
 
 /* =========================================================
    NAVBAR FIJO SUPERIOR
    ========================================================= */
 .navbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 15px 30px; background: #F08D7D; box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #F08D7D;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
 }
 
-.logo { font-size: 30px; font-weight: 600;  color: #000; cursor: pointer; user-select: none; }
-.logo:hover { opacity: .85; }
+.logo {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+}
 
-.nav-menu { display: flex; gap: 25px; }
+.logo:hover {
+    opacity: .85;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
 .nav-menu a {
- color: #000; text-decoration: none; transition: color .3s ease;
+    color: #000;
+    text-decoration: none;
+    transition: color .3s ease;
 }
-.nav-menu a:hover {color: #fff; text-decoration: underline; font-weight: 700; }
+
+.nav-menu a:hover {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 700;
+}
 
 /* =========================================================
    LAYOUT DE CADA "PÁGINA"
    ========================================================= */
 .landing-page {
-  min-height: 100vh;
-  background: #fff;
-  display: flex; flex-direction: column; align-items: center; text-align: center;
-  padding: 100px 20px 40px;
+    min-height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 40px;
 }
+
 .landing-page h1 {
     font-size: 3rem;
     color: #333;
@@ -63,18 +100,32 @@ html {
     max-width: 600px;
 }
 
-.about-page, .services-page {
-  min-height: 100vh;
-  padding: 120px 20px 40px;   
-  display: block;                 
-  background: #FFFFFF;            
+.about-page,
+.services-page {
+    min-height: 100vh;
+    padding: 120px 20px 40px;
+    display: block;
+    background: #FFFFFF;
 }
-.services-page { background: #FFFFFF; }
 
-.components-page { width: 100%; max-width: 1100px; padding: 20px; margin-top: 10px; }
+.services-page {
+    background: #FFFFFF;
+}
+
+.components-page {
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
 #inicio .components-page section {
-  min-height: 400px; margin-bottom: 30px; padding: 40px;
-  background: #f9f9f9; border-radius: 10px; border-left: 4px solid #F08D7D;
+    min-height: 400px;
+    margin-bottom: 30px;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border-left: 4px solid #F08D7D;
 }
 
 .index-links {
@@ -85,6 +136,7 @@ html {
     margin-top: 30px;
     margin-bottom: 50px;
 }
+
 .index-links p {
     font-size: 1.2rem;
     color: #808080;
@@ -176,6 +228,7 @@ html {
     font-size: 14px;
     margin-top: 15px;
 }
+
 /* ============================================
    2. BUTTONS
    ============================================ */
@@ -205,7 +258,7 @@ button:active:not(.disable-button) {
 
 .primary-button {
     transition: transform 0.1s ease-in-out;
-    background-color:  #F08D7D;
+    background-color: #F08D7D;
     color: #FFFFFF;
 }
 
@@ -224,7 +277,7 @@ button:active:not(.disable-button) {
     background-color: #F0b498;
 }
 
-.outline-button {
+.tertiary-button {
     background: transparent;
     border: none;
     color: black;
@@ -237,7 +290,7 @@ button:active:not(.disable-button) {
     text-decoration: underline;
 }
 
-.outline-button:hover {
+.tertiary-button:hover {
     background-color: #FBDFCA;
     color: black;
 }
@@ -253,14 +306,14 @@ button:active:not(.disable-button) {
    3. INPUTS & FIELDS
    ============================================ */
 
-   #Inputs-Fields {
+#Inputs-Fields {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
-#Inputs-Fields h3{
+#Inputs-Fields h3 {
     margin: 0 0 8px;
     line-height: 1.25;
     font-weight: 700;
@@ -304,151 +357,162 @@ button:active:not(.disable-button) {
    ============================================ */
 
 .formulario-contenedor {
-  max-width: 500px;
-  padding: 40px;
-  background: #F0B498;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px #808080;
-  margin: 20px auto;
+    max-width: 500px;
+    padding: 40px;
+    background: #F0B498;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #808080;
+    margin: 20px auto;
 }
 
 .formulario-titulo {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #A0522D;
-  text-align: center;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #A0522D;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #FFFFFF;
 }
 
 .formulario-subtitulo {
-  color: #A0522D;
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
-  font-weight: 500;
+    color: #A0522D;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
-.campo-form { margin-bottom: 25px; position: relative; }
+.campo-form {
+    margin-bottom: 25px;
+    position: relative;
+}
+
 .etiqueta-form {
     display: block;
-  text-align: left; 
-  margin-bottom: 8px;
-  color: #A0522D;
-  font-size: 16px;
-  font-weight: 600;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #A0522D;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .input-form,
 .select-form,
 .textarea-campo {
-  width: 100%;
-  padding: 18px;
-  border: 3px solid #A0522D;
-  border-radius: 15px;
-  background: #FFFFFF33;
-  color: #A0522D;
-  font-size: 16px;
-  font-weight: 600;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
+    width: 100%;
+    padding: 18px;
+    border: 3px solid #A0522D;
+    border-radius: 15px;
+    background: #FFFFFF33;
+    color: #A0522D;
+    font-size: 16px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 .input-form::placeholder,
-.textarea-campo::placeholder { color: #A0522D; }
+.textarea-campo::placeholder {
+    color: #A0522D;
+}
+
 .input-form:focus,
 .select-form:focus,
 .textarea-campo:focus {
-  outline: none;
-  border-color: #FFBC8A;
-  color: #A0522D;
+    outline: none;
+    border-color: #FFBC8A;
+    color: #A0522D;
 }
 
 .textarea-campo {
-  resize: vertical;
-  min-height: 100px;
-  max-height: 200px;
-  padding-top: 20px;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+    padding-top: 20px;
 }
 
 .campo-form-correcto .input-form,
 .campo-form-correcto .select-form,
 .campo-form-correcto .textarea-campo {
-  border-color: #90EE90;
+    border-color: #90EE90;
 }
+
 .campo-form-error .input-form,
 .campo-form-error .select-form,
 .campo-form-error .textarea-campo {
-  border-color: #FF6347;
+    border-color: #FF6347;
 }
 
 .mensaje-error-form {
-  display: none;
-  color: #FF6347;
-  font-size: 14px;
-  margin-top: 8px;
-  background: #FFFFFF;
-  padding: 8px 12px;
-  border-radius: 10px;
-  font-weight: 600;
-  border-left: 4px solid #FF6347;
+    display: none;
+    color: #FF6347;
+    font-size: 14px;
+    margin-top: 8px;
+    background: #FFFFFF;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    border-left: 4px solid #FF6347;
 }
-.campo-form-error .mensaje-error-form { display: block; }
+
+.campo-form-error .mensaje-error-form {
+    display: block;
+}
 
 .contador-caracteres-form {
-  text-align: right;
-  font-size: 14px;
-  color: #A0522D;
-  margin-top: 5px;
-  background: #FFFFFF;
-  padding: 5px 12px;
-  border-radius: 10px;
-  display: inline-block;
-  font-weight: 600;
-  border: 2px solid #A0522D;
+    text-align: right;
+    font-size: 14px;
+    color: #A0522D;
+    margin-top: 5px;
+    background: #FFFFFF;
+    padding: 5px 12px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 600;
+    border: 2px solid #A0522D;
 }
 
 .acciones-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
 }
 
 .formulario-contenedor .primary-button,
 .formulario-contenedor .disable-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;      
-  padding: 18px;    
-  border-radius: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-sizing: border-box;
 }
 
 .etiqueta-y-contador {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  margin-bottom: 6px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
 }
 
 .etiqueta-y-contador .etiqueta-form {
-  margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .contador-caracteres-form {
-  font-size: 11px;
-  background: #FFFFFF33;
-  padding: 2px 6px;
-  border-radius: 6px;
-  border: 1px solid #A0522D;
-  font-weight: 500;
-  color: #A0522D;
+    font-size: 11px;
+    background: #FFFFFF33;
+    padding: 2px 6px;
+    border-radius: 6px;
+    border: 1px solid #A0522D;
+    font-weight: 500;
+    color: #A0522D;
 }
 
 /* ============================================
@@ -587,7 +651,7 @@ a:hover {
     font-size: 2rem;
 }
 
-#RadioButtons p{
+#RadioButtons p {
     text-align: left;
     margin: 0;
     font-weight: 600;
@@ -716,11 +780,26 @@ label {
    10) NAVBAR guia de estilos
    ========================================================= */
 #NavBar nav .nav-links {
-  display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
-  background: rgb(240,141,125); line-height: 3.2; padding: 10px 12px; border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgb(240, 141, 125);
+    line-height: 3.2;
+    padding: 10px 12px;
+    border-radius: 10px;
 }
-#NavBar nav .nav-links a { color: #000000; text-decoration: none; transition: color .3s ease; }
-#NavBar nav .nav-links a:hover { color: #FFFFFF; text-decoration: underline; }
+
+#NavBar nav .nav-links a {
+    color: #000000;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+#NavBar nav .nav-links a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
 
 /* ============================================
    BLOQUES DE CÓDIGO GENERALES
@@ -741,22 +820,22 @@ pre {
 }
 
 pre code {
-    color:  #FFFFFF;
+    color: #FFFFFF;
     display: block;
 }
 
-.Etiquetas-Html{
-    color:rgb(255, 209, 168);
+.Etiquetas-Html {
+    color: rgb(255, 209, 168);
     font-weight: bold;
 }
 
-.ids-class{
-    color:rgb(240, 141, 125);
+.ids-class {
+    color: rgb(240, 141, 125);
     font-weight: bold;
 }
 
-.EntreComillas{
-    color:rgb(240,180,152);
+.EntreComillas {
+    color: rgb(240, 180, 152);
 }
 
 .component-description {
@@ -767,7 +846,7 @@ pre code {
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: fit-content;
-    display: block; 
+    display: block;
 }
 
 .component-description p {
@@ -787,17 +866,17 @@ pre code {
    FOOTER
    ============================================ */
 footer {
-  background-color: #F08D7D;
-   padding: 40px 20px 20px;
-  text-align: center;
+    background-color: #F08D7D;
+    padding: 40px 20px 20px;
+    text-align: center;
 }
 
 .footer-section h3 {
-  color: #000000;              
+    color: #000000;
 }
 
 .footer-section p {
-  color: #000000;
-  opacity: 0.92;
-  line-height: 1.6;
+    color: #000000;
+    opacity: 0.92;
+    line-height: 1.6;
 }
