@@ -58,7 +58,7 @@ html {
 
 .landing-page p {
     font-size: 1.2rem;
-    color: #666;
+    color: #808080;
     margin-bottom: 30px;
     max-width: 600px;
 }
@@ -67,9 +67,9 @@ html {
   min-height: 100vh;
   padding: 120px 20px 40px;   
   display: block;                 
-  background: #f5f5f5;            
+  background: #FFFFFF;            
 }
-.services-page { background: #fff; }
+.services-page { background: #FFFFFF; }
 
 .components-page { width: 100%; max-width: 1100px; padding: 20px; margin-top: 10px; }
 #inicio .components-page section {
@@ -87,7 +87,7 @@ html {
 }
 .index-links p {
     font-size: 1.2rem;
-    color: #666;
+    color: #808080;
     margin-bottom: 10px;
     max-width: 600px;
     font-weight: bold;
@@ -95,8 +95,8 @@ html {
 
 .index-links a {
     text-decoration: none;
-    color: #4a4a4a;
-    background-color: white;
+    color: #808080;
+    background-color: #FFFFFF;
     padding: 10px 30px;
     border-radius: 8px;
     border: 1px solid #FBDFCA;
@@ -110,7 +110,7 @@ html {
 
 .index-links a:hover {
     background-color: #F08D7D;
-    color: white;
+    color: #FFFFFF;
     border-color: #F08D7D;
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -141,7 +141,7 @@ html {
 }
 
 .primary-color {
-    border: 3px solid #fff;
+    border: 3px solid #FFFFFF;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -157,7 +157,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    color: #FFFFFF;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 12px;
@@ -172,7 +172,7 @@ html {
 
 .usage-note {
     text-align: center;
-    color: #666;
+    color: #808080;
     font-size: 14px;
     margin-top: 15px;
 }
@@ -206,7 +206,7 @@ button:active:not(.disable-button) {
 .primary-button {
     transition: transform 0.1s ease-in-out;
     background-color:  #F08D7D;
-    color: white;
+    color: #FFFFFF;
 }
 
 .primary-button:active {
@@ -214,7 +214,7 @@ button:active:not(.disable-button) {
 }
 
 .secondary-button {
-    background-color: white;
+    background-color: #FFFFFF;
     border: solid 2px #F0b498;
     color: black;
 }
@@ -273,7 +273,7 @@ button:active:not(.disable-button) {
     height: 1.6rem;
     width: 200px;
     background-color: #f0b498;
-    color: gray;
+    color: #808080;
     border-radius: 4px;
     border: none;
     border-bottom: 2px solid rgb(236, 142, 142);
@@ -288,9 +288,9 @@ button:active:not(.disable-button) {
     max-width: 400px;
     max-height: 200px;
     padding: 15px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-radius: 15px;
-    color: black;
+    color: #000000;
     font-size: 16px;
     font-weight: 600;
     margin: 10px;
@@ -315,7 +315,7 @@ button:active:not(.disable-button) {
 .formulario-titulo {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #8B4513;
+  color: #A0522D;
   text-align: center;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px #FFFFFF;
@@ -334,7 +334,7 @@ button:active:not(.disable-button) {
     display: block;
   text-align: left; 
   margin-bottom: 8px;
-  color: #8B4513;
+  color: #A0522D;
   font-size: 16px;
   font-weight: 600;
 }
@@ -347,7 +347,7 @@ button:active:not(.disable-button) {
   border: 3px solid #A0522D;
   border-radius: 15px;
   background: #FFFFFF33;
-  color: #8B4513;
+  color: #A0522D;
   font-size: 16px;
   font-weight: 600;
   box-sizing: border-box;
@@ -361,7 +361,7 @@ button:active:not(.disable-button) {
 .textarea-campo:focus {
   outline: none;
   border-color: #FFBC8A;
-  color: #8B4513;
+  color: #A0522D;
 }
 
 .textarea-campo {
@@ -398,7 +398,7 @@ button:active:not(.disable-button) {
 .contador-caracteres-form {
   text-align: right;
   font-size: 14px;
-  color: #8B4513;
+  color: #A0522D;
   margin-top: 5px;
   background: #FFFFFF;
   padding: 5px 12px;
@@ -477,7 +477,7 @@ h3 {
 .label {
     display: inline-block;
     background: #1f2937;
-    color: #f5ab73;
+    color: #F0B498;
     font-size: 1rem;
     padding: 6px 12px;
     border-radius: 6px;
@@ -497,8 +497,8 @@ h3 {
 .label:hover,
 .Pequeño:hover,
 .Grande:hover {
-    background: #374151;
-    color: #ffd1a8;
+    background: hsl(217, 19%, 27%);
+    color: #FFBC8A;
     cursor: pointer;
 }
 
@@ -594,22 +594,22 @@ a:hover {
 }
 
 #RadioButtons #color-f08d7d-label {
-    color: #f08d7d;
+    color: #F08D7D;
     font-weight: bold;
 }
 
 #RadioButtons #color-f0b498-label {
-    color: #f0b498;
+    color: #F0B498;
     font-weight: bold;
 }
 
 #RadioButtons #color-f08d7d {
-    accent-color: #f08d7d;
+    accent-color: #F08D7D;
     cursor: pointer;
 }
 
 #RadioButtons #color-f0b498 {
-    accent-color: #f0b498;
+    accent-color: #F0B498;
     cursor: pointer;
 }
 
@@ -686,29 +686,29 @@ label {
     max-width: 420px;
     padding: 10px 12px;
     font-size: 16px;
-    color: #f08d7d;
-    background: #fff;
+    color: #F08D7D;
+    background: #FFFFFF;
 }
 
 .opciones option {
-    color: #f08d7d;
-    background: #fff;
+    color: #F08D7D;
+    background: #FFFFFF;
 }
 
 .opciones:hover {
-    border-color: #f08d7d;
+    border-color: #F08D7D;
 }
 
 .opciones:focus {
     outline: none;
-    border-color: #f08d7d;
+    border-color: #F08D7D;
     box-shadow: 0 0 0 3px rgba(42, 122, 226, .25);
 }
 
 .opciones:disabled {
     background-color: #808080;
     color: #000000;
-    border-color: #ffffff;
+    border-color: #FFFFFF;
     cursor: not-allowed;
 }
 
@@ -719,8 +719,8 @@ label {
   display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
   background: rgb(240,141,125); line-height: 3.2; padding: 10px 12px; border-radius: 10px;
 }
-#NavBar nav .nav-links a { color: #000; text-decoration: none; transition: color .3s ease; }
-#NavBar nav .nav-links a:hover { color: #fff; text-decoration: underline; }
+#NavBar nav .nav-links a { color: #000000; text-decoration: none; transition: color .3s ease; }
+#NavBar nav .nav-links a:hover { color: #FFFFFF; text-decoration: underline; }
 
 /* ============================================
    BLOQUES DE CÓDIGO GENERALES
@@ -728,7 +728,7 @@ label {
 
 pre {
     background: #000000;
-    color: #ffffff;
+    color: #FFFFFF;
     padding: 16px;
     margin: 10px;
     border-radius: 8px;
@@ -737,11 +737,11 @@ pre {
     font-size: 14px;
     text-align: left;
     line-height: 1.5;
-    border: 1px solid #333;
+    border: 1px solid #000000;
 }
 
 pre code {
-    color:  #ffffff;
+    color:  #FFFFFF;
     display: block;
 }
 
@@ -760,7 +760,7 @@ pre code {
 }
 
 .component-description {
-    background-color: #fff;
+    background-color: #FFFFFF;
     padding: 20px;
     margin: 15px auto 25px auto;
     border-radius: 8px;
@@ -793,11 +793,11 @@ footer {
 }
 
 .footer-section h3 {
-  color: black;              
+  color: #000000;              
 }
 
 .footer-section p {
-  color: black;           
-  opacity: 0.92;            
+  color: #000000;
+  opacity: 0.92;
   line-height: 1.6;
 }
