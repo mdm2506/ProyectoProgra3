@@ -4,20 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto Progra3</title>
+  <title>Guia de estilos</title>
   <link rel="stylesheet" href="CSS/Style.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo" onclick="showPage('inicio')">Progra3 Project</div>
-            <div class="nav-menu">
-                <a onclick="showPage('inicio')">Inicio</a>
-                <a onclick="showPage('sobre-nosotros')">Sobre Nosotros</a>
-                <a onclick="showPage('servicios')">Servicios</a>
-            </div>
-        </nav>
+  <nav class="navbar">
+   <div class="logo" data-page="inicio">Guía de estilos</div>
+    <div class="nav-menu">
+      <a href="#" data-page="Integrantes">Integrantes</a>
+      <a href="#" data-page="DescargaCSS">Descarga CSS</a>
+    </div>
+  </nav>
     </header>
 
   <!-- PÁGINA DE INICIO (LANDING) -->
@@ -143,105 +142,119 @@
 &lt;/div&gt;
                         </code></pre>
       </section>
+<section id="Forms"> 
+  <h2>Formularios section</h2>
 
-         <section id="Forms">
-       <h2>Formularios section</h2>
-       <div class="formulario-contenedor">
-            <h4 class="formulario-titulo">¡Formulario!</h4>
-            <p class="formulario-subtitulo">mensaje</p>
-            
-            <form class="formulario-contacto">
-                <!-- CAMPO OBLIGATORIO CORRECTO -->
-                <div class="campo-form campo-form-correcto">
-                    <label for="form-nombre" class="etiqueta-form">Tu Nombre Completo *</label>
-                    <input type="text" id="form-nombre" name="name" class="input-form" placeholder="Escribe tu nombre aquí" value="Juan Carlos Pérez">
-                </div>
+  <div class="component-description">
+    <p><strong>¿Para qué sirven?</strong> Los formularios permiten al usuario ingresar información, seleccionar opciones o enviar datos que serán procesados. 
+    Se utilizan en casos como registro de usuarios, contacto, pedidos o cualquier acción que requiera interacción directa entre el usuario y el sistema.</p>
+  </div>
 
-                <!-- CAMPO OBLIGATORIO INCORRECTO -->
-                <div class="campo-form campo-form-error">
-                    <label for="form-correo" class="etiqueta-form">Tu Correo Electrónico *</label>
-                    <input type="email" id="form-correo" name="email" class="input-form" placeholder="ejemplo@correo.com" value="email-invalido">
-                    <div class="mensaje-error-form">Por favor ingresa un email válido</div>
-                </div>
+  <form class="formulario-contenedor">
+    <h4 class="formulario-titulo">¡Formulario!</h4>
+    <p class="formulario-subtitulo">mensaje</p>
 
-                <!-- CAMPO OPCIONAL NORMAL -->
-                <div class="campo-form">
-                    <label for="form-telefono" class="etiqueta-form">Tu Teléfono (opcional)</label>
-                    <input type="tel" id="form-telefono" name="phone" class="input-form" placeholder="Tu número de teléfono" value="">
-                </div>
+    <!-- INPUT TEXTO VACÍO -->
+    <div class="campo-form">
+      <label for="ejemplo-vacio" class="etiqueta-form">Campo vacío *</label>
+      <input type="text" id="ejemplo-vacio" class="input-form" placeholder="Escribe aquí...">
+    </div>
 
-                <!-- CAMPO OBLIGATORIO INCORRECTO -->
-                <div class="campo-form campo-form-error">
-                    <label for="form-asunto" class="etiqueta-form">¿De qué quieres hablar? *</label>
-                    <select id="form-asunto" name="subject" class="select-form">
-                        <option value="">Selecciona una opción</option>
-                        <option value="support">Necesito Ayuda</option>
-                        <option value="feedback">Quiero Opinar</option>
-                        <option value="order">Hacer Pedido</option>
-                        <option value="other">Otra Cosa</option>
-                    </select>
-                    <div class="mensaje-error-form">Debes seleccionar una opción</div>
-                </div>
+    <!-- INPUT TEXTO CORRECTO -->
+    <div class="campo-form campo-form-correcto">
+      <label for="ejemplo-correcto" class="etiqueta-form">Campo correcto *</label>
+      <input type="text" id="ejemplo-correcto" class="input-form" value="Juan Carlos Pérez">
+    </div>
 
-                <!-- CAMPO OBLIGATORIO INCORRECTO -->
-                <div class="campo-form campo-form-error">
-                    <label for="form-mensaje" class="etiqueta-form">Escribe tu mensaje aquí *</label>
-                    <textarea id="form-mensaje" name="message" class="textarea-form" placeholder="Escribe tu mensaje aquí...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.</textarea>
-                    <div class="contador-caracteres-form">547 / 500</div>
-                    <div class="mensaje-error-form">El mensaje excede el límite de 500 caracteres</div>
-                </div>
+    <!-- INPUT TEXTO ERROR -->
+    <div class="campo-form campo-form-error">
+      <label for="ejemplo-error" class="etiqueta-form">Campo con error *</label>
+      <input type="email" id="ejemplo-error" class="input-form" value="email-invalido">
+      <div class="mensaje-error-form">Por favor ingresa un email válido</div>
+    </div>
+    <!-- SELECT ERROR -->
+    <div class="campo-form campo-form-error">
+      <label for="opciones-error" class="etiqueta-form">Opción con error *</label>
+      <select id="opciones-error" class="select-form">
+        <option value="">Selecciona una opción</option>
+        <option value="1">Opción A</option>
+        <option value="2">Opción B</option>
+      </select>
+      <div class="mensaje-error-form">Debes seleccionar una opción</div>
+    </div>
 
-                <button type="button" class="boton-form">Enviar Mi Mensaje</button>
-              </div>
-            </form>
-            <pre><code>
-&lt;form class="formulario-contacto"&gt;
-    &lt;div class="campo-form campo-form-correcto"&gt;
-        &lt;label for="form-nombre" class="etiqueta-form"&gt;Tu Nombre Completo *&lt;/label&gt;
-        &lt;input type="text" id="form-nombre" name="name"
-                class="input-form" placeholder="Escribe tu nombre aquí"
-                value="Juan Carlos Pérez"&gt;
+<!-- TEXTAREA ERROR -->
+<div class="campo-form campo-form-error">
+  <div class="etiqueta-y-contador">
+    <label for="mensaje" class="etiqueta-form">Escribe tu mensaje aquí *</label>
+    <div class="contador-caracteres-form">0 / 500</div>
+  </div>
+  <textarea id="mensaje" name="message" class="textarea-campo" placeholder="Escribe tu mensaje..." required maxlength="500"></textarea>
+  <div class="mensaje-error-form">El campo no puede estar vacío</div>
+</div>
+
+    <!-- BOTONES -->
+    <div class="acciones-form">
+      <button type="button" class="disable-button" disabled>Enviar (deshabilitado)</button>
+      <button type="submit" class="primary-button">Enviar</button>
+       <button type="button" class="disable-button" disabled>Enviado</button>
+    </div>
+  </form>
+
+         <h3>Código HTML:</h3>
+       <pre><code>
+&lt;form class="formulario-contenedor"&gt;
+  &lt;h4 class="formulario-titulo"&gt;¡Formulario!&lt;/h4&gt;
+  &lt;p class="formulario-subtitulo"&gt;mensaje&lt;/p&gt;
+
+  &lt;!-- INPUT TEXTO VACÍO --&gt;
+  &lt;div class="campo-form"&gt;
+    &lt;label for="ejemplo-vacio" class="etiqueta-form"&gt;Campo vacío *&lt;/label&gt;
+    &lt;input type="text" id="ejemplo-vacio" class="input-form" placeholder="Escribe aquí..."&gt;
+  &lt;/div&gt;
+
+  &lt;!-- INPUT TEXTO CORRECTO --&gt;
+  &lt;div class="campo-form campo-form-correcto"&gt;
+    &lt;label for="ejemplo-correcto" class="etiqueta-form"&gt;Campo correcto *&lt;/label&gt;
+    &lt;input type="text" id="ejemplo-correcto" class="input-form" value="Juan Carlos Pérez"&gt;
+  &lt;/div&gt;
+
+  &lt;!-- INPUT TEXTO ERROR --&gt;
+  &lt;div class="campo-form campo-form-error"&gt;
+    &lt;label for="ejemplo-error" class="etiqueta-form"&gt;Campo con error *&lt;/label&gt;
+    &lt;input type="email" id="ejemplo-error" class="input-form" value="email-invalido"&gt;
+    &lt;div class="mensaje-error-form"&gt;Por favor ingresa un email válido&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- SELECT ERROR --&gt;
+  &lt;div class="campo-form campo-form-error"&gt;
+    &lt;label for="opciones-error" class="etiqueta-form"&gt;Opción con error *&lt;/label&gt;
+    &lt;select id="opciones-error" class="select-form"&gt;
+      &lt;option value=""&gt;Selecciona una opción&lt;/option&gt;
+      &lt;option value="1"&gt;Opción A&lt;/option&gt;
+      &lt;option value="2"&gt;Opción B&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div class="mensaje-error-form"&gt;Debes seleccionar una opción&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- TEXTAREA ERROR --&gt;
+  &lt;div class="campo-form campo-form-error"&gt;
+    &lt;div class="etiqueta-y-contador"&gt;
+      &lt;label for="mensaje" class="etiqueta-form"&gt;Escribe tu mensaje aquí *&lt;/label&gt;
+      &lt;div class="contador-caracteres-form"&gt;0 / 500&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="campo-form campo-form-error"&gt;
-        &lt;label for="form-correo" class="etiqueta-form"&gt;Tu Correo Electrónico *&lt;/label&gt;
-        &lt;input type="email" id="form-correo" name="email"
-                class="input-form" placeholder="ejemplo@correo.com"
-                value="email-invalido"&gt; 
-        &lt;div class="mensaje-error-form"&gt;Por favor ingresa un email válido&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="campo-form"&gt;
-        &lt;label for="form-telefono" class="etiqueta-form"&gt;Tu Teléfono (opcional)&lt;/label&gt;
-        &lt;input type="tel" id="form-telefono" name="phone"
-                class="input-form" placeholder="Tu número de teléfono"
-                value="+506 8888-9999"&gt;
-    &lt;/div&gt;
-    &lt;div class="campo-form campo-form-error"&gt;
-        &lt;label for="form-asunto" class="etiqueta-form"&gt;¿De qué quieres hablar? *&lt;/label&gt;
-        &lt;select id="form-asunto" name="subject" class="select-form
-"&gt;
-            &lt;option value=""&gt;Selecciona una opción&lt;/option&gt;
-            &lt;option value="support"&gt;Necesito Ayuda&lt;/option&gt;
-            &lt;option value="feedback"&gt;Quiero Opinar&lt;/option&gt
-            &lt;option value="order"&gt;Hacer Pedido&lt;/option&gt;
-            &lt;option value="other"&gt;Otra Cosa&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;div class="mensaje-error-form"&gt;Debes seleccionar una opción&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="campo-form campo-form-error"&gt;
-        &lt;label for="form-mensaje" class="etiqueta-form"&gt
-            Escribe tu mensaje aquí *&lt;/label&gt;
-        &lt;textarea id="form-mensaje" name="message"
-                  class="textarea-form"
-                  placeholder="Escribe tu mensaje aquí..."&gt;
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.
-        &lt;/textarea&gt;
-        &lt;div class="contador-caracteres-form"&gt;547 / 500&lt;/div&gt;
-        &lt;div class="mensaje-error-form"&gt;El mensaje excede el límite
-            de 500 caracteres&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;button type="button" class="boton-form"&gt;Enviar Mi Mensaje&lt;/button&gt;
+    &lt;textarea id="mensaje" name="message" class="textarea-campo" placeholder="Escribe tu mensaje..." required maxlength="500"&gt;&lt;/textarea&gt;
+    &lt;div class="mensaje-error-form"&gt;El campo no puede estar vacío&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- BOTONES --&gt;
+  &lt;div class="acciones-form"&gt;
+    &lt;button type="button" class="disable-button" disabled&gt;Enviar (deshabilitado)&lt;/button&gt;
+    &lt;button type="button" class="primary-button"&gt;Enviar (activo)&lt;/button&gt;
+    &lt;button type="button" class="disable-button" disabled&gt;Enviado&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/form&gt;
-            </code></pre>
+</code></pre>
       </section>
 
       <section id="Labels">
@@ -290,10 +303,6 @@
 
         <pre><code>
 &lt;a href="#" <span class="ids-class">class=</span><span class="EntreComillas">"tipo1"</span>&gt;link tipo 1&lt;/a&gt;
-    </code></pre>
-
-        
-        <pre><code>
 &lt;a href="#" <span class="ids-class">class=</span><span class="EntreComillas">"tipo2"</span>&gt;link tipo 2&lt;/a&gt;
     </code></pre>
       </section>
@@ -350,13 +359,18 @@
       </section>
 
       <section id="CheckBoxes">
+
         <h2>Check Boxes section</h2>
-        <br>
-          <label for="check">Esto es un checkbox</label>
-          <input type="checkbox" id="check">
-        
-        <h3>Código HTML:</h3>
-          <pre><code>
+
+        <div class="component-description">
+          <p><strong>¿Para qué sirve?</strong> Los checkbox o casillas de verificación sirven para que un usuario pueda seleccionar una o varias opciones de un conjunto en un formulario o interfaz.</p>
+        </div>
+
+        <label for="check">Esto es un checkbox</label>
+
+        <input type="checkbox" id="check">
+
+        <pre><code>
           &lt;label for="check"&gt;Esto es un checkbox&lt;/label&gt;
           &lt;input type="checkbox" id="check"&gt;
           </code></pre>
@@ -401,7 +415,6 @@
 
         </section>
         
-        <header>
         <section id="NavBar">
             <h1>Navbar</h1>
             <div class="component-description">
@@ -434,25 +447,32 @@
   &lt;/nav&gt;
 &lt;/section&gt;
 </code></pre>
-
-        </section>
       </section>
-
-
+</div>
     </div>
 
+    <!-- PÁGINA DE INTEGRANTES -->
 
-    <div id="sobre-nosotros" class="page about-page">
-      <h1>Sobre Nosotros</h1>
+
+   <div id="Integrantes" class="page about-page" aria-hidden="true">
+      <h1>Grupo conformado por: </h1>
+      <ul>
+        <li>Fatima Carrillo Garcia</li>
+        <li>Samir Campos Diaz</li>
+        <li>Maria del Mar Diaz Ruiz</li>
+        <li>Elian Fajardo Gutierrez</li>
+        <li>Keril Valle Vasquez</li>
+        <li>Yeisson Villalobos Toruño</li>
+      </ul>
     </div>
 
-
-    <div id="servicios" class="page services-page">
-      <h1>Nuestros Servicios</h1>
-      <h1>poner servicios</h1>
+<div id="DescargaCSS" class="page services-page" aria-hidden="true">
+      <h1>Descarga el archivo CSS</h1>
+      <p>Puedes descargar el archivo CSS haciendo clic en el siguiente enlace:</p>
+      <div class="download-link">
+        <a href="CSS/Style.css" download="Style.css">Descargar Style.css</a>
+      </div>
     </div>
-  </div>
-  </div>
 
 
 
