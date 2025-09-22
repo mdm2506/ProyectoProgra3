@@ -4,7 +4,7 @@
   const logoText = logoContainer.querySelector('a');
   const navbar = document.querySelector('.Navbar');
 
-  const MAX_SCROLL = 150; // scroll donde la animación se completa
+  const MAX_SCROLL = 100; // scroll donde la animación se completa
 
   // Valores iniciales y finales
   const START_LOGO_X = 0;     // posición inicial del logo
