@@ -221,11 +221,12 @@ header.scrolled .logo img { height: 50px; width: 50px;}
   margin: 70px;
   grid-area: about-us;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-rows: auto auto ;
-  grid-template-areas: 
-    "texto imagen"
-    "imagen2 container-textos";
+  grid-template-columns: 1.15fr 0.85fr;         /* 2 columnas: texto | imagen */
+  grid-template-rows: auto auto auto;           /* 3 filas: sobre, misión, visión */
+  grid-template-areas:
+    "texto  imagen"
+    "mision imagen"
+    "vision imagen";
   gap: 40px;
   align-items: center;
   padding: 36px 24px;
@@ -237,32 +238,28 @@ header.scrolled .logo img { height: 50px; width: 50px;}
   background-color: #db9475;
   border-radius: 45px;
   padding: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+  color: #000000;
+  font-family: Roboto;
+  font-size: 1em;
 }
 
-p>em{
+.texto { grid-area: texto; }
+.Mision { grid-area: mision; }
+.Vision { grid-area: vision; }
+
+p > em {
   font-weight: bold;
   font-size: 1.1rem;
   color: black;
 }
 
-.texto>h2 ,.Vision>h2, .Mision>h2{
+.texto > h2, .Vision > h2, .Mision > h2 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #FFBC8A;
+  color: #A0522D;
   font-family: cinzel;
-}
-
-.contenedor-textos{
-   margin-top: 80px;
-  grid-area: container-textos;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: flex-end;
-  align-content: flex-end;
-  gap: 30px;
 }
 
 #AboutUs .imagen {
@@ -271,36 +268,14 @@ p>em{
   aspect-ratio: 4 / 3;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
-  background: url(../IMG/AboutUs.png) top/cover no-repeat;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  background: url("../IMG/AboutUs.png") top/cover no-repeat; /* misma imagen */
 }
-
-#AboutUs .imagen2 {
-  margin-top: 50px;
-  max-width: 375px; 
-  width: 80%;      
-  margin: 0 auto;  
-  grid-area: imagen2;
-  position: relative;
-  aspect-ratio: 3/ 3;
-  background: url("../IMG/flores.jpg") center/cover no-repeat;
-  border-radius: 16px;
-  align-self: center; 
-  justify-self: center;
-}
-
-#AboutUs .Vision,#AboutUs .Mision{
-  grid-area: vision;
-  color:  #000000;
-  font-family: Roboto;
-  font-size: 1em;
-}
-
-.imagen::before,.imagen2::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
+.imagen::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
   background: linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15));
 }
 
@@ -694,7 +669,7 @@ p>em{
   border: 3px solid #A0522D;
   border-radius: 15px;
   background: #FFFFFF33;
-  color: #8B4513; 
+  color: #A0522D; 
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -705,7 +680,7 @@ p>em{
 .textarea-campo:focus {
   outline: none;
   border-color: #FFBC8A; 
-  color: #8B4513;      
+  color: #A0522D;      
 }
 
 .input-campo::placeholder,
