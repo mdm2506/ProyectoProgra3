@@ -223,7 +223,7 @@ header.scrolled .logo img { height: 50px; width: 50px;}
   font-size: 1.2rem;
   font-weight: bold;
   transition: background 0.3s ease;
-  pointer-events: auto; /* Para que sea clickable */
+  pointer-events: auto; 
 }
 .cta-button:hover {
   background: rgb(240, 141, 125);
@@ -235,8 +235,8 @@ header.scrolled .logo img { height: 50px; width: 50px;}
   margin: 70px;
   grid-area: about-us;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;         /* 2 columnas: texto | imagen */
-  grid-template-rows: auto auto auto;           /* 3 filas: sobre, misión, visión */
+  grid-template-columns: 1.15fr 0.85fr;        
+  grid-template-rows: auto auto auto;          
   grid-template-areas:
     "texto  imagen"
     "mision imagen"
@@ -617,31 +617,33 @@ p > em {
   max-width: 500px;
   width: 100%;
   padding: 40px;
-  background:  #F0B498;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px #808080; 
+  background: #F0B498; 
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .titulo-principal {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #A0522D; 
+  color: #A0522D;
   text-align: center;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px #FFFFFF;
 }
 
 .subtitulo {
-  color: #A0522D; 
+  color: #A0522D;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 1.1rem;
   font-weight: 500;
 }
 
+/* ================================
+   CAMPOS
+   ================================ */
 .campo {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .etiqueta {
@@ -663,43 +665,51 @@ p > em {
   top: -12px;
   left: 10px;
   font-size: 14px;
-  color: #FFFFFF;
-  background: #A0522D;
-  padding: 4px 12px;
-  border-radius: 15px;
+  color: #fff;
+  background: #F08D7D; 
+  padding: 4px 10px;
+  border-radius: 12px;
   font-weight: 600;
 }
-
-.input-campo+.etiqueta,
-.textarea-campo+.etiqueta {
-  opacity: 1;
+.formulario-contenedor .input-form,
+.formulario-contenedor .select-form,
+.formulario-contenedor .textarea-campo{
+  border: 2px solid #F0B498;   
+  background: #fff;           
+  color: #000;                
 }
 
-.input-campo, 
+.formulario-contenedor .input-form:focus,
+.formulario-contenedor .select-form:focus,
+.formulario-contenedor .textarea-campo:focus{
+  border-color: #A0522D;                           /* = form 1 */
+  box-shadow: 0 0 0 3px rgba(240,141,125,0.25);    /* = form 1 */
+  outline: none;
+}
+.input-campo,
 .select-campo,
 .textarea-campo {
   width: 100%;
-  padding: 15px;
-  border: 3px solid #A0522D;
-  border-radius: 15px;
-  background: #FFFFFF33;
-  color: #A0522D; 
+  padding: 14px;
+  border: 2px solid #A0522D;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
   font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, background 0.3s ease;
 }
 
 .input-campo:focus,
 .select-campo:focus,
 .textarea-campo:focus {
   outline: none;
-  border-color: #FFBC8A; 
-  color: #A0522D;      
+  border-color: #FFBC8A;
+  box-shadow: 0 0 0 3px rgba(240, 141, 125, 0.25);
 }
 
 .input-campo::placeholder,
 .textarea-campo::placeholder {
-  color: #A0522D; 
+  color: #808080;
 }
 
 .campo.correcto .input-campo,
@@ -715,84 +725,79 @@ p > em {
   animation: shake 0.5s ease-in-out;
 }
 
-
 @keyframes shake {
   0% { transform: translateX(0); }
-  25% { transform: translateX(-10px); }
-  75% { transform: translateX(10px); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
   100% { transform: translateX(0); }
 }
 
+/* ================================
+   MENSAJES DE ERROR
+   ================================ */
 .mensaje-error {
   color: #FF6347;
   font-size: 14px;
-  margin-top: 8px;
-  margin-left: 15px;
-  opacity: 0;
-  transform: translateY(-10px);
-  background: #FFFFFF;
-  padding: 8px 12px;
-  border-radius: 10px;
-  display: inline-block;
-  font-weight: 600;
-  border-left: 4px solid #FF6347;
+  margin-top: 6px;
+  display: none;
 }
 
 .mensaje-error.mostrar {
-  opacity: 1;
-  transform: translateY(0);
+  display: block;
 }
 
+/* ================================
+   TEXTAREA
+   ================================ */
 .textarea-campo {
   resize: vertical;
   min-height: 100px;
-  padding-top: 20px;
   max-height: 200px;
+  padding-top: 16px;
 }
 
-.primary-button {
-    transition: transform 0.1s ease-in-out;
-    background-color:  #F08D7D;
-    color: white;
-}
-
-.primary-button:active {
-    background-color: #f08d7d;
-}
-
-.disable-button {
-    background-color: #808080;
-    cursor: not-allowed;
-}
-
+/* ================================
+   BOTONES
+   ================================ */
 .boton-enviar {
   width: 100%;
-  padding: 18px;
+  padding: 16px;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 20px;
-  position: relative;
-  overflow: hidden;
+  margin-top: 15px;
   cursor: pointer;
   transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
 }
-.contador-caracteres {
-  text-align: left;
-  font-size: 14px;
-  color: #A0522D;
-  margin-top: 5px;
-   background: #FFFFFF33;
-  padding: 5px 12px;
-  border-radius: 10px;
-  display: inline-block;
-  font-weight: 600;
-   border: 1px solid #A0522D;
+
+.primary-button {
+  background-color: #F08D7D;
+  color: #fff;
 }
 
+.primary-button:hover {
+  background-color: #f08d7d;
+}
+
+.disable-button {
+  background-color: #808080;
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ================================
+   CONTADOR DE CARACTERES
+   ================================ */
+.contador-caracteres {
+  text-align: right;
+  font-size: 14px;
+  color: #A0522D;
+  margin-top: 4px;
+}
 /* ===================== 
     ELEMENTOS GENERALES
    ===================== */
@@ -835,10 +840,11 @@ span {
 .social-link {
   display: inline-block;
 }
-
 .social-link::before {
+  font-family: "Font Awesome 6 Brands"; /* Para íconos de marcas */
+  font-weight: 400; /* Necesario para que aparezcan */
   display: inline-block;
-  width: 1em;
+  width: 1.2em;
   opacity: 0;
   transform: translateX(-0.5em);
   transition: transform .3s ease, opacity .2s ease;
@@ -846,15 +852,15 @@ span {
 }
 
 .facebook::before {
-  content: "🔗";
+  content: "\f09a"; /* Código unicode de Facebook */
 }
 
 .instagram::before {
-  content: "🔗";
+  content: "\f16d"; /* Código unicode de Instagram */
 }
 
 .whatsapp::before {
-  content: "🔗";
+  content: "\f232"; /* Código unicode de WhatsApp */
 }
 
 .tipo2:hover::before {
