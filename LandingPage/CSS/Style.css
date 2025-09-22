@@ -213,7 +213,21 @@ header.scrolled .logo img { height: 50px; width: 50px;}
   padding: 20px 40px;
   border-radius: 15px;
 }
-
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: rgba(240, 141, 125, 0.9);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  pointer-events: auto; /* Para que sea clickable */
+}
+.cta-button:hover {
+  background: rgb(240, 141, 125);
+}
 /* ================= 
    SECCIÓN ABOUT US 
    ================= */
