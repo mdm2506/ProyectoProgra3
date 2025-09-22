@@ -223,7 +223,7 @@ header.scrolled .logo img { height: 50px; width: 50px;}
   font-size: 1.2rem;
   font-weight: bold;
   transition: background 0.3s ease;
-  pointer-events: auto; /* Para que sea clickable */
+  pointer-events: auto; 
 }
 .cta-button:hover {
   background: rgb(240, 141, 125);
@@ -235,8 +235,8 @@ header.scrolled .logo img { height: 50px; width: 50px;}
   margin: 70px;
   grid-area: about-us;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;         /* 2 columnas: texto | imagen */
-  grid-template-rows: auto auto auto;           /* 3 filas: sobre, misión, visión */
+  grid-template-columns: 1.15fr 0.85fr;        
+  grid-template-rows: auto auto auto;          
   grid-template-areas:
     "texto  imagen"
     "mision imagen"
@@ -679,7 +679,6 @@ p > em {
   color: #000;                
 }
 
-/* Focus: marrón (#A0522D) + halo suave */
 .formulario-contenedor .input-form:focus,
 .formulario-contenedor .select-form:focus,
 .formulario-contenedor .textarea-campo:focus{
@@ -692,7 +691,7 @@ p > em {
 .textarea-campo {
   width: 100%;
   padding: 14px;
-  border: 2px solid #f0b498;
+  border: 2px solid #A0522D;
   border-radius: 8px;
   background: #fff;
   color: #000;
@@ -704,7 +703,7 @@ p > em {
 .select-campo:focus,
 .textarea-campo:focus {
   outline: none;
-  border-color: #A0522D;
+  border-color: #FFBC8A;
   box-shadow: 0 0 0 3px rgba(240, 141, 125, 0.25);
 }
 
