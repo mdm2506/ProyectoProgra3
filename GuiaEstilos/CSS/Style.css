@@ -774,6 +774,10 @@ pre code {
     color:  #ffffff;
     display: block;
 }
+.Etiquetas-Html{
+    color:rgb(255, 209, 168);
+    font-weight: bold;
+}
 .ids-class{
     color:rgb(240, 141, 125);
     font-weight: bold;
